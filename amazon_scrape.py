@@ -3,6 +3,7 @@ import re
 import pytz
 import pandas as pd
 from datetime import datetime
+import threading
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -11,13 +12,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import selenium.common.exceptions as se
 
 AMAZON_BASE = "https://www.amazon.com.tr"
-AMAZON_LOGIN_PAGE = (
-    "https://www.amazon.com.tr/ap/signin?openid.pape.max_auth_age=0"
-    "&openid.return_to=https%3A%2F%2Fwww.amazon.com.tr%2F%3Fref_%3Dnav_ya_signin"
-    "&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select"
-    "&openid.assoc_handle=trflex&openid.mode=checkid_setup"
-    "&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select"
-    "&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+AMAZON_LOGIN_URL = (
+    "https://www.amazon.com.tr/"
 )
 
 TR_MONTHS = {
@@ -27,18 +23,41 @@ TR_MONTHS = {
 
 
 class AmazonScraper:
-    def __init__(self, headless: bool = False):
-        self.driver = self._make_driver(headless=headless)
-        self.driver.get(AMAZON_LOGIN_PAGE)
-        print("Amazon login sayfası açıldı. Giriş yaptıktan sonra scrape_product() çağırabilirsiniz.")
+    def __init__(self, headless: bool = False, detach: bool = True):
+        self.driver = self._make_driver(headless=headless, detach=detach)
+        self.driver.get(AMAZON_LOGIN_URL)
+        print("Amazon login page opened. Please log in, then call scrape(asin_or_url).")
 
     # ------------------------------------------------------------------
-    # Driver
+    # Public API
     # ------------------------------------------------------------------
 
-    def _make_driver(self, headless: bool = False) -> webdriver.Chrome:
+    def scrape(self, asin_or_url: str, target_n: int = 80, max_pages: int = 80, wait_timeout: int = 15) -> pd.DataFrame:
+        """Scrape reviews for a single product. Pass an ASIN or full Amazon URL."""
+        asin = self._extract_asin(asin_or_url)
+        if not asin:
+            raise ValueError(f"Could not extract a valid ASIN from: {asin_or_url!r}")
+
+        print(f"Scraping ASIN: {asin}")
+        df = self._scrape_product(asin, target_n=target_n, max_pages=max_pages, wait_timeout=wait_timeout)
+        print(f"  -> {len(df)} reviews collected")
+        return df
+
+    def close(self):
+        try:
+            self.driver.quit()
+        except Exception:
+            pass
+
+    # ------------------------------------------------------------------
+    # Internal helpers
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _make_driver(headless: bool = False, detach: bool = True) -> webdriver.Chrome:
         opts = webdriver.ChromeOptions()
-        opts.add_experimental_option("detach", True)
+        if detach:
+            opts.add_experimental_option("detach", True)
         if headless:
             opts.add_argument("--headless=new")
         opts.add_argument("--no-sandbox")
@@ -48,45 +67,23 @@ class AmazonScraper:
         opts.add_argument(
             "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/123.0.0.0 Safari/537.36"
+            "Chrome/131.0.0.0 Safari/537.36"
         )
         driver = webdriver.Chrome(options=opts)
         driver.set_page_load_timeout(60)
         return driver
 
-    def quit(self):
-        self.driver.quit()
-
-    # ------------------------------------------------------------------
-    # Public API
-    # ------------------------------------------------------------------
-
-    def scrape_product(
-        self,
-        product_url: str,
-        target_n: int = 80,
-        max_pages: int = 80,
-        wait_timeout: int = 15,
-    ) -> pd.DataFrame:
-        """Scrape up to target_n most-recent local reviews for a single product URL."""
-        asin = self._asin_from_url(product_url)
-        if not asin:
-            raise ValueError(f"ASIN could not be parsed from URL: {product_url}")
-
-        product_meta = self._get_product_meta(asin, wait_timeout=wait_timeout)
-        return self._scrape_reviews(asin, product_meta, target_n, max_pages, wait_timeout)
-
-    # ------------------------------------------------------------------
-    # URL helpers
-    # ------------------------------------------------------------------
-
     @staticmethod
-    def _asin_from_url(url: str) -> str | None:
-        m = re.search(r"/dp/([A-Z0-9]{10})", url)
-        return m.group(1) if m else None
-
-    def _build_product_url(self, asin: str) -> str:
-        return f"{AMAZON_BASE}/dp/{asin}"
+    def _extract_asin(value: str) -> str | None:
+        value = value.strip()
+        # Pure ASIN (10 alphanumeric chars)
+        if re.fullmatch(r"[A-Z0-9]{10}", value, re.IGNORECASE):
+            return value.upper()
+        # From URL: /dp/ASIN or /product-reviews/ASIN
+        m = re.search(r"/(?:dp|product-reviews|gp/product)/([A-Z0-9]{10})", value, re.IGNORECASE)
+        if m:
+            return m.group(1).upper()
+        return None
 
     def _build_review_url(self, asin: str, page: int) -> str:
         ref = "cm_cr_arp_d_viewopt_sr" if page <= 1 else f"cm_cr_arp_d_paging_btm_next_{page}"
@@ -95,9 +92,27 @@ class AmazonScraper:
             f"?ie=UTF8&reviewerType=all_reviews&sortBy=recent&pageNumber={page}"
         )
 
+    def _build_product_url(self, asin: str) -> str:
+        return f"{AMAZON_BASE}/dp/{asin}"
+
     # ------------------------------------------------------------------
-    # Product metadata
+    # Page interactions
     # ------------------------------------------------------------------
+
+    def _wait_reviews_stable(self, timeout: int = 20, stable_rounds: int = 3, poll: float = 0.25) -> int:
+        end = time.time() + timeout
+        last, stable = -1, 0
+        while time.time() < end:
+            cards = self.driver.find_elements(By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]')
+            n = len(cards)
+            if n == last and n > 0:
+                stable += 1
+                if stable >= stable_rounds:
+                    return n
+            else:
+                stable, last = 0, n
+            time.sleep(poll)
+        return len(self.driver.find_elements(By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]'))
 
     def _get_product_meta(self, asin: str, wait_timeout: int = 15) -> dict:
         wait = WebDriverWait(self.driver, wait_timeout)
@@ -111,27 +126,25 @@ class AmazonScraper:
             pass
 
         bullets = []
-        product_description = None
-        desc_candidates = [
+        for sel in [
             "#feature-bullets ul li span.a-list-item",
             "ul.a-unordered-list.a-vertical li span.a-list-item",
             "#productDescription",
-        ]
-        for sel in desc_candidates:
+        ]:
             try:
                 els = self.driver.find_elements(By.CSS_SELECTOR, sel)
                 texts = [e.text.strip() for e in els if e.text and e.text.strip()]
                 if texts:
                     if sel == "#productDescription" and not bullets:
-                        product_description = " ".join(texts).strip()
-                        break
+                        bullets = texts
                     else:
                         bullets.extend(texts)
+                    if sel != "#productDescription":
+                        break
             except Exception:
                 continue
 
-        if bullets:
-            product_description = " | ".join(dict.fromkeys(bullets))
+        product_description = " | ".join(dict.fromkeys(bullets)) if bullets else None
 
         return {
             "product_title": product_title,
@@ -139,195 +152,43 @@ class AmazonScraper:
             "product_url": self._build_product_url(asin),
         }
 
-    # ------------------------------------------------------------------
-    # Review scraping
-    # ------------------------------------------------------------------
-
-    def _scrape_reviews(
-        self,
-        asin: str,
-        product_meta: dict,
-        target_n: int,
-        max_pages: int,
-        wait_timeout: int,
-    ) -> pd.DataFrame:
-        wait = WebDriverWait(self.driver, wait_timeout)
-        seen: set = set()
-        rows: list = []
-
-        self.driver.get(self._build_review_url(asin, 1))
-        last_url = None
-
-        for page in range(1, max_pages + 1):
-            try:
-                wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#cm_cr-review_list")))
-                wait.until(EC.presence_of_element_located(
-                    (By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]')
-                ))
-                self._wait_reviews_stable(timeout=25)
-            except se.TimeoutException:
-                break
-
-            if self.driver.current_url == last_url:
-                break
-            last_url = self.driver.current_url
-
-            local_cards, global_cards = self._find_local_and_global_cards()
-
-            if len(global_cards) > 0 or len(local_cards) == 0:
-                break
-
-            for i, card in enumerate(local_cards):
-                try:
-                    rid = card.get_attribute("id")
-                except Exception:
-                    rid = None
-
-                if rid and rid in seen:
-                    continue
-
-                try:
-                    row = self._parse_card(card, asin, product_meta)
-                except se.StaleElementReferenceException:
-                    cards2 = self.driver.find_elements(
-                        By.CSS_SELECTOR,
-                        '#cm_cr-review_list li[data-hook="review"], '
-                        '#cm_cr-review_list div[data-hook="review"]',
-                    )
-                    if i >= len(cards2):
-                        continue
-                    row = self._parse_card(cards2[i], asin, product_meta)
-                    rid = row.get("review_id")
-
-                if rid:
-                    seen.add(rid)
-                rows.append(row)
-
-                if len(seen) >= target_n:
-                    return self._to_df(rows, target_n)
-
-            time.sleep(0.6)
-
-            try:
-                if self.driver.find_elements(By.CSS_SELECTOR, "li.a-disabled.a-last"):
-                    break
-                current_first = None
-                first_cards = self.driver.find_elements(
-                    By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]'
-                )
-                if first_cards:
-                    current_first = first_cards[0]
-
-                next_a = wait.until(EC.element_to_be_clickable((
-                    By.CSS_SELECTOR, "li.a-last a, a[data-hook='pagination-next']"
-                )))
-                self.driver.execute_script("arguments[0].scrollIntoView({block:'center'});", next_a)
-                try:
-                    next_a.click()
-                except Exception:
-                    self.driver.execute_script("arguments[0].click();", next_a)
-
-                if current_first is not None:
-                    wait.until(EC.staleness_of(current_first))
-            except se.TimeoutException:
-                break
-
-        return self._to_df(rows, target_n)
-
-    # ------------------------------------------------------------------
-    # Page helpers
-    # ------------------------------------------------------------------
-
-    def _wait_reviews_stable(self, timeout: int = 20, stable_rounds: int = 3, poll: float = 0.25) -> int:
-        end = time.time() + timeout
-        last = -1
-        stable = 0
-        while time.time() < end:
-            cards = self.driver.find_elements(
-                By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]'
-            )
-            n = len(cards)
-            if n == last and n > 0:
-                stable += 1
-                if stable >= stable_rounds:
-                    return n
-            else:
-                stable = 0
-                last = n
-            time.sleep(poll)
-        return len(self.driver.find_elements(
-            By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]'
-        ))
+    @staticmethod
+    def _is_foreign_card(card) -> bool:
+        # Primary marker: foreign reviews wrap content in <div id="customer_review_foreign-...">
+        if card.find_elements(By.CSS_SELECTOR, '[id^="customer_review_foreign-"]'):
+            return True
+        # Backup markers: translated-content span or "Translate to Turkish" link
+        if card.find_elements(By.CSS_SELECTOR, 'span.cr-original-review-content'):
+            return True
+        if card.find_elements(By.CSS_SELECTOR, '[data-hook="cr-translate-this-review-link"]'):
+            return True
+        return False
 
     def _find_local_and_global_cards(self):
         container = self.driver.find_element(By.CSS_SELECTOR, "#cm_cr-review_list")
-        cards = container.find_elements(
-            By.CSS_SELECTOR, 'li[data-hook="review"], div[data-hook="review"]'
-        )
-        local_headers = container.find_elements(
-            By.CSS_SELECTOR, 'h3[data-hook="arp-local-reviews-header"]'
-        )
-        local_text = local_headers[0].text.strip() if local_headers else ""
-        is_local = ("Ülke:" in local_text) or ("Türkiye" in local_text)
+        cards = container.find_elements(By.CSS_SELECTOR, 'li[data-hook="review"], div[data-hook="review"]')
 
-        # Some pages do not render the local/global header immediately.
-        # In that case, treat visible cards as local to avoid false early stop.
-        if not local_headers:
-            return cards, []
-
-        return (cards, []) if is_local else ([], cards)
+        local_cards, global_cards = [], []
+        for card in cards:
+            if self._is_foreign_card(card):
+                global_cards.append(card)
+            else:
+                local_cards.append(card)
+        return local_cards, global_cards
 
     # ------------------------------------------------------------------
-    # Card parsing
+    # Parsing helpers
     # ------------------------------------------------------------------
-
-    def _parse_card(self, card, asin: str, product_meta: dict) -> dict:
-        title = None
-        try:
-            title = card.find_element(By.CSS_SELECTOR, '[data-hook="review-title"]').text.strip()
-        except Exception:
-            pass
-
-        rating = self._extract_rating(card)
-
-        body = None
-        try:
-            body = card.find_element(By.CSS_SELECTOR, '[data-hook="review-body"]').text.strip().replace("\n", " ")
-        except Exception:
-            pass
-
-        review_date = None
-        try:
-            date_text = card.find_element(By.CSS_SELECTOR, 'span[data-hook="review-date"]').text.strip()
-            review_date = self._parse_date(date_text)
-        except Exception:
-            pass
-
-        review_id = None
-        try:
-            review_id = card.get_attribute("id")
-        except Exception:
-            pass
-
-        collected_at = datetime.now(pytz.timezone("Europe/Istanbul")).strftime("%Y-%m-%d %H:%M")
-
-        return {
-            "review_id": review_id,
-            "asin": asin,
-            "title": title,
-            "rating": rating,
-            "body": body,
-            "review_date": review_date,
-            "product_title": (product_meta or {}).get("product_title"),
-            "product_description": (product_meta or {}).get("product_description"),
-            "product_url": self._build_product_url(asin),
-            "source": "amazon_tr",
-            "review_summary": None,
-            "collected_at": collected_at,
-        }
 
     @staticmethod
-    def _extract_rating(card) -> float | None:
+    def _safe_text(el) -> str:
+        try:
+            return el.text.strip()
+        except Exception:
+            return ""
+
+    @staticmethod
+    def _parse_rating(card) -> float | None:
         try:
             txt = card.get_attribute("innerText") or card.get_attribute("textContent") or ""
             txt = txt.replace("\u00a0", " ").strip()
@@ -360,19 +221,182 @@ class AmazonScraper:
             return None
         day, mon_name, year = int(m.group(1)), m.group(2).strip(), int(m.group(3))
         mon = TR_MONTHS.get(mon_name)
-        if not mon:
-            return None
-        return datetime(year, mon, day).date().isoformat()
+        return datetime(year, mon, day).date().isoformat() if mon else None
+
+    def _parse_card(self, card, asin: str, product_meta: dict) -> dict:
+        title = None
+        try:
+            title = self._safe_text(card.find_element(By.CSS_SELECTOR, '[data-hook="review-title"]'))
+        except Exception:
+            pass
+
+        body = None
+        try:
+            body = self._safe_text(card.find_element(By.CSS_SELECTOR, '[data-hook="review-body"]')).replace("\n", " ")
+        except Exception:
+            pass
+
+        review_date = None
+        try:
+            review_date = self._parse_date(
+                self._safe_text(card.find_element(By.CSS_SELECTOR, 'span[data-hook="review-date"]'))
+            )
+        except Exception:
+            pass
+
+        review_id = None
+        try:
+            review_id = card.get_attribute("id")
+        except Exception:
+            pass
+
+        tz = pytz.timezone("Europe/Istanbul")
+        return {
+            "review_id": review_id,
+            "asin": asin,
+            "title": title,
+            "rating": self._parse_rating(card),
+            "body": body,
+            "review_date": review_date,
+            "product_title": (product_meta or {}).get("product_title"),
+            "product_description": (product_meta or {}).get("product_description"),
+            "product_url": self._build_product_url(asin),
+            "source": "amazon_tr",
+            "review_summary": None,
+            "collected_at": datetime.now(tz).strftime("%Y-%m-%d %H:%M"),
+        }
 
     # ------------------------------------------------------------------
-    # Utility
+    # Core scraping logic
     # ------------------------------------------------------------------
 
-    @staticmethod
-    def _to_df(rows: list, target_n: int) -> pd.DataFrame:
+    def _scrape_product(self, asin: str, target_n: int, max_pages: int, wait_timeout: int) -> pd.DataFrame:
+        wait = WebDriverWait(self.driver, wait_timeout)
+        seen, rows = set(), []
+
+        try:
+            product_meta = self._get_product_meta(asin, wait_timeout=wait_timeout)
+        except Exception:
+            product_meta = {"product_title": None, "product_description": None, "product_url": self._build_product_url(asin)}
+
+        self.driver.get(self._build_review_url(asin, 1))
+        stagnant_rounds = 0
+
+        for page in range(1, max_pages + 1):
+            try:
+                wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#cm_cr-review_list")))
+                wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]')))
+                self._wait_reviews_stable(timeout=25, stable_rounds=4)
+            except se.TimeoutException:
+                break
+
+            local_cards, _ = self._find_local_and_global_cards()
+
+            if len(local_cards) == 0:
+                break
+
+            page_had_new = False
+
+            for i, card in enumerate(local_cards):
+                try:
+                    rid = card.get_attribute("id")
+                except Exception:
+                    rid = None
+
+                if rid and rid in seen:
+                    continue
+
+                try:
+                    row = self._parse_card(card, asin, product_meta)
+                except se.StaleElementReferenceException:
+                    fresh = self.driver.find_elements(
+                        By.CSS_SELECTOR,
+                        '#cm_cr-review_list li[data-hook="review"], #cm_cr-review_list div[data-hook="review"]'
+                    )
+                    if i >= len(fresh):
+                        continue
+                    row = self._parse_card(fresh[i], asin, product_meta)
+                    rid = row.get("review_id")
+
+                if rid:
+                    seen.add(rid)
+                rows.append(row)
+                page_had_new = True
+
+                if len(seen) >= target_n:
+                    df = pd.DataFrame(rows)
+                    return df.drop_duplicates(subset=["review_id"]).head(target_n)
+
+            if page_had_new:
+                stagnant_rounds = 0
+            else:
+                stagnant_rounds += 1
+                if stagnant_rounds >= 2:
+                    print(f"  -> no new reviews on page {page}, stopping")
+                    break
+
+            time.sleep(0.6)
+
+            if not self._navigate_to_next_page():
+                break
+
         df = pd.DataFrame(rows[:target_n])
         if "review_id" in df.columns:
             df = df.drop_duplicates(subset=["review_id"])
-        elif not df.empty:
+        else:
             df = df.drop_duplicates()
         return df
+
+    def _navigate_to_next_page(self) -> bool:
+        url_before = self.driver.current_url
+        count_before = len(
+            self.driver.find_elements(By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]')
+        )
+        wait = WebDriverWait(self.driver, 15)
+
+        # Standard next-page button
+        try:
+            if not self.driver.find_elements(By.CSS_SELECTOR, "li.a-disabled.a-last"):
+                candidates = self.driver.find_elements(By.CSS_SELECTOR, "li.a-last a")
+                if candidates:
+                    a = candidates[0]
+                    self.driver.execute_script("arguments[0].scrollIntoView({block:'center'});", a)
+                    try:
+                        a.click()
+                    except Exception:
+                        self.driver.execute_script("arguments[0].click();", a)
+
+                    try:
+                        wait.until(lambda d: d.current_url != url_before)
+                        return True
+                    except se.TimeoutException:
+                        return False
+        except Exception:
+            pass
+
+        # "Show more" button (appends reviews without changing URL)
+        try:
+            show_more = [
+                el for el in self.driver.find_elements(By.CSS_SELECTOR, 'a[data-hook="show-more-button"]')
+                if el.is_displayed()
+            ]
+            if show_more:
+                a = show_more[0]
+                self.driver.execute_script("arguments[0].scrollIntoView({block:'center'});", a)
+                try:
+                    a.click()
+                except Exception:
+                    self.driver.execute_script("arguments[0].click();", a)
+
+                try:
+                    wait.until(
+                        lambda d: len(d.find_elements(By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]')) > count_before
+                    )
+                    return True
+                except se.TimeoutException:
+                    current = len(self.driver.find_elements(By.CSS_SELECTOR, '#cm_cr-review_list [data-hook="review"]'))
+                    return current > count_before
+        except Exception:
+            pass
+
+        return False
