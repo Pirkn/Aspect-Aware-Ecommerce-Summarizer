@@ -1,6 +1,9 @@
 from amazon_scrape import AmazonScraper
 from aspect_labeler import AspectLabelingPipeline
+from aspect_selector import AspectSentenceSelector
+from aspect_summarizer import AspectSummarizer
 from preprocessor import ReviewPreprocessor
+from prompt_builder import PromptBuilder
 
 
 def main():
@@ -14,6 +17,9 @@ def main():
         batch_size=32,
         device="cpu",
     )
+    aspect_selector = AspectSentenceSelector(device="cpu", batch_size=32)
+    prompt_builder = PromptBuilder()
+    summarizer = AspectSummarizer()
     print("=" * 60)
     print("All models loaded. Starting scraper...")
     print("=" * 60)
@@ -38,14 +44,14 @@ def main():
                 print("No reviews collected; skipping.")
                 continue
 
-            df.to_csv("output.csv", index=False)
+            df.to_csv("Outputs/output.csv", index=False)
             print(f"Raw reviews saved to output.csv ({len(df)} rows)")
 
             print("Preprocessing...")
             reviews_df, sentences_df = preprocessor.process(df)
 
-            reviews_df.to_csv("reviews.csv", index=False)
-            sentences_df.to_csv("sentences.csv", index=False)
+            reviews_df.to_csv("Outputs/reviews.csv", index=False)
+            sentences_df.to_csv("Outputs/sentences.csv", index=False)
             print(
                 f"Done. reviews.csv={reviews_df.shape}, sentences.csv={sentences_df.shape}"
             )
@@ -54,8 +60,26 @@ def main():
             labeled_df = aspect_labeler.predict(
                 sentences_df, return_probs=True, return_binary=True
             )
-            labeled_df.to_csv("labeled_sentences.csv", index=False)
+            labeled_df.to_csv("Outputs/labeled_sentences.csv", index=False)
             print(f"labeled_sentences.csv={labeled_df.shape}")
+
+            print("Selecting aspect sentences (relevance + MMR)...")
+            mmr_df = aspect_selector.select(labeled_df)
+            if mmr_df.empty:
+                print("No aspect sentences selected.")
+                continue
+
+            mmr_df.to_csv("Outputs/aspect_sentences_mmr.csv", index=False)
+            print(f"aspect_sentences_mmr.csv={mmr_df.shape}")
+
+            print("Building prompts...")
+            prompt_df = prompt_builder.build(mmr_df)
+            print(f"prompt_df={prompt_df.shape}")
+
+            print("Calling teacher + student models...")
+            summarizer.summarize_and_save(
+                prompt_df, "Outputs/aspect_summaries.csv"
+            )
     finally:
         scraper.close()
 
