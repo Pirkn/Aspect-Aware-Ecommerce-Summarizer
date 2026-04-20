@@ -149,17 +149,22 @@ class AspectSummarizer:
         if missing:
             raise ValueError(f"prompt_df missing columns: {missing}")
 
-        rows = [self._summarize_row(row) for _, row in prompt_df.iterrows()]
-        flat = rows[0]  # single-product assumption
+        flats = [self._summarize_row(row) for _, row in prompt_df.iterrows()]
 
-        data = {
-            "Fine Tuned LLama Model": [flat.get(f"student_{a}") for a in self.ASPECTS],
-            "Gpt 5.4 Mini": [flat.get(f"teacher_{a}") for a in self.ASPECTS],
-        }
-        return pd.DataFrame(data, index=self.ASPECTS)
+        records = []
+        for flat in flats:
+            for aspect in self.ASPECTS:
+                records.append({
+                    "product_id":      flat["product_id"],
+                    "product_title":   flat.get("product_title", ""),
+                    "aspect":          aspect,
+                    "student_summary": flat.get(f"student_{aspect}"),
+                    "teacher_summary": flat.get(f"teacher_{aspect}"),
+                })
+        return pd.DataFrame(records)
 
     def summarize_and_save(self, prompt_df: pd.DataFrame, output_path: str) -> pd.DataFrame:
         result_df = self.summarize(prompt_df)
-        result_df.to_csv(output_path, index=True)
+        result_df.to_csv(output_path, index=False)
         print(f"Saved summaries to {output_path} ({result_df.shape})")
         return result_df

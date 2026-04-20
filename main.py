@@ -2,6 +2,7 @@ from amazon_scrape import AmazonScraper
 from aspect_labeler import AspectLabelingPipeline
 from aspect_selector import AspectSentenceSelector
 from aspect_summarizer import AspectSummarizer
+from evidence_retriever import EvidenceRetriever
 from preprocessor import ReviewPreprocessor
 from prompt_builder import PromptBuilder
 
@@ -20,6 +21,12 @@ def main():
     aspect_selector = AspectSentenceSelector(device="cpu", batch_size=32)
     prompt_builder = PromptBuilder()
     summarizer = AspectSummarizer()
+    evidence_retriever = EvidenceRetriever(
+        sentence_model=aspect_selector.model,
+        batch_size=32,
+        top_k=5,
+        tau=0.45,
+    )
     print("=" * 60)
     print("All models loaded. Starting scraper...")
     print("=" * 60)
@@ -77,8 +84,16 @@ def main():
             print(f"prompt_df={prompt_df.shape}")
 
             print("Calling teacher + student models...")
-            summarizer.summarize_and_save(
+            summaries_df = summarizer.summarize_and_save(
                 prompt_df, "Outputs/aspect_summaries.csv"
+            )
+
+            print("Retrieving evidence for student summaries...")
+            evidence_retriever.retrieve_and_save(
+                summaries_df=summaries_df,
+                mmr_df=mmr_df,
+                reviews_df=reviews_df,
+                output_path="Outputs/evidence.csv",
             )
     finally:
         scraper.close()
