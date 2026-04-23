@@ -3,6 +3,16 @@ import os
 import pandas as pd
 from openai import OpenAI
 from dotenv import load_dotenv
+import requests
+import logging
+
+logging.basicConfig(
+    filename="student_outputs.log",
+    filemode="a",
+    level=logging.INFO,
+    format="%(asctime)s - %(message)s",
+    encoding="utf-8",
+)
 
 load_dotenv()
 
@@ -50,21 +60,21 @@ class AspectSummarizer:
         openai_api_key: str | None = None,
         runpod_api_key: str | None = None,
         teacher_model: str = "gpt-5.4-mini",
-        student_model: str = "berkhan/llama31-8b-turkish-sft-v3-merged",
+        student_model: str = "berkhan/turkish-ecommerce-aspect-summarizer",
         student_base_url: str = "https://api.runpod.ai/v2/7ja9cfymaef7os/openai/v1",
         teacher_temperature: float = 0.2,
         student_temperature: float = 0.0,
         student_max_tokens: int = 128,
     ):
         openai_key = openai_api_key or os.getenv("OPENAI_API_KEY")
-        runpod_key = runpod_api_key or os.getenv("RUNPOD_TOKEN")
+        pod_id = os.getenv("POD_ID")
         if not openai_key:
             raise ValueError("OPENAI_API_KEY is not set.")
-        if not runpod_key:
-            raise ValueError("RUNPOD_TOKEN is not set.")
+        if not pod_id:
+            raise ValueError("POD_ID is not set.")
 
         self.teacher_client = OpenAI(api_key=openai_key)
-        self.student_client = OpenAI(api_key=runpod_key, base_url=student_base_url)
+        self.student_base_url = f"https://{pod_id}-8000.proxy.runpod.net/generate"
 
         self.teacher_model = teacher_model
         self.student_model = student_model
@@ -90,13 +100,16 @@ class AspectSummarizer:
             return {}
 
     def _call_student(self, messages: list) -> str | None:
-        resp = self.student_client.chat.completions.create(
-            model=self.student_model,
-            temperature=self.student_temperature,
-            max_tokens=self.student_max_tokens,
-            messages=messages,
+        resp = requests.post(
+            self.student_base_url,
+            json={
+                "messages": messages, 
+                "temperature": self.student_temperature,
+            },
         )
-        text = (resp.choices[0].message.content or "").strip()
+        resp.raise_for_status()
+        text = resp.json()["response"]
+        logging.info(f"Student Input: {messages} \n Student response: {text}")
         if not text or text.lower() == "null":
             return None
         return text

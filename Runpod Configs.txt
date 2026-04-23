@@ -1,0 +1,72 @@
+runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
+bash -c "pip install fastapi uvicorn transformers accelerate && python3 /workspace/server.py"
+
+# Fist Bash
+
+pip install huggingface_hub --break-system-packages
+
+python3 -c "
+from huggingface_hub import snapshot_download
+snapshot_download(
+    'berkhan/turkish-ecommerce-aspect-summarizer',
+    local_dir='/workspace/model',
+    token='hf_YOUR_TOKEN'
+)
+"
+
+# Second Bash make it smaller pieces so i can paste into webterminal
+
+cat << 'EOF' > /workspace/server.py
+from fastapi import FastAPI, Request
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+import uvicorn
+
+app = FastAPI()
+
+MODEL_PATH = "/workspace/model"
+
+print("Loading tokenizer...")
+tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+print("Loading model...")
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_PATH,
+    torch_dtype=torch.float16,
+    device_map="auto"
+)
+print("Model loaded!")
+
+@app.post("/generate")
+async def generate(request: Request):
+    body = await request.json()
+    messages = body.get("messages", [])
+    max_tokens = body.get("max_tokens", 512)
+    temperature = body.get("temperature", 0.3)
+
+    input_text = tokenizer.apply_chat_template(
+        messages, tokenize=False, add_generation_prompt=True
+    )
+    inputs = tokenizer(input_text, return_tensors="pt").to(model.device)
+
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=max_tokens,
+            temperature=temperature,
+            do_sample=temperature > 0,
+            pad_token_id=tokenizer.eos_token_id
+        )
+
+    new_tokens = outputs[0][inputs["input_ids"].shape[1]:]
+    response_text = tokenizer.decode(new_tokens, skip_special_tokens=True)
+    return {"response": response_text}
+
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+EOF
+
+
