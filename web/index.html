@@ -144,6 +144,7 @@ function formatElapsed(ms) {
 
 function Landing({ onSubmit, onFileSubmit, error }) {
   const [value, setValue] = React.useState('');
+  const [comment, setComment] = React.useState('');
   const fileRef = React.useRef(null);
 
   const canSubmit = value.trim().length > 0;
@@ -151,17 +152,17 @@ function Landing({ onSubmit, onFileSubmit, error }) {
   const handleSubmit = (e) => {
     e?.preventDefault?.();
     if (!canSubmit) return;
-    onSubmit(value.trim());
+    onSubmit(value.trim(), comment.trim());
   };
 
   const handleDemo = (asin) => {
     setValue(asin);
-    onSubmit(asin);
+    onSubmit(asin, comment.trim());
   };
 
   const handleFileChange = (e) => {
     const f = e.target.files?.[0];
-    if (f) onFileSubmit(f);
+    if (f) onFileSubmit(f, comment.trim());
     e.target.value = '';
   };
 
@@ -189,6 +190,15 @@ function Landing({ onSubmit, onFileSubmit, error }) {
             Analiz Et
           </button>
         </form>
+
+        <div className="comment-shell">
+          <textarea
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            placeholder="(İsteğe bağlı) Kendi yorumunuzu ekleyin — Amazon yorumlarıyla birlikte analiz edilecek"
+            rows={3}
+          />
+        </div>
 
         {error && <div className="error-inline">{error}</div>}
 
@@ -584,12 +594,13 @@ function App() {
   const [resultData, setResultData] = React.useState(null);
   const [landingError, setLandingError] = React.useState(null);
 
-  const startRun = async (text, file) => {
+  const startRun = async (text, file, comment) => {
     setLandingError(null);
     try {
       const fd = new FormData();
       if (text) fd.append('input', text);
       if (file) fd.append('file', file);
+      if (comment) fd.append('comment', comment);
       const res = await fetch('/api/run', { method: 'POST', body: fd });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
@@ -603,8 +614,8 @@ function App() {
     }
   };
 
-  const handleSubmit = (text) => startRun(text, null);
-  const handleFileSubmit = (file) => startRun(null, file);
+  const handleSubmit = (text, comment) => startRun(text, null, comment);
+  const handleFileSubmit = (file, comment) => startRun(null, file, comment);
 
   const handleComplete = async (resultUrl) => {
     try {

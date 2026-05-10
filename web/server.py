@@ -21,10 +21,12 @@ import traceback
 import uuid
 from contextlib import asynccontextmanager
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
+import pytz
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
@@ -178,7 +180,47 @@ def _mmr_counts(mmr_df: pd.DataFrame) -> dict[str, int]:
     return {a: int(counts.get(a, 0)) for a in ASPECTS}
 
 
-def run_pipeline(run_id: str, user_input: str | None, uploaded_csv: bytes | None) -> None:
+def _append_user_comment(df: pd.DataFrame, comment: str) -> pd.DataFrame:
+    """Append a single user-supplied comment as an Amazon-shaped review row."""
+    text = (comment or "").strip()
+    if not text:
+        return df
+
+    tz = pytz.timezone("Europe/Istanbul")
+    now = datetime.now(tz)
+
+    def _first(col: str):
+        if col in df.columns:
+            vals = df[col].dropna()
+            if not vals.empty:
+                return vals.iloc[0]
+        return None
+
+    row = {col: None for col in df.columns}
+    row.update({
+        "review_id": f"user_comment_{int(now.timestamp())}",
+        "asin": _first("asin"),
+        "title": None,
+        "rating": None,
+        "body": text,
+        "review_date": now.date().isoformat(),
+        "product_title": _first("product_title"),
+        "product_description": _first("product_description"),
+        "product_url": _first("product_url"),
+        "source": "user_input",
+        "review_summary": None,
+        "collected_at": now.strftime("%Y-%m-%d %H:%M"),
+    })
+
+    return pd.concat([df, pd.DataFrame([row])], ignore_index=True)
+
+
+def run_pipeline(
+    run_id: str,
+    user_input: str | None,
+    uploaded_csv: bytes | None,
+    user_comment: str | None = None,
+) -> None:
     """Blocking pipeline worker. Emits SSE events into the run's asyncio queue."""
     assert MODELS is not None
     state = RUNS[run_id]
@@ -202,6 +244,9 @@ def run_pipeline(run_id: str, user_input: str | None, uploaded_csv: bytes | None
 
         if df is None or df.empty:
             raise RuntimeError("Bu ürün için yorum bulunamadı.")
+
+        if user_comment and user_comment.strip():
+            df = _append_user_comment(df, user_comment)
 
         product_title = None
         product_id = None
@@ -346,6 +391,7 @@ async def health():
 @app.post("/api/run")
 async def create_run(
     input: str | None = Form(None),
+    comment: str | None = Form(None),
     file: UploadFile | None = File(None),
 ):
     if MODELS is None:
@@ -363,7 +409,7 @@ async def create_run(
         csv_bytes = await file.read()
 
     # Worker runs on default thread executor so it doesn't block the event loop.
-    loop.run_in_executor(None, run_pipeline, run_id, input, csv_bytes)
+    loop.run_in_executor(None, run_pipeline, run_id, input, csv_bytes, comment)
 
     return {"run_id": run_id}
 

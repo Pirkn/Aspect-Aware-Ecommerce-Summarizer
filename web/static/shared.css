@@ -132,6 +132,11 @@ body {
 .btn-secondary { background: none; color: var(--muted); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 16px; font-family: inherit; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; gap: 8px; }
 .btn-secondary:hover { color: var(--text); border-color: var(--text); }
 
+.comment-shell { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; transition: border-color 0.15s, box-shadow 0.15s; margin-top: -4px; }
+.comment-shell:focus-within { border-color: var(--text); box-shadow: 0 0 0 3px rgba(26,24,20,0.04); }
+.comment-shell textarea { width: 100%; border: none; outline: none; background: transparent; font-family: inherit; font-size: 13px; color: var(--text); resize: vertical; min-height: 48px; line-height: 1.5; }
+.comment-shell textarea::placeholder { color: var(--muted); }
+
 .upload-row { display: flex; justify-content: center; margin-top: -8px; }
 
 .demo-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
