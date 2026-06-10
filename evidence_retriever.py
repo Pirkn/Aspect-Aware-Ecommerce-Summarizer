@@ -13,6 +13,22 @@ class EvidenceRetriever:
     """
 
     ASPECTS = ["kargo", "paketleme", "fiyat_performans", "kalite", "genel_memnuniyet"]
+    EVIDENCE_COLUMNS = [
+        "product_id",
+        "product_title",
+        "aspect",
+        "summary_source",
+        "summary_text",
+        "evidence_rank",
+        "similarity",
+        "matched_sentence",
+        "matched_sent_idx",
+        "review_id",
+        "rating",
+        "mmr_rank",
+        "relevance_score",
+        "full_review_text",
+    ]
 
     def __init__(
         self,
@@ -90,7 +106,7 @@ class EvidenceRetriever:
         reviews_df: pd.DataFrame | None = None,
     ) -> pd.DataFrame:
         if summaries_df is None or summaries_df.empty or mmr_df is None or mmr_df.empty:
-            return pd.DataFrame()
+            return pd.DataFrame(columns=self.EVIDENCE_COLUMNS)
 
         s = summaries_df.copy()
         s[self.summary_col] = s[self.summary_col].astype("string")
@@ -98,11 +114,11 @@ class EvidenceRetriever:
         s = s.reset_index(drop=True)
         if s.empty:
             print("No non-empty summaries to retrieve evidence for.")
-            return pd.DataFrame()
+            return pd.DataFrame(columns=self.EVIDENCE_COLUMNS)
 
         candidates = mmr_df.dropna(subset=[self.candidate_text_col]).reset_index(drop=True)
         if candidates.empty:
-            return pd.DataFrame()
+            return pd.DataFrame(columns=self.EVIDENCE_COLUMNS)
 
         print(f"Encoding {len(candidates)} candidate sentences...")
         cand_vecs = self._encode(candidates[self.candidate_text_col].astype(str).tolist())
@@ -151,7 +167,7 @@ class EvidenceRetriever:
                     "full_review_text": review_lookup.get(rid),
                 })
 
-        return pd.DataFrame(records)
+        return pd.DataFrame(records, columns=self.EVIDENCE_COLUMNS)
 
     def retrieve_and_save(
         self,

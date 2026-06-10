@@ -50,8 +50,21 @@ logging.basicConfig(
 log = logging.getLogger("review-evaluator")
 
 ASPECTS = ["kargo", "paketleme", "fiyat_performans", "kalite", "genel_memnuniyet"]
+SUMMARY_COLUMNS = [
+    "product_id",
+    "product_title",
+    "aspect",
+    "student_summary",
+    "teacher_summary",
+]
 OUTPUTS_DIR = PROJECT_ROOT / "Outputs"
 OUTPUTS_DIR.mkdir(exist_ok=True)
+DATA_DIR = PROJECT_ROOT / "data"
+DIAGNOSTIC_DATASETS = {
+    "B0C3BV19Q3": "HyperX Cloud III Oyuncu Kulaklığı",
+    "B0C8VK2Y95": "Hakiki Deri Kartlık",
+    "B0CHXF71NK": "Apple Watch Series 9 Akıllı Saat",
+}
 
 SCRAPER_TIMEOUT_SEC = 45
 
@@ -165,6 +178,21 @@ def _run_scrape_with_timeout(scraper: AmazonScraper, user_input: str, timeout: i
             ) from te
 
 
+def _load_diagnostic_dataset(asin: str) -> pd.DataFrame:
+    asin = (asin or "").strip().upper()
+    if asin not in DIAGNOSTIC_DATASETS:
+        raise RuntimeError(f"Tanımlı hızlı tanı ürünü değil: {asin}")
+
+    csv_path = DATA_DIR / f"{asin}_data.csv"
+    if not csv_path.exists():
+        raise RuntimeError(f"Hazır veri dosyası bulunamadı: {csv_path.name}")
+
+    try:
+        return pd.read_csv(csv_path)
+    except Exception as e:
+        raise RuntimeError(f"Hazır veri CSV'si okunamadı: {e}") from e
+
+
 def _aspect_counts(labeled_df: pd.DataFrame) -> dict[str, int]:
     out = {}
     for a in ASPECTS:
@@ -220,6 +248,7 @@ def run_pipeline(
     user_input: str | None,
     uploaded_csv: bytes | None,
     user_comment: str | None = None,
+    data_asin: str | None = None,
 ) -> None:
     """Blocking pipeline worker. Emits SSE events into the run's asyncio queue."""
     assert MODELS is not None
@@ -227,10 +256,12 @@ def run_pipeline(
     scraper = MODELS.scraper
 
     try:
-        # --- Stage 1: Scraping (or CSV upload) ---
-        state.emit("stage_start", {"stage": 1, "name": "scraping"})
+        # --- Stage 1: Data loading (scrape, upload, or diagnostic CSV) ---
+        state.emit("stage_start", {"stage": 1, "name": "data_loading"})
 
-        if uploaded_csv is not None:
+        if data_asin:
+            df = _load_diagnostic_dataset(data_asin)
+        elif uploaded_csv is not None:
             try:
                 df = pd.read_csv(io.BytesIO(uploaded_csv))
             except Exception as e:
@@ -392,12 +423,13 @@ async def health():
 async def create_run(
     input: str | None = Form(None),
     comment: str | None = Form(None),
+    data_asin: str | None = Form(None),
     file: UploadFile | None = File(None),
 ):
     if MODELS is None:
         raise HTTPException(status_code=503, detail="Models not loaded yet.")
-    if not input and file is None:
-        raise HTTPException(status_code=400, detail="Provide 'input' or 'file'.")
+    if not input and file is None and not data_asin:
+        raise HTTPException(status_code=400, detail="Provide 'input', 'file', or 'data_asin'.")
 
     run_id = uuid.uuid4().hex[:12]
     loop = asyncio.get_running_loop()
@@ -409,7 +441,7 @@ async def create_run(
         csv_bytes = await file.read()
 
     # Worker runs on default thread executor so it doesn't block the event loop.
-    loop.run_in_executor(None, run_pipeline, run_id, input, csv_bytes, comment)
+    loop.run_in_executor(None, run_pipeline, run_id, input, csv_bytes, comment, data_asin)
 
     return {"run_id": run_id}
 
@@ -464,7 +496,7 @@ def _load_results_payload(state: RunState) -> dict[str, Any]:
 
     summaries = []
     if summaries_csv.exists():
-        sdf = pd.read_csv(summaries_csv)
+        sdf = _read_csv_or_empty(summaries_csv, SUMMARY_COLUMNS)
         for _, row in sdf.iterrows():
             summaries.append({
                 "aspect": row["aspect"],
@@ -475,7 +507,7 @@ def _load_results_payload(state: RunState) -> dict[str, Any]:
 
     evidence = []
     if evidence_csv.exists():
-        edf = pd.read_csv(evidence_csv)
+        edf = _read_csv_or_empty(evidence_csv, EvidenceRetriever.EVIDENCE_COLUMNS)
         for _, row in edf.iterrows():
             evidence.append({
                 "aspect": row["aspect"],
@@ -491,13 +523,13 @@ def _load_results_payload(state: RunState) -> dict[str, Any]:
 
     product_title = state.product_title
     if product_title is None and summaries_csv.exists():
-        sdf = pd.read_csv(summaries_csv)
+        sdf = _read_csv_or_empty(summaries_csv, SUMMARY_COLUMNS)
         if "product_title" in sdf.columns and not sdf["product_title"].dropna().empty:
             product_title = sdf["product_title"].dropna().iloc[0]
 
     product_id = state.product_id
     if product_id is None and summaries_csv.exists():
-        sdf = pd.read_csv(summaries_csv)
+        sdf = _read_csv_or_empty(summaries_csv, SUMMARY_COLUMNS)
         if "product_id" in sdf.columns and not sdf["product_id"].dropna().empty:
             product_id = sdf["product_id"].dropna().iloc[0]
 
@@ -510,6 +542,13 @@ def _load_results_payload(state: RunState) -> dict[str, Any]:
         "summaries": summaries,
         "evidence": evidence,
     }
+
+
+def _read_csv_or_empty(path: Path, columns: list[str]) -> pd.DataFrame:
+    try:
+        return pd.read_csv(path)
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame(columns=columns)
 
 
 def _clean_cell(v) -> str | None:

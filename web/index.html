@@ -29,30 +29,30 @@ const ASPECT_LABELS = {
 
 const DEMO_PRODUCTS = [
   {
-    asin: "B0FVYFD3HZ",
-    emoji: "🤖",
-    title: "Philips HomeRun 2000 Robot Süpürge ve Paspas",
-    meta: "Amazon TR · robot süpürge",
+    asin: "B0C3BV19Q3",
+    emoji: "H3",
+    title: "HyperX Cloud III Oyuncu Kulaklığı",
+    meta: "Hazır CSV · hızlı tanı",
   },
   {
-    asin: "B0DLC71NGG",
-    emoji: "🎧",
-    title: "Kablosuz Kulaklık (demo kart — ASIN'i güncelleyin)",
-    meta: "Amazon TR · örnek ürün",
+    asin: "B0C8VK2Y95",
+    emoji: "DK",
+    title: "Hakiki Deri Kartlık",
+    meta: "Hazır CSV · hızlı tanı",
   },
   {
-    asin: "B0CHX1W1XY",
-    emoji: "☕",
-    title: "Espresso Makinesi (demo kart — ASIN'i güncelleyin)",
-    meta: "Amazon TR · örnek ürün",
+    asin: "B0CHXF71NK",
+    emoji: "S9",
+    title: "Apple Watch Series 9 Akıllı Saat",
+    meta: "Hazır CSV · hızlı tanı",
   },
 ];
 
 const STAGES = [
   {
     key: "scraping",
-    title: "Yorumlar toplanıyor",
-    sub: "Amazon'dan gerçek zamanlı scrape",
+    title: "Yorumlar hazırlanıyor",
+    sub: "Canlı scrape, CSV yükleme veya hazır veri",
   },
   {
     key: "preprocessing",
@@ -142,7 +142,7 @@ function formatElapsed(ms) {
    Act 1 — Landing / input
 ================================================================== */
 
-function Landing({ onSubmit, onFileSubmit, error }) {
+function Landing({ onSubmit, onFileSubmit, onPresetSubmit, error }) {
   const [value, setValue] = React.useState('');
   const [comment, setComment] = React.useState('');
   const fileRef = React.useRef(null);
@@ -157,7 +157,7 @@ function Landing({ onSubmit, onFileSubmit, error }) {
 
   const handleDemo = (asin) => {
     setValue(asin);
-    onSubmit(asin, comment.trim());
+    onPresetSubmit(asin, comment.trim());
   };
 
   const handleFileChange = (e) => {
@@ -594,13 +594,14 @@ function App() {
   const [resultData, setResultData] = React.useState(null);
   const [landingError, setLandingError] = React.useState(null);
 
-  const startRun = async (text, file, comment) => {
+  const startRun = async (text, file, comment, dataAsin) => {
     setLandingError(null);
     try {
       const fd = new FormData();
       if (text) fd.append('input', text);
       if (file) fd.append('file', file);
       if (comment) fd.append('comment', comment);
+      if (dataAsin) fd.append('data_asin', dataAsin);
       const res = await fetch('/api/run', { method: 'POST', body: fd });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
@@ -616,6 +617,7 @@ function App() {
 
   const handleSubmit = (text, comment) => startRun(text, null, comment);
   const handleFileSubmit = (file, comment) => startRun(null, file, comment);
+  const handlePresetSubmit = (asin, comment) => startRun(null, null, comment, asin);
 
   const handleComplete = async (resultUrl) => {
     try {
@@ -638,7 +640,7 @@ function App() {
   };
 
   if (view === 'landing') {
-    return <Landing onSubmit={handleSubmit} onFileSubmit={handleFileSubmit} error={landingError}/>;
+    return <Landing onSubmit={handleSubmit} onFileSubmit={handleFileSubmit} onPresetSubmit={handlePresetSubmit} error={landingError}/>;
   }
   if (view === 'progress') {
     return <Progress runId={runId} onComplete={handleComplete} onRetry={handleReset}/>;

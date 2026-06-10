@@ -3,6 +3,7 @@ import re
 import pytz
 import pandas as pd
 from datetime import datetime
+from pathlib import Path
 import threading
 
 from selenium import webdriver
@@ -15,6 +16,7 @@ AMAZON_BASE = "https://www.amazon.com.tr"
 AMAZON_LOGIN_URL = (
     "https://www.amazon.com.tr/"
 )
+DATA_DIR = Path(__file__).resolve().parent / "data"
 
 TR_MONTHS = {
     "Ocak": 1, "Şubat": 2, "Mart": 3, "Nisan": 4, "Mayıs": 5, "Haziran": 6,
@@ -40,7 +42,9 @@ class AmazonScraper:
 
         print(f"Scraping ASIN: {asin}")
         df = self._scrape_product(asin, target_n=target_n, max_pages=max_pages, wait_timeout=wait_timeout)
+        output_path = self._save_scraped_data(asin, df)
         print(f"  -> {len(df)} reviews collected")
+        print(f"  -> scraped data saved to {output_path}")
         return df
 
     def close(self):
@@ -84,6 +88,13 @@ class AmazonScraper:
         if m:
             return m.group(1).upper()
         return None
+
+    @staticmethod
+    def _save_scraped_data(asin: str, df: pd.DataFrame) -> Path:
+        DATA_DIR.mkdir(exist_ok=True)
+        output_path = DATA_DIR / f"{asin}_data.csv"
+        df.to_csv(output_path, index=False)
+        return output_path
 
     def _build_review_url(self, asin: str, page: int) -> str:
         ref = "cm_cr_arp_d_viewopt_sr" if page <= 1 else f"cm_cr_arp_d_paging_btm_next_{page}"
