@@ -1,0 +1,766 @@
+,target_text,prediction_trained,prediction_non_trained
+0,Kargo hızlı ve zamanında teslim edilmiş.,Kargo hızlı ve zamanında teslim edilmiş.,Kargo süreci genellikle hızlı ve düzgün gerçekleşiyor.
+1,Ambalajın sağlam geldiği ve ürünün korunduğu belirtilmiş.,Paketleme sağlam ve ürünün korunması iyi görünüyor.,"Paketleme sağlam ve güzel, kutu içinde ürünlerin korunması ve hasar görmediği gözlemlendi."
+2,Fiyatının uygun ve karşılığında tatmin edici olduğu söylenmiş.,Fiyatına göre oldukça avantajlı ve hesaplı bulunmuş.,Ürün fiyatına göre kalitesi iyi ve fiyat avantajı sunuyor.
+3,Kalitesinin iyi ve uzun ömürlü olduğu ifade edilmiş.,Pil kalitesi ve ömrü genel olarak iyi bulunmuş.,Ürün kalitesi iyi.
+4,"Genel memnuniyet yüksek, ürünün tekrar alınabileceği belirtilmiş.",Ürün genel olarak beğenilmiş ve tekrar tercih edilebilecek bir ürün olarak görülmüş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+5,Kargo teslimatı hızlı ve sorunsuz olarak değerlendirilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo süreci genellikle hızlı ve özenlidir.
+6,Paketleme için özenli ve koruyucu bir gönderim yapıldığı belirtilmiş.,Paketleme genel olarak iyi ve ürünün korunaklı ulaştığı belirtilmiş.,Paketleme konusunda bazı sorunlar ve eksiklikler olduğu görülmektedir.
+7,Ürünün fiyatının uygun ve fiyat-performans açısından başarılı olduğu söylenmiş.,Fiyatının uygun olduğu ve fiyat-performans açısından başarılı bulunduğu söyleniyor.,Ürün fiyatına değer.
+8,"Ürünün kaliteli, taze ve köpekler tarafından sevilen bir mama olduğu ifade edilmiş.","Ürünün kaliteli, besleyici ve hayvana uygun olduğu vurgulanıyor.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+9,Kullanıcılar üründen memnun kalmış ve tavsiye etmeye eğilimli görünmüş.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve ürün tavsiye ediliyor.
+10,,None,null
+11,,None,Paketleme null.
+12,,None,Fiyat-performans dengesi iyi görünüyor.
+13,Ürün sessiz çalışıyor ve kullanımda sağlam bir izlenim veriyor.,"Ürün sessiz, güzel ve beklentiyi karşılayan bir yapıda görünüyor.",Ürün kalitesi iyi görünüyor.
+14,Kullanıcılar üründen memnun ve cihazı beğeniyor.,Kullanıcılar üründen memnun kalmış ve olumlu bir izlenim bırakmış.,Kullanıcılar genel olarak memnundur ve tekrar satın alma eğilimindedir.
+15,,None,null
+16,Ürün siyah Casio kutusunda teslim edilmiş.,Ürün kutusuna benzer bir ambalajla gelmiş.,Paketleme kalitesi iyi.
+17,Fiyatına göre iyi bir değer sunduğu belirtilmiş.,Fiyatına göre iyi bir performans sunduğu belirtilmiş.,Ürün fiyatına değer.
+18,Şık bir görünüme sahip olduğu ve kordonunun ayarlanabildiği anlaşılıyor.,Saatin şık ve şık görünümü beğenilmiş.,null
+19,Genel olarak bir sorun yaşanmadığı ve memnuniyetin yüksek olduğu görülüyor.,Ürün genel olarak memnuniyet yaratmış ve tavsiye edilebilir bulunmuş.,Genel memnuniyet yüksek.
+20,Kargo hızlı ve zamanından önce teslim edilmiş görünüyor.,Teslimatın hızlı ve zamanından önce ulaştığı belirtiliyor.,Kargo süreci genellikle hızlı ve güvenilir olarak gözükmektedir.
+21,Ürün sağlam ve özenli paketlenmiş olarak ulaşmış.,Ürün sağlam ve özenli paketlenmiş olarak gelmiş.,Ürün paketleme olarak sağlam ve özenli olarak geldi.
+22,Fiyatına göre oldukça başarılı ve kullanışlı bulunmuş.,Fiyatına göre oldukça işlevli ve parasını karşılıyor.,Ürün fiyatına değer.
+23,Kalitesi ve kullanım rahatlığıyla beğenilen sağlam bir ürün olarak görülmüş.,"Ürünün kaliteli, kullanışlı ve sağlam olduğu vurgulanıyor.",Ürün kalitesi genel olarak olumlu olarak değerlendiriliyor.
+24,Kullanıcılar üründen memnun kalıp tavsiye ediyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+25,Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo hızlı ve teslimat sorunsuz gerçekleşmiş.,Kargo süreci genellikle sorun yaşamadan ve hızlı teslimatla gerçekleşiyor.
+26,,None,Paketleme null.
+27,Ürün fiyatına göre oldukça avantajlı ve fiyat-performans açısından başarılı bulunmuş.,Ürün fiyatına göre oldukça avantajlı ve fiyat-performans açısından başarılı görülmüş.,Ürün fiyatına değer.
+28,"Pil performansı ve dayanıklılığı genel olarak iyi, akma yapmayan güvenilir bir ürün olarak görülmüş.",Ürünün kalitesi ve dayanıklılığı genel olarak olumlu değerlendirilmiş.,Ürün kalitesi iyi ve dayanıklıdır.
+29,Kullanıcılar üründen memnun kalmış ve tekrar tercih edebileceklerini belirtmiş.,Ürün genel olarak beğenilmiş ve tekrar tercih edilebilecek bir ürün olarak görülmüş.,Ürün genel olarak kullanıcı memnuniyetini karşılayıp tavsiye ediliyor.
+30,Hızlı ve sağlam ulaştığı belirtilmiş.,Kargo hızlı ve sağlam şekilde teslim edilmiş.,Kargo süreci hızlı ve sağlamdır.
+31,Yırtık kutuyla gönderildiği için paketleme eleştirilmiş.,Paketleme yetersiz bulunmuş ve kutunun yırtık geldiği söylenmiş.,Paketleme kalitesi sorunlu.
+32,,None,"Fiyat performansı değerlendirilemiyor, çünkü yeterli kanıt yok."
+33,"Kalitesi ve kokusunun beğenildiği, ürünün tavsiye edildiği görülüyor.","Kokusu ve ferahlatıcı etkisi beğenilmiş, ürün kaliteli bulunmuş.",Ürün kalitesi tatmin edici.
+34,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Kullanıcılar genel olarak memnun ve tavsiye ediyorlar.
+35,Teslimatın sorunsuz ve hızlı olduğu belirtilmiş.,Teslimat hızlı ve sorunsuz gerçekleşmiş.,Teslimat hızlıydı.
+36,Ürünün iyi paketlenmiş ve korunaklı geldiği söylenmiş.,Paketleme iyi ve ürün kaliteli şekilde ulaşmış.,Paketleme kalitesi beklenenin üzerinde.
+37,Performansına göre fiyatının makul olduğu ifade edilmiş.,Fiyatına göre performansının makul olduğu söyleniyor.,Fiyatı performansa uygun.
+38,"Kablonun kaliteli, sağlam ve görüntü aktarımında başarılı olduğu vurgulanmış.","Kablo kaliteli, sağlam ve görüntü aktarımında başarılı bulunuyor.",Ürün kalitesi yüksek ve sağlamdır.
+39,Ürün memnuniyet vermiş ve tavsiye edilmiş.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Ürün genel olarak kullanıcılar tarafından memnuniyetle karşılanıyor ve tavsiye ediliyor.
+40,Kargo hızlı ve sorunsuz ulaştığı için teslimat süreci olumlu değerlendirilmiş.,Ürün hızlı ve güvenli şekilde teslim edilmiş.,Kargo süreci hızlı ve güvenilir.
+41,Ambalajın çok iyi yapıldığı ve ürünün korunaklı geldiği belirtilmiş.,Paketleme çok iyi yapılmış.,Paketleme çok iyi.
+42,Fiyatının uygun olduğu ve performansıyla fiyatını karşıladığı söylenmiş.,Fiyatına göre iyi bir performans sunduğu belirtilmiş.,Ürün fiyatına değer.
+43,"Ürünün malzeme kalitesi, sağlamlığı ve işçiliği beğenilmiş.","Malzeme ve işçilik kalitesi yüksek, sağlam ve dayanıklı bulunmuş.",Ürün kalitesi yüksek ve sağlam bir yapıya sahiptir.
+44,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini belirtmiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcı memnuniyetini yüksek seviyede karşılamaktadır.
+45,Kargo hızlı ve teslimat sorunsuz görünüyor.,Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Hızlı ve güvenilir kargo süreci deneyimi sunuluyor.
+46,Paketleme özenli ve ürün sağlam şekilde ulaşıyor.,Paketleme özenli ve ürün sağlam şekilde ulaşmış.,Paketleme kalitesi iyi.
+47,Ürün fiyatına göre avantajlı ve değerli bulunuyor.,Ürün fiyatına göre avantajlı ve parasını hak eden bir seçenek olarak görülüyor.,Ürün genellikle fiyatına değer.
+48,"Ürün orijinal, kaliteli ve uzun ömürlü olarak değerlendiriliyor.","Ürünün orijinal, kaliteli ve uzun ömürlü olduğu vurgulanıyor.",Ürün kalitesi sağlam ve beklentileri karşılıyor.
+49,Kullanıcılar üründen memnun kalıp tavsiye ediyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılayıp tavsiye ediliyor.
+50,Teslimatın çok hızlı olduğu ve gönderim sürecinin iyi geçtiği belirtiliyor.,Teslimatın hızlı olduğu ve kargo sürecinin sorunsuz ilerlediği belirtiliyor.,Teslimat hızı ve kargo süreci başarılıydı.
+51,Paketleme başarılı ve ürünün sorunsuz ulaştığı ifade ediliyor.,Paketleme ve kargo iyi bulunmuş.,Paketleme gayet iyi.
+52,İndirimdeyken alınmaya değer bulunduğu anlaşılıyor.,İndirimde olduğu için stok yapıldığı belirtilmiş.,Ürün fiyatına değer.
+53,"Lezzeti ve kıvamı beğenilen, glutensiz olduğu anlaşılmayan kaliteli bir ürün olarak övülüyor.","Ürünün tadı ve kıvamı beğenilmiş, glutensiz makarna olarak da başarılı bulunmuş.",Ürün kalitesi yüksek ve lezzetli.
+54,Ürün genel olarak çok beğeniliyor ve tekrar tercih edildiği anlaşılıyor.,Ürün genel olarak beğenilmiş ve tekrar tercih edilebilecek bir ürün olarak görülmüş.,Ürün genel olarak memnuniyeti yüksek ve tavsiye ediliyor.
+55,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci bazen beklenenin aksine uzun sürebilir.
+56,Paketin sağlam geldiği ve ürünün hasar görmediği söyleniyor.,Paketleme genel olarak iyi ve ürün hasarsız ulaşmış.,Paketleme iyi ve hasarsızdır.
+57,Fiyatının uygun ve indirimli alındığında avantajlı olduğu ifade ediliyor.,Fiyatının uygun olduğu ve indirim dönemlerinde avantajlı bulunduğu söyleniyor.,Ürün fiyatına değer.
+58,"Ürünün kaliteli, doğal ve saç derisine uyumlu olduğu vurgulanıyor.","Ürünün kaliteli, kullanışlı ve saçları iyi temizleyen bir yapıda olduğu belirtilmiş.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+59,Kullanıcılar üründen memnun kaldıklarını ve severek kullandıklarını belirtiyor.,Kullanıcılar üründen memnun kalmış ve tekrar kullanmayı düşündüklerini belirtmiş.,Ürün genel olarak memnun kalınan ve tavsiye edilen bir ürün gibi görünüyor.
+60,Teslimat ve gönderim süreci güvenli ve sorunsuz bulunmuş.,Ürün güvenle ve sorunsuz ulaştı.,Kargo süreci genellikle güvenilir ve hızlıdır.
+61,Paketlemenin ürünün korunması açısından iyi olduğu belirtilmiş.,Paketleme özenli bulunmuş ve ürünün iyi korunduğu söylenmiş.,Paketleme kalitesi sorunlu olabilir.
+62,Fiyatının yüksek olduğu düşünülse de performansıyla bunu karşıladığı söylenmiş.,Fiyatının yüksek olduğu belirtilse de performansı fiyatına değdiği söyleniyor.,"Ürün fiyatına değer, ancak fiyatı biraz yüksek gelebilir."
+63,Ürünün kalitesi ve ısı iletim başarısı güçlü bulunmuş.,"Ürünün kalitesi, yapısı ve ısı iletim performansı yüksek bulunmuş.",Ürün kalitesi yüksek ve işçilik mükemmel.
+64,Ürün genel olarak beğenilmiş ve tavsiye edilmiştir.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak tavsiye edilip edinmektedir.
+65,Kargo hızlı ve teslimat süreci başarılı bulunmuş.,Kargo hızlı ve teslimat süreci memnuniyet verici bulunmuş.,Hızlı ve başarılı kargo süreci.
+66,Ürün koruma bandıyla ve güvenli paketlenmiş olarak gelmiş.,Ürün koruma bandıyla ve başarılı paketlemeyle gelmiş.,Paketleme kalitesi genellikle iyi ama bazen ürün hasar görebilir.
+67,Ürünün fiyatını hak ettiği ve uygun fiyata alındığı belirtilmiş.,Ürün fiyatına göre değerli ve uygun fiyatlı bulunmuş.,Ürün fiyatına değer ve güncel ekonomide abartı bir fiyat değil.
+68,"Maskaranın ayırma, kalıcılık ve akmama performansı beğenilmiş.","Ürünün kalitesi, dayanıklılığı ve doğal görünümü beğenilmiş.",Ürün kalitesi iyi ve doğal bir görünüm sağlar.
+69,Ürün genel olarak çok beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+70,,None,null
+71,,None,null
+72,,None,Fiyat-performans dengesi iyi görünüyor.
+73,Saatin Casio kalitesiyle dikkat çektiği ve şık göründüğü belirtiliyor.,Casio kalitesinin yüksek olduğu ve parlamasının beğenildiği söyleniyor.,Ürün kalitesi yüksek ve sağlamdır.
+74,Gündelik kullanım için tercih edilip memnuniyet ifade ediliyor.,Kullanım için alınmış ve memnuniyet vermiş.,Genel memnuniyet yüksek.
+75,Ürün teslimatı sorunsuz ve zamanında gerçekleşmiş görünüyor.,Teslimatın sorunsuz ve zamanında olduğu belirtiliyor.,Kargo süreci genellikle sorun yaşamadan gerçekleşiyor.
+76,Kutu içi teslimatın küçük ve düzenli olduğu belirtilmiş.,Paketleme genel olarak iyi bulunmuş ve ürünün korunaklı ulaştığı belirtilmiş.,Paketleme kalitesi kötü.
+77,Fiyatına göre performansı yüksek ve alınmaya değer bulunmuş.,Ürün fiyatına göre oldukça iyi bir performans sunuyor.,Ürün fiyatına göre iyi performans sunar.
+78,Malzeme ve genel ürün kalitesi olumlu değerlendirilmiş.,Malzeme ve kullanım kalitesi genel olarak yüksek ve ürün sağlam bulunmuş.,Ürün kalitesi genel olarak olumlu yorumlar almaktadır.
+79,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+80,Kargo hızlı ve teslimat sorunsuz gerçekleşmiş.,Kargo hızlı ve teslimat süreci sorunsuz ilerlemiş.,Kargo süreci hızlı ve sorunsuz gerçekleşiyor.
+81,Paket sorunsuz ulaştığı için ambalaj genel olarak iyi görünüyor.,Paketin sorunsuz ulaştığı ve ürünün iyi korunmuş olduğu söyleniyor.,Paketleme kalitesi sorunlu görünüyor.
+82,Ürün fiyat açısından uygun bulunuyor ve fiyatını hak ettiği düşünülüyor.,Ürün fiyatına göre avantajlı ve uygun fiyatlı bulunmuş.,Ürün fiyatına değip değmediği konusunda kararsızlık var.
+83,"Ürün yumuşak, kullanışlı ve genel olarak kaliteli bulunuyor.","Ürünün kullanım deneyimi ve işçiliği beğenilmiş, sağlam ve kullanışlı bulunmuş.",Ürün kalitesi genel olarak memnuniyet verici ve sağlamdır.
+84,Ürün genel olarak beğenilmiş ve tavsiye ediliyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+85,Kargo süreci hızlı ve sorunsuz görünürken fatura gönderimiyle ilgili sorunlar dile getirilmiş.,Kargo süreci genel olarak olumlu değerlendirilmiş.,Kargo süreci genellikle olumlu olarak değerlendiriliyor.
+86,Ürün sağlam ve kutusu açılmamış şekilde teslim edilmiş.,Ürün sağlam paketlenmiş ve kutusundan özenli şekilde gelmiş.,Ürün paketlemesi sağlam ve güzel geldi.
+87,Fiyatına göre başarılı ve alınabilir bir ürün olarak görülüyor.,Fiyatına göre başarılı ve uygun fiyatlı bir ürün olarak görülmüş.,Ürünün fiyatına kıyasla başarılı buldum.
+88,Malzeme kalitesi ve dayanıklılığı konusunda karışık bir izlenim var.,Malzeme kalitesi ve sağlamlığı genel olarak zayıf bulunmuş.,Ürün kalitesi vasat ve bazı kullanıcılar düşük kaliteye sahip olduğunu belirtiyorlar.
+89,Kullanıcılar üründen memnun kalıp tekrar satın alma eğilimi gösteriyor.,Kullanıcılar üründen memnun kaldıklarını ve tekrar almayı düşündüklerini belirtiyor.,Ürün genel olarak memnun kalınan ve tavsiye edilen bir ürün gibi görünüyor.
+90,Teslimat hızlı ve ürün kısa sürede ulaşıyor.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Kargo süreci genellikle hızlı ve teslimatlar kısa sürede gerçekleşiyor.
+91,Paketleme yetersiz bulunmuş ve ürün hasarlı gelebiliyor.,"Paketleme yetersiz bulunmuş, ürünün kapağı kırık gelmiştir.",Paketleme kalitesi genellikle kötüydü.
+92,Fiyatının uygun olduğu ve parasına değdiği söyleniyor.,Ürün fiyatına göre avantajlı ve indirimle alınca daha iyi değerlendirilmiş.,Ürün fiyatına değer.
+93,"Ürünün yapısı, kokusu ve emiciliği beğeniliyor.","Ürünün yapısı, kokusu ve nemlendirmesi beğenilmiş.",Ürün kalitesi iyi ve dayanıklıdır.
+94,Kullanıcılar üründen memnun ve tavsiye ediyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Uygulama genel olarak memnuniyeti yüksek ve tavsiye edilebilir.
+95,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Teslimat hızlı ve paketleme özenlidir.
+96,Paketlemenin özenli ve ürünleri iyi koruyan bir yapıda olduğu söyleniyor.,Paketleme özenli ve ürünler sağlam ulaşmış.,Paketleme özenli ve genellikle muntazam.
+97,Fiyatının uygun ve avantajlı olduğu vurgulanıyor.,Fiyatının uygun ve indirimde alınabileceği düşünülüyor.,Ürün fiyatı makul ve hesaplıdır.
+98,"Çayın kaliteli, aroması ve tadı beğenilen bir ürün olduğu ifade ediliyor.","Ürünün kalitesi ve aroması beğenilmiş, sağlam ve kaliteli bulunmuş.",Ürün kalitesi genel olarak olumlu yorumlar almaktadır.
+99,Ürün genel olarak beğeniliyor ve tavsiye ediliyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak memnuniyet veriyorsa ve tavsiye ediliyorsa: null
+100,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle sorunsuz ve hızlı gerçekleşse de bazı durumlarda ezik ve yıpranmış kutularla veya kullanılan ürünlerin gönderilmesi gibi sorunlar yaşanabilir.
+101,Ürün yıpranmış ya da hasarlı kutuyla ve eksik korumayla gelmiş.,"Paketleme yetersiz bulunmuş, ürünün suyla ya da ezik geldiği belirtilmiş.",Ürün genellikle hasarlı olarak gönderiliyor.
+102,Fiyatına göre başarılı ve uygun bulunmuş.,Fiyatına göre başarılı ve avantajlı bulunmuş.,Ürün fiyat performans açısından başarılı görünüyor.
+103,"Malzeme kalitesi, sağlamlığı ve kullanım kolaylığı beğenilmiş.","Malzeme ve kullanım kalitesi beğenilmiş, ürün sağlam ve pratik bulunmuş.",Ürün kalitesi sağlam ve pratik bir şekilde tasarlanmış gibi görünüyor.
+104,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+105,Ürün hızlı ve sorunsuz teslim edilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve sağlamdır.
+106,Ürün orijinal ve özenli paketle gelmiş.,Ürün orijinal kutu ve ambalajla gelmiş.,Ürün paketleme kalitesi ve ambalajı çok güzel.
+107,Fiyatı uygun bulunmuş ve alınmaya değer görülmüş.,Fiyatının uygun ve alınabilir olduğu söyleniyor.,Ürün fiyatına değiyor.
+108,"Ürün kaliteli, sağlam ve orijinal olarak değerlendirilmiş.","Ürünün kaliteli, sağlam ve kullanışlı olduğu vurgulanıyor.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+109,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak tavsiye ediliyor ve kullanıcılar memnun kalıyor.
+110,Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Kargo hızlı ve zamanında teslim edilmiş görünüyor.,Kargo süreci genellikle zamanında ve güvenilir olarak gerçekleşiyor.
+111,Ürün özenli ve güzel paketlenmiş şekilde ulaşmış.,Ürün güzel paketlenmiş ve sağlam ulaşmış.,Paketleme kalitesi iyi.
+112,Fiyatının uygun olduğu ve indirimle alınmasının memnuniyet verdiği belirtilmiş.,Fiyatının uygun olduğu ve indirimde alınabileceği belirtilmiş.,Ürün fiyatına değer.
+113,"Pil kalitesi, dayanıklılığı ve uzun ömürlü kullanımı beğenilmiş.","Ürünün kalitesi, dayanıklılığı ve kullanım süresi beğenilmiş.",Ürün kalitesi yüksek ve uzun ömürlüdür.
+114,Ürün genel olarak beğenilmiş ve memnuniyetle tavsiye edilmiş.,Kullanıcılar üründen memnun kaldıklarını ve tekrar tercih edebileceklerini belirtmiş.,Ürün genel olarak memnun kalınan ve tekrar satın alınabilecek kaliteye sahiptir.
+115,Kargo hızlı ve teslimat sorunsuz gerçekleşmiş.,Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo süreci genellikle sorunsuz ve hızlıdır.
+116,Paketleme koruyucu ambalaj açısından yetersiz bulunmuş.,Paketlemenin koruyucu bandı eksik ya da göstermelik olduğu belirtilmiş.,"Paketleme kalitesi sorunlu, ürünün korunması için gereken koruyucu bandın uygun yerine yerleştirilmemesi ve bazı durumlarda ürünün orijinal olmadığı görülmektedir."
+117,,None,Fiyat-performans dengesi iyi.
+118,Ürün hacim verme ve ayırma performansıyla beğenilmiş.,Ürünün akışkanlığı ve hacim verme performansı beğenilmiş.,Ürün kalitesi iyi görünüyor.
+119,Ürün beğenilmiş ve tekrar kullanılan bir rimel olarak görülmüş.,Ürün beğenilmiş ve tekrar tercih edilebilecek bir ürün olarak görülmüş.,Ürün genel olarak memnuniyeti yüksek ve tavsiye ediliyor.
+120,Kargo süreci çoğunlukla hızlı ve zamanında teslimat olarak değerlendirilmiş.,Kargo süreci hızlı ve teslimat zamanından önce gerçekleşmiş.,Kargo süreci genellikle hızlı ve teslimat hızı beklenenin üzerinde gerçekleşmektedir.
+121,"Paketlemenin açık, yırtık ya da hasarlı gelmesi eleştirilmiş.","Paketleme yetersiz bulunmuş, ürünün açık ya da yırtık geldiği belirtilmiş.",Paketleme kalitesi sorunlu.
+122,Ürün fiyatına göre iyi bir fiyat-performans sunduğu söylenmiş.,Ürün fiyatına göre başarılı ve uygun bir fiyat-performans sunuyor.,Fiyat performans olarak çok uygun bir ürün...
+123,"Kahvenin kalitesi, aroması ve içiminin beğenildiği belirtilmiş.","Ürünün kalitesi, aroması ve tadı beğenilmiş.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+124,Ürün genel olarak beğenilmiş ve tekrar tercih edildiği ifade edilmiş.,Kullanıcılar üründen memnun kalmış ve tekrar almayı düşünecek kadar beğenmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+125,Teslimatın hızlı ve zamanında olduğu belirtiliyor.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci genellikle sorunlar içermektedir.
+126,"Paketlemenin zayıf olduğu, yırtık ve patlak geldiği söyleniyor.","Paketleme zayıf bulunmuş, ürünün hasarlı ya da patlak geldiği belirtilmiş.",Paketleme kalitesi genellikle düşük ve hasar görme riski yüksek görünüyor.
+127,Ürünün fiyat-performans açısından avantajlı bulunduğu ifade ediliyor.,Ürün fiyatına göre avantajlı ve fiyat-performans açısından beğenilmiş.,Ürün fiyat performans olarak memnun kalınmıştır.
+128,Kumun topaklanmasının ve genel ürün kalitesinin beğenildiği görülüyor.,"Topaklanması ve kokusu beğenilmiş, ürünün kalitesi olumlu değerlendirilmiş.",Ürün kalitesi iyi görünüyor.
+129,Ürün genel olarak beğeniliyor ve tekrar alınabileceği söyleniyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek gibi görünüyor.
+130,,None,Kargo süreci sorun yaratmadı.
+131,Paket ve ürün biraz tozlu gelmiş.,Paketin tozlu geldiği belirtilmiş.,Paketleme kalitesi iyi değil.
+132,Fiyatının yüksek olduğu hissi veriyor.,Fiyatının yüksek olduğu ve beklentiyi karşılamadığı söylenmiş.,Fiyat performans olarak beklentilerin üzerinde kalıyor.
+133,Çantanın genel kalitesi iyi ve malzemesi sağlam görünüyor.,"Çanta kalitesi ve malzemesi beğenilmiş, ancak bazı kullanıcılar askının zayıf olduğu ve zamanla bükülerek kötü görünmeye başladığı söylenmiş.",Ürün kalitesi gayet güzel ve herhangi bir sorunu yok...
+134,Ürün genel olarak beğenilmiş ve memnuniyet oluşturmuş.,Ürün genel olarak beğenilmiş ve memnuniyet ifade edilmiş.,Ürün genel memnuniyeti olumlu görünüyor.
+135,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Kargo süreci genellikle hızlı ve uygun fiyatlıdır.
+136,Paketleme özenli ve ürün iyi korunmuş görünüyor.,Paketleme özenli bulunmuş ve kutunun sağlam geldiği belirtilmiş.,Paketleme kalitesi iyi.
+137,Ürün fiyatına göre oldukça avantajlı bulunmuş.,Fiyatının uygun olduğu ve alınabilir bulunduğu söyleniyor.,Ürün fiyatına değer.
+138,"Ürünün kalitesi, kokusu ve nemlendirme etkisi beğenilmiş.","Ürünün kalitesi, kokusu ve kullanım performansı beğenilmiş.",Ürün kalitesi yüksek ve başarılı bir ürün.
+139,Kullanıcılar üründen memnun kalmış ve yeniden almayı düşünüyor.,Kullanıcılar üründen memnun kalmış ve tekrar tercih etmeye eğilimli görünmüş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+140,Kargo hızlı ve teslimat süreci genel olarak memnuniyet vermiş.,"Kargo süreci hızlı ve sorunsuz bulunmuş, ürünler zamanında teslim edilmiş.",Kargo süreci genellikle sorunlu ve kalitesizdir.
+141,Paketleme bazı yorumlarda özenli ve koruyucu bulunmuş.,"Paketleme özensiz bulunmuş, ürünün sızması ve hasarı yaşanmış.",Paketleme kalitesi genellikle sorunlu ve özensizdir.
+142,Fiyatının uygun ve avantajlı olduğu belirtilmiş.,Fiyatının uygun olduğu ve fiyatına göre iyi bir seçenek olduğu söyleniyor.,Ürün fiyatına değer.
+143,Ürünün kalitesi ve marka güveni olumlu değerlendirilmiş.,Ürünün kalitesi ve sağlamlığı beğenilmiş.,Ürün kalitesi genel olarak olumlu yorumlar almaktadır.
+144,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak başarılı ve tavsiye edilebilir.
+145,,None,null
+146,,None,null
+147,,None,Fiyat-performans dengesi iyi görünüyor.
+148,"Malzeme ve işçilik kalitesi beğenilmiş, ürünün dayanıklı olduğu belirtilmiş.","Malzeme ve işçilik kalitesi beğenilmiş, ürün dayanıklı bulunmuş.",Ürün kalitesi iyi ve işçiliği güzel.
+149,Ürünün uzun ömürlü bulunması genel memnuniyeti olumlu gösteriyor.,Ürün uzun ömürlü olduğu için memnuniyet yüksek görünüyor.,null
+150,Teslimatın hızlı ve zamanında olduğu belirtiliyor.,Teslimatın hızlı ve zamanında olduğu belirtiliyor.,Kargo süreci genellikle hızlı ve uygun fiyatlıdır.
+151,Paketlemenin özenli ve korunaklı olduğu ifade ediliyor.,Paketleme özenli ve korunaklı bulunmuş.,Paketleme kalitesi genellikle iyi ama bazen yırtık gelebiliyor.
+152,Fiyatın uygun ve alınan ürüne değer bulunduğu söyleniyor.,Fiyatının uygun olduğu ve fiyat-performans açısından tatmin ettiği söyleniyor.,Ürün fiyatı uygun görünmektedir.
+153,"Ürünün kaliteli, orijinal ve son kullanma tarihinin uzun olduğu vurgulanıyor.",Ürünün kaliteli ve köpekler tarafından beğenilen bir mama olduğu belirtiliyor.,Ürün kalitesi genel olarak olumlu yorumlar almaktadır.
+154,Kullanıcılar alışverişten memnun kaldıklarını ve ürünü tavsiye ettiklerini belirtiyor.,Köpeklerin mama konusunda çok beğenildiği ve tekrar tercih edileceği belirtiliyor.,Genel kullanıcı memnuniyeti yüksek ve ürün tavsiye ediliyor.
+155,Hızlı teslimat yapılmış.,Teslimatın hızlı olduğu belirtiliyor.,Teslimat hızı ve kurye deneyimi genellikle olumlu olarak yorumlanıyor.
+156,,None,Paketleme kalitesi sorunlu.
+157,Fiyatına göre iyi bir ürün olarak görülüyor.,Fiyatına göre iyi bir ürün olarak görülüyor.,Ürün fiyatına değer.
+158,Ürün sağlam ve kaliteli bulunmuş.,"Ürünün sağlam, rahat ve kaliteli olduğu vurgulanıyor.",Ürün kalitesi sağlam ve konforludur.
+159,Kullanıcılar üründen memnun kalmış ve tavsiye ediyor.,Kullanıcılar üründen memnun kalmış ve beğenmiş.,Ürün genel olarak kullanıcılar tarafından memnuniyetle karşılanıyor.
+160,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve iyi yönetilmektedir.
+161,Paketleme genel olarak iyi ve koruyucu bulunmuş.,Paketleme genel olarak iyi ve ürün korunaklı şekilde ulaşmış.,Paketleme kalitesi bazen iyi bazen kötü olabilir.
+162,Ürünün fiyatını hak ettiği ve alınmaya değer olduğu düşünülüyor.,Ürün fiyatına göre mantıklı ve parasını hak eden bir seçenek olarak görülüyor.,Ürün fiyatına değer.
+163,"Ürün kaliteli, sağlam ve beklentileri karşılayan bir yapıda görülüyor.",Ürünün kalitesi ve soğutma performansı beğenilmiş.,Ürün kalitesi yüksek ve beklentileri karşılayan bir ürün.
+164,Kullanıcılar üründen memnun kalmış ve tavsiye ediyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+165,Teslimat ve kargo süreci için hem hızlı ve sorunsuz yorumları hem de gecikme ve hasarlı ulaşma şikayetleri var.,Teslimatın geciktiği ve hasarlı ulaştığı belirtilmiş.,Kargo süreci bazen gecikmeli ve teslimat hızı sorunlu olabilir.
+166,Paketleme için iyi korunduğunu söyleyenler olsa da hasarlı teslimat şikayeti öne çıkıyor.,Paketleme iyi ve ürün sağlam ulaşmış.,Paketleme kalitesi sorunlu teslimatta hasarlı pakete neden oldu.
+167,"Fiyatı uygun bulanlar var, ancak ürünün fiyatına değmediğini düşünen yorumlar da dikkat çekiyor.",Fiyatının uygun olduğu ve bu seviyede bulunamadığı belirtilmiş.,Ürün uygun fiyatlıdır.
+168,"Ürünün kalitesi ve aroması beğeniliyor, fakat tadı ve gövdesi konusunda eleştiriler de var.","Ürünün tadı ve aroması beğenilmiş, genel olarak kaliteli bulunmuş.",Ürün kalitesi genel olarak iyi ancak bazı kullanıcılar tat ve gövde kalitesinde sorunlar olduğunu belirtti.
+169,"Üründen memnun kalan ve tekrar alacağını söyleyenler var, buna karşılık beğenmeyip yeniden almayacağını belirtenler de bulunuyor.",Ürün genel olarak beğenilmiş ve tekrar alınabileceği ifade edilmiş.,"Genel kullanıcı memnuniyeti karışık, bazı kullanıcılar memnunken bazıları ise memnun değil."
+170,Kargo hızlı ve sorunsuz ulaştığı için memnuniyet öne çıkıyor.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve sorun yaşamadan gerçekleşiyor.
+171,"Paketlemenin zayıf olduğu, ürünün yırtık ya da açık şekilde geldiği görülüyor.","Paketleme zayıf bulunmuş, ürünün patlak ya da yırtık geldiği belirtilmiş.",Paketleme kalitesi genellikle sorunlu ve ürün hasar görmüştür.
+172,Fiyatının uygun olduğu ve bu yönüyle tercih edildiği anlaşılıyor.,Fiyatının uygun olduğu ve fiyatına göre iyi bulunduğu söylenmiş.,Ürün fiyatına değer.
+173,Ürünün bazı teslimatlarda hasarlı ya da ufalanmış gelmesi kalite algısını zayıflatıyor.,"Ürünün kaliteli, sorunsuz ve köpeğin beğendiği bir mama olduğu belirtiliyor.",Ürün kalitesi konusunda bazı eleştiriler olsa da genel olarak iyi bir ürün olarak tanımlanmaktadır.
+174,Ürün genel olarak beğeniliyor ve tekrar alınmaya değer bulunuyor.,Kullanıcılar üründen memnun kalmış ve tekrar almayı düşünmüş.,Genel kullanıcı memnuniyeti yüksek gibi görünüyor.
+175,Kargo hızlıydı.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Kargo hızlıydı.
+176,,None,null
+177,Fiyatına göre uygun ve indirim döneminde tercih edilebilecek bir ürün olarak görülüyor.,Fiyatına göre uygun ve alınabilir bir seçenek olarak görülmüş.,Ürün fiyatına değer.
+178,Orijinal ve günlük kullanıma uygun bulunuyor.,Ürünün kalitesi ve kullanım ömrü beğenilmiş.,"Ürün kalitesi tartışılabilir, bazı kullanıcılar günlük kullanım için uygun bulsa da bazıları da beklenen kaliteyi sağlayamadığını düşünüyor."
+179,Çok beğenilmiş ve rahat olduğu söylenmiş.,Ürün beğenilmiş ve memnuniyet ifade edilmiş.,Genel kullanıcı memnuniyeti yüksek gibi görünüyor.
+180,"Kargo süreci için hızlı ve sorunsuz teslimat vurgulanırken, bazı yorumlarda teslimatın özensiz olduğu belirtilmiş.",Kargo süreci hızlı ve sorunsuz görünse de teslimatın bazı yönleriyle olumsuz değerlendirildiği görülüyor.,Kargo süreci genellikle sorunlar içermiyor ancak teslimat hızı ve kurye deneyimi bazen sorunlara neden olabiliyor.
+181,Paketleme için korumasız ve hasarlı gelen gönderiler öne çıkıyor.,"Paketleme yetersiz kalmış, ürünler hasarlı ya da açık şekilde ulaşmış.",Paketleme kalitesi genellikle kötüydü.
+182,Ürün uygun fiyatlı ve fiyatına göre başarılı bulunuyor.,Ürün uygun fiyatlı ve fiyatına göre başarılı bulunuyor.,Ürün uygun fiyatla satılmaktadır.
+183,"Pirinç kaliteli, lezzetli ve memnuniyet veren bir ürün olarak değerlendiriliyor.","Ürünün kaliteli, lezzetli ve güven veren bir pirinç olduğu vurgulanıyor.","Ürün kalitesi konusunda bazı olumlu ve olumsuz yorumlar var, ancak genel olarak kalite iyi olduğu söylenebilir."
+184,Genel olarak ürün beğeniliyor ve tekrar tercih edilecek bir ürün olarak görülüyor.,Ürün genel olarak beğenilmiş ve tekrar tercih edilebilecek bir ürün olarak görülmüş.,Ürün genel olarak memnuniyeti yüksek ve tavsiye ediliyor.
+185,Kargo sürecinin hızlı ve sorunsuz olduğu belirtilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci ve teslimat hızı mükemmel.
+186,Paketin temiz ve sağlam geldiği söylenmiş.,Paketleme sağlam ve ürün temiz ulaşmış.,Paketleme kalitesi iyi.
+187,Ürünün ekonomik ve fiyatına göre avantajlı olduğu ifade edilmiş.,Fiyatının uygun olduğu ve ekonomik bir seçenek sunduğu belirtilmiş.,Ürün fiyatına değer.
+188,"Ürünün lezzetli, kıvamı iyi ve genel olarak kaliteli bulunduğu belirtilmiş.","Ürünün lezzeti, kıvamı ve genel kalitesi beğenilmiş.",Ürün kalitesi genel olarak olumlu yorumlar aldı.
+189,Ürün beğenilmiş ve gönül rahatlığıyla tavsiye edilmiş.,Ürün genel olarak beğenilmiş ve tekrar tercih edilebilecek bir ürün olarak görülmüş.,Ürün genel olarak memnuniyet verici ve tavsiye edilebilir.
+190,"Teslimatın hızlı ve sorunsuz olduğu, ürünün kısa sürede ulaştığı belirtiliyor.",Kargo hızlı ve güvenli teslimatla öne çıkıyor.,Kargo süreci genellikle hızlı ve güvenli teslimat ile sonuçlanıyor.
+191,Ürünün kutusunun sağlam ve hasarsız geldiği ifade ediliyor.,Paketleme genel olarak iyi ve ürün sağlam ulaşmış.,Paketleme kalitesi genellikle iyi ama bazı durumlarda hasar görülebilir.
+192,Fiyatına göre çok iyi bir seçenek olduğu ve parasını hak ettiği söyleniyor.,Ürün fiyatına göre tatmin edici ve parasını hak eden bir seçenek olarak görülüyor.,Ürün fiyatına değer.
+193,Malzeme kalitesinin ve genel yapısının iyi olduğu vurgulanıyor.,"Malzeme ve ses kalitesi beğenilmiş, ürün sağlam ve kaliteli bulunmuş.",Ürün kalitesi iyi ve sağlamdır.
+194,Kullanıcılar üründen genel olarak memnun kaldıklarını ve tavsiye ettiklerini belirtiyor.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+195,Ürün hızlı gönderilmiş ve sorunsuz şekilde teslim edilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş.,Ürünler genellikle hızlı ve güvenli bir şekilde kargoya verilir ve teslimat hızı genellikle beklentilere uygun olarak gerçekleşir.
+196,"Paketleme özenli bulunmuş, ürün sağlam ve hasarsız ulaşmış.",Paketleme özenli ve ürün kutusu sağlam şekilde ulaşmış.,Ürün paketleme konusunda genellikle iyi bir kaliteye sahiptir.
+197,Fiyatına göre performansı güçlü ve alınabilir bir ürün olarak görülmüş.,Ürün fiyatına göre oldukça avantajlı ve alınabilir bulunmuş.,Ürün fiyatına değer.
+198,"Ürünün performansı ve işçiliği başarılı, sağlam ve kaliteli bulunmuş.",Ürünün performansı ve genel kalitesi beğenilmiş.,Ürün kalitesi sağlamdır.
+199,Kullanıcılar üründen memnun kalmış ve tekrar almayı düşünecek kadar olumlu yaklaşmış.,Kullanıcılar üründen memnun kalmış ve tekrar almayı düşünecek kadar beğenmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+200,Kargo süreci hızlı ve sorunsuz görünmektedir.,Kargo süreci hızlı ve sorunsuz görünüyor.,Kargo süreci başarılı ve hızlıdır.
+201,Paketleme oldukça koruyucu bulunmuştur.,"Paketleme zayıf bulunmuş, ürünün özenle korunmadığı söylenmiş.",Paketleme kalitesi iyi.
+202,,None,null
+203,Ürünün orijinal olduğu ve ısınma sorunu yaşatmadığı belirtilmiştir.,Ürünün orijinal olduğu ve ısınma sorunu olmadığı belirtilmiş.,Ürünün kalitesi konusunda yeterli bilgiye sahip değilim.
+204,"Ürün, geçici kullanım ve yedekleme için uygun bulunarak memnuniyetle karşılanmıştır.",Ürün kısa süreli kullanım için uygun bulunmuş ve memnuniyet ifade edilmiş.,Toshiba P300 4TB HDD için genel kullanıcı memnuniyeti yüksek gibi görünüyor.
+205,Kargo hızlı ve teslimat süresi oldukça memnuniyet verici görünüyor.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Kargo süreci genellikle hızlı ve uygun olarak gerçekleşiyor.
+206,Paketleme genel olarak iyi bulunsa da kutunun yıpranmış ya da açılmış geldiği belirtiliyor.,"Paketleme genel olarak iyi bulunmuş, ancak kutu hasarlı ya da pis geldiği de belirtilmiş.",Paketleme kalitesi genellikle iyi ama bazen kutuların tozlu veya açılmış olarak geldiği gözlemlenmiştir.
+207,"Ürün, fiyatına göre oldukça iyi bir seçenek olarak değerlendiriliyor.",Fiyatının uygun olduğu ve fiyat-performans açısından tatmin ettiği söyleniyor.,Ürün fiyatına değip değmediği konusunda genel olarak olumlu yorumlar var.
+208,Malzeme ve işçilik kalitesi genel olarak yüksek ve orijinal hissi veriyor.,"Malzeme ve genel kalite beğenilmiş, ürün rahat ve kullanışlı bulunmuş.",Ürün kalitesi iyi duruyor.
+209,Kullanıcılar üründen memnun kalıp tavsiye ediyor ve tekrar almayı düşünüyor.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+210,Teslimatın hızlı olduğu ve ürünün çabuk ulaştığı belirtiliyor.,Kargo hızlı ve teslimat süreci memnuniyet verici bulunmuş.,Kargo süreci genellikle hızlı ve memnun ediciydi.
+211,"Paketlemenin zayıf olduğu, ambalajın ezilip patlayabildiği söyleniyor.","Paketleme bazı yorumlarda yetersiz bulunmuş, ürünün patlayıp ezildiği belirtilmiş.",Paketleme kalitesi genellikle zayıf ve ürünün hasar görmesi riski yüksek.
+212,Fiyatının uygun ve alınabilir bulunduğu ifade ediliyor.,Fiyatının uygun olduğu ve ekonomik bulunduğu söylenmiş.,"Fiyat performansı iyi görünüyor, ancak fiyat artışı devam ediyor."
+213,"Kahvenin tadı, tazeliği ve dengeli yapısı beğeniliyor.","Kahvenin tadı ve dokusu beğenilmiş, kaliteli ve taze olduğu söylenmiş.","Ürün kalitesi dengeli ve mükemmel, ancak zamanla aroması ve yoğunluğu seyreliyor."
+214,Ürün genel olarak beğeniliyor ve tekrar alınabileceği söyleniyor.,Ürün genel olarak beğenilmiş ve tekrar tercih edilebilecek bir kahve olarak görülmüş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye edilebilir.
+215,"Kargo teslimatı bazı yorumlarda hızlı ve zamanında bulunurken, gecikme ve hasarlı ulaşım şikayetleri de öne çıkıyor.",Kargo süreci hızlı ve teslimat sorunsuz görünse de paketleme ve teslimat sorunları da öne çıkıyor.,Kargo süreci genellikle hızlı ama bazen paketleme hataları ve hasarlı teslimatlar yaşanabiliyor.
+216,"Paketleme yetersiz bulunmuş, kutu yırtılması ve ürünün dökülerek hasarlı gelmesi sıkça belirtilmiş.","Paketleme yetersiz kalmış, kutular yırtık ve hasarlı şekilde gelmiş.",Paketleme kalitesi genellikle kötüydü.
+217,Ürünün fiyatı yüksek bulunmuş ve verilen paraya değmediği düşünülmüş.,Fiyatının yüksek olduğu ve parasını hak etmediği düşünülmüş.,Ürün fiyatına değmiyor.
+218,"Ürün tozsuz yapısı, iyi topaklanması ve genel performansıyla kaliteli görülüyor.","Ürünün toz yapmaması, topaklanma performansı ve genel kalitesi beğenilmiş.",Ürün kalitesi genellikle olumlu olarak değerlendiriliyor.
+219,Kullanıcılar üründen genel olarak memnun ve ürünü yeniden almayı ya da tavsiye etmeyi düşünüyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak memnun kalınan bir seçimdir.
+220,Gönderim sorunsuz ve hızlı gerçekleşmiş.,Sorunsuz ve hızlı gönderimle teslimat gerçekleşmiş.,Hızlı ve sorunsuz kargo süreci.
+221,,None,null
+222,,None,Fiyat-performans dengesi açısından ürünün yeterlilik derecesi belirlenemedi.
+223,Ürünün kalitesi çok beğenilmiş ve güven veren bir dayanıklılık sunduğu belirtilmiş.,Varta markasının kalitesi ve güvenilirliği vurgulanıyor.,Ürün kalitesi yüksek ve güvenilir görünüyor.
+224,Kullanıcılar üründen çok memnun kalmış ve tekrar tercih edilebilecek kadar beğenmiş.,Ürün genel olarak çok beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak kullanıcılar tarafından memnuniyetle karşılanıyor.
+225,"Kargo hızlı ve sağlam teslim edilen siparişler olduğu gibi, ezik ve yırtık gelen gönderiler de belirtilmiş.",Kargo süreci hızlı ve ürün sağlam ulaştığı için teslimat açısından olumlu değerlendirilmiş.,Kargo süreci sorunlu ve teslimat hızı bazen beklenenden farklı olabilir.
+226,"Paketleme konusunda sağlam teslimat övgüsü var, ancak ezilmiş, yırtılmış ve açılmış gelen ürünler de aktarılmış.","Paketleme bazı yorumlarda sağlam ve düzenli bulunsa da ezik, yırtık ve açık gelen ürünler de var.",Paketleme kalitesi genellikle zayıf ve ürün hasar görmüş.
+227,Fiyatının kampanyayla çok uygun olduğu ve piyasaya göre avantajlı bulunduğu söyleniyor.,Fiyatı uygun ve kampanya ile alınabilir bir ürün olarak görülüyor.,Ürün fiyatına değer.
+228,Ürün kalitesi beğeniliyor; ferahlık ve beyazlık etkisiyle kaliteli ve memnuniyet veren bir diş macunu olarak görülüyor.,Ürünün kalitesi ve beyazlatma performansı beğenilmiş.,Ürün kalitesi genel olarak iyi ve güvenilir görünmektedir.
+229,"Kullanıcılar üründen memnun olduklarını, tavsiye ettiklerini ve tekrar tercih ettiklerini söylüyor.",Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+230,,None,null
+231,İç hacmi koruyucu ve düzenli bir kullanım sunuyor.,Ürün ve kabloların korunaklı şekilde geldiği belirtilmiş.,Paketleme kalitesi iyi.
+232,,None,Fiyat-performans dengesi açısından ürünün yeterlilik derecesi belirsizdir.
+233,"Malzeme, fermuar ve işçilik açısından sağlam ve kaliteli görünüyor.","Malzeme ve kilitler sağlam, dayanıklı ve kaliteli bulunmuş.",Ürün kalitesi sağlam ve dayanıklı malzemelerden oluşuyor.
+234,Kullanıcılar üründen memnun kalmış ve ihtiyaçlarına uygun bulmuş.,Kullanıcılar üründen memnun kalmış ve tekrar tercih edebileceklerini belirtmiş.,Kullanıcılar genel olarak memnuniyet duyuyorlar ve tekrar satın alma eğiliminde.
+235,Teslimatın hızlı olduğu belirtiliyor.,Teslimatın hızlı olduğu belirtiliyor.,Hızlı teslimat.
+236,Ambalajın sorunsuz olduğu ifade ediliyor.,"Paketleme sorunsuz bulunmuş, ancak ürünün arızalı geldiği belirtilmiş.",Paketleme kalitesi sorunlu çıktı.
+237,Fiyatına göre performansının ve kalitesinin iyi olduğu söyleniyor.,Fiyatına göre oldukça iyi bir performans sunduğu belirtilmiş.,Ürünün fiyatına değip değmediği konusunda net bir kanıya varılamıyor.
+238,"Malzeme ve işçilik kalitesinin yüksek, ürünün sağlam ve güvenilir olduğu vurgulanıyor.","Malzeme ve genel yapı kalitesi yüksek, sağlam ve güvenilir bulunmuş.",Ürün kalitesi yüksek ve güvenilir bir ürün olarak dikkat çekiyor.
+239,Ürün genel olarak beğeniliyor ve tavsiye ediliyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak kullanıcı memnuniyetini yüksek seviyede karşılayıp tavsiye ediliyor.
+240,Teslimat hızlı yapılmış ve ürün kısa sürede ulaşmış.,Teslimat hızlı ve ürün kısa sürede ulaştırılmış.,Ürün güzel paketlenmiş hızlı teslimat yapıldı.
+241,Ürün iyi paketlenmiş ve kutu durumu koruyucu bulunmuş.,Ürün iyi paketlenmiş ve korunaklı şekilde ulaşmış.,Paketleme kalitesi iyi.
+242,Fiyatına göre yeterli ve fiyat performans açısından başarılı görülmüş.,Fiyatına göre başarılı ve alınabilir bir ürün olarak görülüyor.,Fiyat performans dengesi yeterli görünüyor.
+243,"Malzeme ve işçilik kalitesi sağlam, kullanışlı ve güven veren bir ürün olarak değerlendirilmiş.",Malzeme ve işçilik kalitesi genel olarak sağlam ve işlevsel bulunmuş.,Ürün kalitesi genel olarak sağlam ve güvenilir görünüyor.
+244,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+245,Ürün hızlı ve sorunsuz teslim edilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve güvenilir olarak gözükmektedir.
+246,Ürün kırık gelmeden sağlam şekilde ulaştırılmış.,Ürün kutu ve ambalajla sağlam şekilde gelmiş.,"Paketleme kalitesi iyi görünüyor, çünkü kutudan gelen küçük boyutta streç film kullanılabiliyor."
+247,Fiyatının karşılığını vermediği düşünülüyor.,Fiyatının yüksek olduğu ve parasını hak etmediği düşünülmüş.,"Ürün fiyatına değip değmediği belli değil, çünkü bazı kullanıcılar makina bedavaya gelmesine rağmen fiyatın uygun olmadığını düşünüyor."
+248,Malzeme kalitesi ve kullanım kolaylığıyla beğenilmiş.,"Malzeme ve kullanım kalitesi beğenilmiş, ürün kullanışlı ve pratik bulunmuş.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+249,Kullanışlı bulunup tavsiye edilen bir ürün olarak öne çıkıyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılayacak düzeyde görünmektedir.
+250,,None,Kargo süreci sorunlu olabilir.
+251,,None,Paketleme null.
+252,,None,Fiyat-performans dengesi açısından ürünün yeterlilik derecesi belirlenemez.
+253,Ürün yumuşak yapısı ve dudak tonlarına uygun görünümüyle beğenilmiş.,Ürün yumuşak ve dudak rengi tonlarında bulunmuş.,Ürün kalitesi sağlam ve dayanıklıdır.
+254,Ürün genel olarak beğenilmiş ve olumlu bir izlenim bırakmış.,Ürün genel olarak beğenilmiş ve memnuniyet ifade edilmiş.,null
+255,"Teslimat hızlı ve sorunsuz görünürken, bazı yorumlarda kargo sürecinden memnuniyetsizlik de belirtilmiş.",Kargo süreci hızlı ve teslimat sorunsuz görünüyor.,Kargo süreci genellikle hızlı ve sorun yaşamayan kullanıcılar tarafından olumlu olarak yorumlanıyor.
+256,"Paketleme özenli ve koruyucu bulunmuş, ürünün paketinin dolu ve düzenli olduğu söylenmiş.",Paketleme özenli ve ürün iyi korunmuş görünüyor.,Paketleme kalitesi bazı durumlarda sorunlar yaratabilir.
+257,Ürün fiyatına göre başarılı ve hesaplı bir seçenek olarak görülmüş.,Ürün fiyatına göre başarılı ve hesaplı bulunmuş.,Ürün fiyatına değer.
+258,"Malzeme ve performans kalitesi beğenilmiş, soğutma ve kullanım açısından güçlü bulunmuş.",Ürünün kalitesi ve soğutma performansı beğenilmiş.,Ürün kalitesi genellikle olumlu olarak değerlendiriliyor.
+259,Kullanıcılar üründen memnun kalıp tavsiye etmiş ve iş gördüğünü belirtmiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak memnun kalınan ve tavsiye edilen bir ürün gibi görünüyor.
+260,Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve sorunsuz gerçekleşiyor.
+261,Paketleme genel olarak iyi ve ürün eksiksiz ulaşmış.,Paketleme genel olarak iyi bulunmuş ve ürün eksiksiz ulaşmış.,Paketleme kalitesi genellikle iyi ama bazen hasar görülebiliyor.
+262,Fiyatına göre başarılı ve alınabilir bir ürün olarak görülüyor.,Ürün fiyatına göre başarılı ve alınabilir bir seçenek olarak görülüyor.,Ürün fiyatına değer ve uygun fiyatlıdır.
+263,Anakartın kalitesi ve sağlamlığı beğenilmiş.,"Ürünün kaliteli, sorunsuz ve sağlam olduğu vurgulanıyor.",Ürün kalitesi ve işçiliği genel olarak olumlu yorumlar alıyor.
+264,Kullanıcılar üründen memnun kalıp tavsiye ediyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+265,Kargo hızlı ve teslimat süreci sorunsuz olarak değerlendirilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Hızlı kargo süreci ve teslimat hızı olumlu deneyimlere neden oldu.
+266,Paketlemenin bazı gönderilerde eksik ya da sorunlu olduğu belirtilmiş.,Paketleme konusunda eksik ve yanlış teslimat şikayetleri öne çıkıyor.,Paketleme kalitesi konusunda bazı sorunlar var.
+267,Ürün fiyatına göre avantajlı ve uygun bulunmuş.,Fiyatının uygun ve indirim fırsatlarıyla avantajlı olduğu söyleniyor.,Ürün fiyatına değiyor.
+268,"Ürünün uzun ömürlü, dayanıklı ve kaliteli olduğu vurgulanmış.","Ürünün dayanıklı, uzun ömürlü ve kaliteli olduğu vurgulanıyor.",Ürün kalitesi tartışılmaz.
+269,Kullanıcılar üründen memnun kaldığını ve tavsiye ettiğini belirtmiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcılar tarafından memnuniyetle karşılanmaktadır.
+270,Kargo hızlı ve sorunsuz ulaştığı için teslimat süreci olumlu değerlendirilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo süreci genellikle hızlı ve sorunsuz gerçekleşiyor.
+271,Paketleme konusunda kutunun açılmış ya da yetersiz geldiği yönünde eleştiriler öne çıkıyor.,"Paketleme yetersiz bulunmuş, kutu hasarlı ya da açılmış gelmiştir.",Paketleme kalitesi iyi değildi.
+272,Ürün fiyatına göre başarılı ve alınabilir bir seçenek olarak görülüyor.,Fiyatına göre başarılı ve avantajlı bir ürün olarak görülüyor.,Ürün fiyatına değer.
+273,"Malzeme kalitesi, soğutma yapısı ve genel işçilik olumlu bulunmuş.","Malzeme ve genel işçilik kalitesi yüksek, sağlam ve kaliteli bir ürün olarak değerlendirilmiş.",Ürün kalitesi yüksek ve sağlamdır.
+274,Ürün genel olarak memnuniyet yaratmış ve tavsiye edilmiş.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+275,Kargo hızlı ve sağlam teslim edilmiş görünüyor.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve sağlam olarak gerçekleşiyor.
+276,"Paketleme özensiz bulunmuş, kutu ve ambalajda hasar ile yırtıklar belirtilmiş.","Paketleme özensiz bulunmuş, kutu hasarlı ve yırtık gelmiş.",Ürün paketlemesi genellikle kötüydü.
+277,Ürün fiyatına göre başarılı ve fiyat-performans açısından avantajlı görülüyor.,Ürün fiyatına göre başarılı ve fiyat-performans açısından tatmin edici bulunmuş.,Ürün fiyatına göre mükemmel bir performans sergiliyor.
+278,"Malzeme ve işçilik kalitesi beğenilmiş, ürün kaliteli ve sağlam bulunmuş.",Malzeme ve işçilik kalitesi genel olarak iyi bulunmuş.,Ürün kalitesi genel olarak olumlu olarak değerlendiriliyor.
+279,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğilimi göstermiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak memnuniyeti yüksek ve tavsiye ediliyor.
+280,Teslimatın hızlı ve zamanında olduğu belirtiliyor.,Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Kargo süreci genellikle hızlı ve teslimat hızı uygun düzeydedir.
+281,Kılıfın iç korumasının yumuşak olduğu ve cihazı çizilmelere karşı koruduğu söyleniyor.,Paketleme ve koruma konusunda çantanın koruyucu yapısı ve laptopu iyi saran yapısı öne çıkıyor.,Paketleme kalitesi iyi tasarlanmış ve laptopu koruyan bir kılıftır.
+282,Fiyatına göre oldukça iyi ve alınabilir bir ürün olarak değerlendiriliyor.,Ürün fiyatına göre çok iyi bir değer sunuyor.,"Ürün fiyatına değip değmediği, para-değer dengesi ve fiyat avantajı açısından çok iyi bir performans sergiliyor."
+283,"Malzeme ve işçilik kalitesinin yüksek, ürünün de sağlam olduğu ifade ediliyor.","Malzeme ve işçilik kalitesi yüksek, sağlam ve kullanışlı bulunmuş.",Ürün kalitesi gayet iyi ve güven verici malzemesi var.
+284,Ürün genel olarak çok beğenilmiş ve tavsiye ediliyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+285,Kargo hızlı ve sorunsuz olarak övülüyor.,Kargo süreci hızlı ve sorunsuz bulunmuş.,"Kargo süreci genellikle hızlı ve güvenilir olsa da, teslimat hızı ve gönderim performansı bazı durumlarda hatalı ürün göndermesine neden olabiliyor."
+286,,Paketlemenin özensiz olduğu ve ürünün korunmaması nedeniyle güven vermediği söyleniyor.,Paketleme kalitesi konusunda endişe duyuluyor.
+287,Ürün fiyatına göre değerli ve faydalı bulunuyor.,Fiyatının yüksek olduğu ve sürekli arttığı söylenmiş.,Ürün fiyatına değer.
+288,"Ürünün kalitesi, yumuşaklığı ve kullanım rahatlığı beğeniliyor.","Ürünün kalitesi, yumuşaklığı ve kullanışlılığı beğenilmiş.",Ürün kalitesi olumlu yorumlar ile desteklendi.
+289,Kullanıcılar üründen genel olarak memnun ve tavsiye ediyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak memnun kalınan ve tavsiye edilen bir ürün gibi görünmektedir.
+290,"Kargo sürecinde ürünlerin ezilmiş, kırılmış ya da dağılmış geldiği belirtiliyor.","Ürünler ezilmiş, dağılmış ve kırık halde teslim edilmiş.",Kargo süreci genellikle olumsuz deneyimlere neden oluyor.
+291,"Paketleme yetersiz bulunmuş, ürünlerin kutu içinde zarar gördüğü aktarılıyor.","Paketleme yetersiz kalmış, ürünler ezilmiş, dağılmış ve kırılmış şekilde gelmiş.",Paketleme kalitesi genellikle düşük kalitedir.
+292,Fiyatının uygun olduğu ve fiyatına göre iyi bir ürün sunduğu söyleniyor.,Fiyatının uygun olduğu ve fiyatına göre iyi bir seçenek sunduğu belirtilmiş.,Ürün fiyatına değer.
+293,Ürünün tadı ve genel kalitesi beğeniliyor.,"Ürünün tadı ve genel yapısı beğenilmiş, kaliteli bulunmuş.",Ürün kalitesi iyi ve sağlamdır.
+294,Ürün genel olarak beğenilmiş ve tavsiye ediliyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+295,Teslimatta ufak bir gecikme yaşandığı belirtilmiş.,Teslimatın geciktiği ve gönderim sürecinde hata yaşandığı belirtiliyor.,Kargo süreci biraz gecikmeli ve hatalı olabilir.
+296,Paketleme özeninin iyi olduğu vurgulanmış.,Paketleme özenli bulunmuş.,Paketleme özenlidir.
+297,Ürün fiyatına göre oldukça iyi ve avantajlı bulunmuş.,Ürün fiyatına göre başarılı ve fiyat-performans açısından beğenilmiş.,Ürün fiyatına değer.
+298,"Kumaşının yumuşak, kaliteli ve sıcak tutan bir yapıda olduğu söylenmiş.","Kumaş dokusu, yumuşaklığı ve genel işçiliği beğenilmiş.","Ürün kalitesi iyi, malzeme dokusu ve yumuşaklığı başarılı, kumaş yapısı ve işçilik de güzel."
+299,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak memnun kalınan ve tavsiye edilen bir ürün gibi görünüyor.
+300,Sipariş hızlı teslim edilmiş ve kargo süreci memnuniyet yaratmış.,Siparişin çok hızlı teslim edildiği belirtiliyor.,Kargo süreci hızlıydı.
+301,Paketleme zayıf ve ürün koruması yetersiz bulunmuş.,Paketleme yetersiz bulunmuş ve ürünün ince ve hasarsız gelmediği söylenmiş.,Paketleme kalitesi kötüydü.
+302,Ürün fiyatına göre çok iyi ve uygun bulunmuş.,Fiyatına göre oldukça iyi bir seçenek olduğu belirtilmiş.,Ürün fiyatına değer.
+303,"Kumaşı, rahatlığı ve genel işçiligi kaliteli olarak değerlendirilmiş.","Kumaşı kaliteli, rahat ve şık bulunmuş.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+304,"Ürün beğenilmiş, tavsiye edilmiş ve tekrar alışveriş isteği oluşturmuş.",Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+305,Teslimatın hızlı olduğu ve ürünün zamanında ulaştığı belirtiliyor.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci genellikle gecikme olmadan gerçekleşiyor.
+306,Ürünün açılmış ve yeniden bantlanmış şekilde gelmesi paketleme konusunda olumsuz bir izlenim bırakıyor.,"Paketin açılmış ve yeniden kapatılmış olduğu, ürünün korumasız gönderildiği anlaşılıyor.",Ürün ambalajı açılmış ve bazı parçaları da paketten çıkarılmış gibi görünüyordu.
+307,Fiyatına göre iyi bir performans sunduğu ve uygun bulunduğu söyleniyor.,Ürün fiyatına göre oldukça avantajlı ve fiyat-performans açısından beğenilmiş.,Ürün fiyat performans anlamında oldukça iyi bir seçimdir.
+308,Malzeme kalitesi ve işçiliği konusunda olumlu değerlendirmeler öne çıkıyor.,Malzeme kalitesi genel olarak zayıf ve plastik görünüyor.,Ürün kalitesi genel olarak kötü ve plastik.
+309,Kullanıcılar üründen memnun kaldıklarını ve işlerini gördüğünü söylüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde görünmüş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+310,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci genellikle hızlı ve sorunsuz olsa da bazen teslimat hızı ve kurye deneyimi sorunlar yaratabilir.
+311,Paketin sağlam ve eksiksiz geldiği söyleniyor.,Paketleme sağlam ve eksiksiz ulaşmış.,Paket eksiksiz ve sağlam geldi.
+312,Fiyatının uygun ve piyasa karşısında avantajlı olduğu ifade ediliyor.,Ürün fiyatına göre avantajlı ve uygun bulunmuş.,Ürün fiyatına değer.
+313,"Ürünün orijinal, sağlam ve lezzetli olduğu vurgulanıyor.",Ürünün tadı ve genel kalitesi beğenilmiş.,Ürün kalitesi genel olarak olumlu yorumlar aldı.
+314,Ürün beğeniliyor ve tavsiye ediliyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+315,"Kargo hızlı ve zamanında teslim edilmiş, ancak bazı gönderilerde ürün hasarlı ulaşmış.",Kargo süreci hızlı ve teslimat sorunsuz görünse de paketleme ve kurye deneyimi olumsuz değerlendirilmiş.,Kargo süreci genellikle hızlı ama bazen paketleme sorunları ve ambalaj patlamaları yaşanabiliyor.
+316,Paketleme sık sık yetersiz kalmış ve ürünler yırtık ya da patlamış şekilde gelmiş.,"Paketleme yetersiz kalmış, ürünler patlak ya da yırtık şekilde ulaşmış.",Paketleme kalitesi genellikle sorunlu ve ürünün hasar görmesi riski yüksek görünüyor.
+317,Ürün uygun fiyatlı ve fiyatına göre avantajlı bulunmuş.,Ürün fiyatına göre avantajlı ve alınabilir bulunmuş.,Ürün fiyatına değer.
+318,"Ürün lezzetli, kaliteli ve pişince tane tane olması beğenilmiş.",Ürünün lezzeti ve genel kalitesi beğenilmiş.,Ürün kalitesi genellikle iyi ve lezzetli olarak yorumlanıyor.
+319,Ürün tekrar alınmış ve memnuniyetle kullanıldığı için tavsiye edilmiş.,Ürün genel olarak beğenilmiş ve tekrar alınmak istenmiş.,Ürün genel olarak memnuniyet veriyorsa da bazı kullanıcılar tekrar satın alma eğilimini göstermiyor.
+320,Kargolama hızının çok iyi olduğu belirtiliyor.,Kargolama hızı hızlı bulunmuş.,Kargo süreci hızlıdır.
+321,,None,null
+322,,None,Fiyat-performans dengesi iyi görünüyor.
+323,Ürünün malzeme ve işçilik açısından kaliteli ve sağlam olduğu vurgulanıyor.,"Kablonun kaliteli, sağlam ve kaliteli bir ürün hissi verdiği belirtilmiş.",Ürün kalitesi yüksek ve sağlamdır.
+324,Kullanıcılar üründen memnun kaldıklarını ve gönül rahatlığıyla alınabileceğini söylüyor.,Kullanıcılar üründen memnun kaldıklarını ve tekrar tercih edebileceklerini belirtmiş.,Uğraşsız genel memnuniyet.
+325,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci genellikle hızlı ve sorunsuz gerçekleşiyor.
+326,Ürünün paketlemesinin koruyucu ve özenli olduğu ifade ediliyor.,Ürün iyi korunmuş ve sağlam paketlenmiş olarak değerlendirilmiş.,"Ürün paketleme kalitesi iyi, ambalaj sağlam ve ürün hasarsız olarak teslim edilmektedir."
+327,Fiyatına göre başarılı ve uygun fiyatlı bir ürün olarak görülüyor.,Fiyatına göre oldukça iyi bir performans sunduğu belirtiliyor.,Ürün fiyatına değer.
+328,"Malzeme kalitesi, sessizliği ve kullanım kalitesi beğeniliyor.",Malzeme kalitesi ve genel işçilik beğenilmiş.,Ürün kalitesi son derece iyi ve sağlamdır.
+329,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+330,Teslimatın çok hızlı olduğu ve ürünün kısa sürede ulaştığı belirtiliyor.,Teslimat çok hızlı ve ürün kısa sürede ulaştırılmış.,Hızlı teslimat süreci ve uygun fiyatlar ürünün kargo sürecinde olumlu deneyimlere neden oluyor.
+331,,None,null
+332,"Fiyatının uygun ve kaliteyle uyumlu olduğu, kampanyayla daha avantajlı bulunduğu söyleniyor.",Fiyatının uygun ve kampanya ile alınmasının avantajlı olduğu söyleniyor.,Ürün fiyatına değer.
+333,"Ürünün orijinal, rahat ve görseldekiyle uyumlu olduğu ifade ediliyor.","Ürünün orijinal, rahat ve kaliteli olduğu vurgulanıyor.",Ürün kalitesi konusunda bazı sorunlar var gibi görünüyor.
+334,Kullanıcılar üründen memnun kaldıklarını ve tekrar tercih edebileceklerini belirtiyor.,Ürün genel olarak beğenilmiş ve tekrar tercih edilebilecek bir ürün olarak görülmüş.,Kullanıcılar genel olarak memnun kalıyorlar ve tekrar satın alma eğilimi var.
+335,Kargo süreci hızlı bulunmuş.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Ürün kargosunda beklenenden daha hızlı teslimat gerçekleşti.
+336,,None,null
+337,,None,Fiyat-performans dengesi iyi görünüyor.
+338,Kumaş kalitesi iyi ve ürün kaliteli olarak değerlendirilmiş.,Kumaşı kaliteli ve sağlam hissi veriyor.,Ürün kalitesi iyi.
+339,Ürün genel olarak beğenilmiş ve kaliteli bulunmuş.,Ürün genel olarak beğenilmiş ve memnuniyet ifade edilmiş.,null
+340,Kargo hızlı ve ürün kısa sürede teslim edilmiş.,Kargo hızlı ve teslimat kısa sürede gerçekleşmiş.,Ürünün kargo süreci hızlıdır.
+341,Paketleme özenli bulunmuş ve ürünün şık şekilde geldiği belirtilmiş.,Paketleme özenli ve ürün korunaklı şekilde gelmiş.,Paketleme kalitesi iyi.
+342,Ürün fiyatına göre oldukça avantajlı ve fiyat performans açısından beğenilmiş.,Ürün fiyatına göre iyi bir performans sunuyor.,Ürün fiyatına göre iyi ve kullanışlıdır.
+343,"Ürün ince, kullanışlı ve kaliteli bir yapıda görülmüş.","Ürünün ince, kullanışlı ve kaliteli olduğu vurgulanıyor.",Ürün kalitesi fiyatına göre güzel ve sağlam bir yapıya sahiptir.
+344,Kullanıcılar üründen memnun kalmış ve tavsiye etmeye eğilimli olmuş.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+345,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci genellikle sorunsuz ve hızlı gerçekleşiyor.
+346,Ürünün sağlam ve açılmamış kutuyla geldiği ifade ediliyor.,Paketin yamulduğu belirtilse de ürünün sağlam ve açılmamış geldiği söyleniyor.,"Paketleme kalitesi iyi, kutular sağlam ve ürün hasarsız."
+347,Fiyatının yüksek olduğu düşünülse de sunduğu performansla değerli bulunduğu söyleniyor.,Ürün fiyatına göre değerli ve fiyatını hak eden bir ürün olarak görülüyor.,Ürün pahalı.
+348,"Ürünün kaliteli, kullanışlı ve performansının güçlü olduğu vurgulanıyor.","Ürünün kalitesi ve performansı beğenilmiş, kullanışlı ve kaliteli bulunmuş.",Ürün kalitesi gayet iyi ve sağlamdır.
+349,Ürün genel olarak çok beğenilmiş ve tavsiye ediliyor.,Ürün genel olarak çok beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak kullanıcı memnuniyetini yüksek seviyede karşılamaktadır.
+350,Kargo süreci hızlı ve ürünler sağlam teslim edilmiş.,Kargo hızlı ve sağlam teslimatla öne çıkıyor.,Kargo süreci genellikle sağlam ve hızlı gerçekleşiyor.
+351,Paketleme özenli ve koruyucu bulunmuş.,Ürün özenli ve sağlam şekilde paketlenmiş.,Paketleme kalitesi sağlam ve özenlidir.
+352,Ürün uygun fiyatlı ve fiyatına göre avantajlı görülmüş.,Fiyatının uygun ve avantajlı olduğu söyleniyor.,Ürün fiyatı genellikle market fiyatına denk geliyor veya daha uygun olabiliyor.
+353,Ürünün kalitesi ve tadı beğenilmiş.,Ürünün kalitesi ve sağlamlığı beğenilmiş.,Ürün kalitesi genellikle olumlu olarak yorumlanıyor.
+354,"Ürün ve marka genel olarak beğenilmiş, tavsiye edilmiş.",Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek ve ürün tavsiye ediliyor.
+355,,None,null
+356,,None,null
+357,Fiyatına değip değmediği konusunda tereddüt var.,Fiyatına değip değmediği tartışmalı bulunmuş.,Fiyatı performansına göre tartışılabilir.
+358,"Ürün hızlı, sağlam ve günlük kullanımda pratik bulunuyor.","Ürünün hızı, sağlamlığı ve kullanım rahatlığı beğenilmiş.",Ürün kalitesi sağlam ve uzun süreli kullanım için uygun.
+359,Kullanıcılar üründen genel olarak oldukça memnun ve beğenilerini açıkça ifade ediyor.,Kullanıcılar üründen genel olarak memnun ve tavsiye ediyor.,Genel kullanıcı memnuniyeti yüksek.
+360,Kargo hızlı ve teslimat sorunsuz görünmektedir.,Kargo hızlı ve teslimat sorunsuz görünüyor.,Kargo süreci genellikle hızlı ve uygun fiyatlıdır.
+361,"Paketleme beğenilmiş, ürünün kutulu ve sağlam ulaştığı belirtilmiştir.",Paketleme özenli ve ürünün orijinal geldiği belirtilmiş.,Paketleme kalitesi ve ürünün korunması konusunda ürün orijinal ve kaliteli kutusunda teslimat yapıldığından emin olunuyor.
+362,Ürün fiyatına göre başarılı ve indirimde daha avantajlı bulunmuştur.,Ürün fiyatına göre iyi bir performans sunuyor ve indirimde alınca avantajlı görülmüş.,Ürün fiyatına değer.
+363,"Ürünün kalitesi, etkisi ve kalıcılığı beğenilmiştir.","Ürünün kaliteli, etkili ve sağlam olduğu vurgulanıyor.",Ürün kalitesi iyi ve etkili görünüyor.
+364,Kullanıcılar üründen memnun kalmış ve tavsiye etmektedir.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+365,Kargo hızlı ve teslimat süreci sorunsuz olarak değerlendirilmiş.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Kargo süreci genellikle hızlı ve özenli paketlemeyle gerçekleşiyor.
+366,Ürünlerin ayrı ayrı paketlenip uç korumalı gelmesi paketlemenin özenli bulunduğunu gösteriyor.,Ürün özenli ve koruyucu paketlemeyle gelmiş.,Paketleme kalitesi iyi ve ürünler koruma uçlu ayrı paketlerde geldi.
+367,Ürün fiyatına göre başarılı ve uygun fiyatlı bir set olarak görülmüş.,Fiyatına göre oldukça iyi ve hesaplı bir ürün olarak görülmüş.,Ürün fiyatına göre iyi bir performans sunuyor.
+368,"Cımbızların sağlam, hassas ve kaliteli olduğu belirtilmiş.","Malzeme ve kullanım kalitesi yüksek, sağlam ve kaliteli bir ürün olarak değerlendirilmiş.","Ürün kalitesi sağlam ve kaliteli, malzeme bakımından mükemmel ve işçilik açısından iyi."
+369,Kullanıcılar üründen memnun kalıp tavsiye etmeye eğilimli görünüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+370,Kargo hızlı ve teslimat genel olarak sorunsuz bulunmuş.,Teslimatın hızlı ve sağlam olduğu belirtiliyor.,Hızlı teslimat yapıldı.
+371,Paketleme özenli ve ürünün sağlam ulaştığı belirtilmiş.,"Paketleme özenli bulunmuş, ancak bazı yorumlarda açık ve yırtık paketler de belirtilmiş.",Paketleme kalitesi genellikle düşük ve kutuların hasar görmesi sıkça karşılaşılan bir sorun gibi görünüyor.
+372,Ürünün fiyatına değdiği ve parasını hak ettiği söylenmiş.,Fiyatına göre değerli ve alınabilir bir ürün olarak görülmüş.,Ürün fiyatına değer ve parasını hak ediyor.
+373,"Çayın kalitesi, aroması ve içim yumuşaklığı beğenilmiş.","Ürünün kalitesi ve tadı beğenilmiş, kaliteli ve orijinal olduğu vurgulanmış.",Ürün kalitesi yüksek ve sağlamdır.
+374,Ürün genel olarak çok beğenilmiş ve yeniden alınmak istenmiş.,Ürün genel olarak beğenilmiş ve tekrar alınmak istenmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+375,Kargo hızlı ve zamanında teslim edilmiş görünüyor.,Kargo hızlı ve zamanında teslim edilmiş.,Kargo süreci genellikle hızlı ve paketleme güzel olarak algılanıyor.
+376,Paketleme özenli ve sunum başarılı bulunmuş.,Paketleme özenli ve ürünün korunaklı ulaştığı belirtilmiş.,Paketlemesi güzel ve kaliteli.
+377,Fiyatına göre iyi bir değer sunduğu belirtilmiş.,Fiyatına göre oldukça iyi bir performans sunduğu belirtilmiş.,Ürün fiyatına değer.
+378,"Ürünün deri kalitesi, işçiliği ve sağlamlığı beğenilmiş.","Ürünün deri kalitesi, sağlamlığı ve genel işçiliği beğenilmiş.",Ürün kalitesi gayet iyi.
+379,Kullanıcılar üründen memnun kalıp tavsiye etmeye eğilimli görünüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Tüm kullanıcılar memnun kalmış ve tekrar satın alma eğiliminde görünüyor.
+380,Kargo hızlı ve ürün zamanında teslim edilmiş görünüyor.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Hızlı kargo süreci ve sağlam paketleme olumlu deneyimlere neden oldu.
+381,Ürün özenli ve sağlam paketlenmiş olarak gelmiş.,Ürün düzenli ve koruyucu şekilde paketlenmiş.,Ürün paketleme kalitesi iyi.
+382,Ürün fiyatına göre tatmin edici ve fiyat performans açısından beğenilmiş.,Ürün fiyatına göre başarılı ve fiyat-performans açısından beğenilmiş.,Ürün fiyat performanslıdır.
+383,Malzeme ve işçilik genel olarak kaliteli ve sağlam bulunmuş.,Malzeme ve işçilik kalitesi genel olarak iyi ve sağlam bulunmuş.,Ürün kalitesi vasat...
+384,Ürün genel olarak beğenilmiş ve tavsiye edilerek tekrar alınmak istenmiş.,Ürün beğenilmiş ve tekrar alınmak istenmiş.,Ürün genel olarak memnun kalınan ve tavsiye edilen bir ürün.
+385,Teslimatın çok hızlı ve sorunsuz olduğu belirtiliyor.,Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Ürünler genellikle hızlı ve sorunsız bir şekilde kargoya teslim ediliyor.
+386,Paketlemenin özenli ve ürünü iyi koruduğu söyleniyor.,Paketleme özenli ve ürün iyi korunmuş görünüyor.,Paketleme çok güzel.
+387,Ürünün fiyatına göre oldukça iyi bir seçenek olduğu ifade ediliyor.,Fiyatının uygun olduğu ve fiyat-performans açısından beğenildiği söyleniyor.,Ürün fiyatına değer.
+388,"Ürünün rahat, kaliteli ve orijinal hissi verdiği vurgulanıyor.","Ayakkabının rahat, hafif ve kaliteli olduğu vurgulanıyor.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+389,Kullanıcılar üründen genel olarak memnun kaldıklarını ve beğendiklerini söylüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Tüm kullanıcılar memnun kalmış gibi görünüyor.
+390,Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo hızlı ve teslimat beklentilerin üzerinde gerçekleşmiş.,Hızlı kargo süreci ve beklentiler üzerinde teslimat gerçekleşti.
+391,Ürün özenli paketlenmiş.,Ürün güzel paketlenmiş ve koruyucu bir şekilde gönderilmiş.,Paketleme kalitesi sağlam değil.
+392,Ürün fiyatına göre çok iyi bir seçenek olarak görülüyor.,Ürün fiyatına göre çok iyi ve parasını hak eden bir seçenek olarak görülüyor.,Ürün fiyatına göre çok iyi ve kalite olarak gayet güzel.
+393,"Ürün kaliteli, uyumu iyi ve kullanımı kolay bulunuyor.","Ürünün kalitesi, uyumu ve koruyucu performansı beğenilmiş.",Ürün kalite olarak gayet güzel pahalı markalar da kullandım.
+394,Kullanıcılar üründen çok memnun ve tavsiye ediyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+395,"Teslimat ve iade sürecinde sorun yaşandığı, yanlış renk gönderildiği belirtiliyor.",Teslimat ve gönderim süreciyle ilgili olumsuz yorumlar öne çıkıyor.,Kargo süreci sorunlu ve teslimat hızı beklenenden farklı olabilir.
+396,Ürünün orijinal olmadığı ve iç etiketinin eksik olduğu söyleniyor.,None,Ürün ambalajı sağlam ve hasarsız.
+397,Fiyatının uygun olduğu ve kalite açısından karşılığını verdiği ifade ediliyor.,Fiyatının uygun olduğu ve indirimle alınmasının avantajlı olduğu söyleniyor.,Ürün fiyatına değer.
+398,"Ayakkabının sağlam ve rahat olduğu, ancak bazı modellerde cırt ve kalıp sorunları bulunduğu belirtiliyor.","Ürünün sağlam, kaliteli ve rahat olduğu belirtilmiş.","Ürün kalitesi konusunda bazı olumlu ve olumsuz yorumlar var, ancak genel olarak kalite sorunları ile ilgili eleştiriler daha sık görülmektedir."
+399,Ürün için memnuniyetsizlik ve tavsiye etmeme eğilimi öne çıkıyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,null
+400,"Kargo süreci hızlı ve sorunsuz bulunmuş, teslimat ve iletişim olumlu değerlendirilmiş.",Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo süreci genellikle hızlı ve güvenilir olarak gözükmektedir.
+401,Ürün korunaklı ve özenli paketlenmiş olarak gelmiş.,Paketleme özenli ve ürün korunaklı şekilde ulaşmış.,Ürün paketleme olarak iyi ve korunaklı olarak geldi.
+402,Ürünün fiyatına göre performansının iyi olduğu düşünülmüş.,Fiyatına göre performanslı ve alınabilir bir ürün olarak görülmüş.,Fiyatına performans dengesi iyi.
+403,"İşlemcinin performansı ve soğutması beğenilmiş, genel olarak kaliteli bulunmuş.","İşlemcinin oyun performansı ve soğutma yeteneği beğenilmiş, kaliteli bir ürün olarak değerlendirilmiş.",Ürün kalitesi yüksek ve dayanıklıdır.
+404,Ürün genel olarak beğenilmiş ve tavsiye edilmiştir.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+405,Ürün hızlı teslim edilmiş ve görseldekiyle uyumlu gelmiş.,Ürün hızlı teslim edilmiş ve görselde olduğu gibi ulaşmış.,Kargo süreci hızlı ve beklentilere uygun.
+406,,None,null
+407,,None,null
+408,Ürün rahat bulunmuş ve spor kullanımında terletmemesi beğenilmiş.,"Ürün rahat ve terletmeyen bir yapıda, spor için uygun bulunmuş.",Ürün kalitesi sağlamdır.
+409,Spor kullanımında rahat ve terletmeyen bir ürün olarak memnuniyet sağlamış.,Kullanıcı sporda rahat ve terletmeyen bir ürün olarak memnuniyetle kullanıyor.,Genel memnuniyet yüksek.
+410,Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Teslimatın hızlı olduğu ve ürünün kısa sürede ulaştığı belirtiliyor.,Kargo süreci genellikle hızlı ve güvenilir olarak gözükmektedir.
+411,,None,Paketleme kalitesi hakkında yeterli bilgiye sahip değilim.
+412,Ürün fiyatına göre oldukça iyi bir performans sunuyor.,Ürün fiyatına göre çok iyi bir performans sunuyor.,Ürün fiyatına göre çok iyi ve performanslı bir seçimdir.
+413,Malzeme kalitesi ve kullanım rahatlığı genel olarak tatmin edici.,Malzeme ve kullanım hissiyatı genel olarak tatmin edici ve kaliteli bulunmuş.,Ürün kalitesi genel olarak tatmin edici ve malzeme kalitesi gayet iyi.
+414,Kullanıcılar üründen memnun ve tavsiye etme eğiliminde.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+415,Teslimatın hızlı olduğu ve ürünün zamanında ulaştığı belirtilmiş.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci bazen beklenenden uzun sürebilir.
+416,Paketin açık geldiği söylenmiş.,None,Paket durumu açık geldiği için hasarlı.
+417,Fiyatına değdiği ve bütçeye göre tercih edilebileceği ifade edilmiş.,Ürün fiyatına göre değerli ve alınmaya değer görülmüş.,Ürün fiyatına değer.
+418,Ürünün termal performansının ve genel kalitesinin çok iyi olduğu vurgulanmış.,Ürünün termal performansı ve genel kalitesi beğenilmiş.,Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+419,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini belirtmiş.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Genel kullanıcı memnuniyeti yüksek gibi görünüyor.
+420,"Teslimatın hızlı ve sorunsuz olduğu, bazı durumlarda ise gecikme ve hasarlı kutu yaşandığı belirtilmiş.",Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Teslimat genellikle hızlı ve sorunsuz gerçekleşiyor.
+421,"Paketlemenin zayıf olduğu, ürünün açık ya da hasarlı kutuyla geldiği ifade edilmiş.","Paketleme yetersiz bulunmuş, ürünün kutusu açık ya da hasarlı şekilde ulaştığı belirtilmiş.",Ürün paketleme kalitesi genellikle iyi değildir.
+422,Ürünün fiyatına göre başarılı ve fiyat performans ürünü olduğu söylenmiş.,Ürün fiyatına göre başarılı ve fiyat-performans açısından beğenilmiş.,Ürün fiyat performans olarak çok iyi.
+423,"Ürünün kaliteli, kullanımı rahat ve buhar performansının güçlü olduğu belirtilmiş.","Ürünün malzeme kalitesi, işçiliği ve genel yapısı kaliteli ve sağlam bulunmuş.",Ürün kalitesi yüksek ve sağlamdır.
+424,Kullanıcılar üründen memnun kaldığını ve tavsiye ettiğini belirtmiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+425,Kargo hızlı ve sorunsuz ulaştığı için teslimat süreci beğenilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş.,Hızlı ve sorunsuz kargo süreci genellikle gözlemlenmiştir.
+426,"Ürün kapalı, sağlam ve düzenli paketlenmiş halde geldiği için ambalaj olumlu değerlendirilmiş.",Paketleme genel olarak sağlam ve koruyucu bulunmuş.,Paketleme konusunda ürünün çoğu kez sağlam ve güzel paketlenmiş olarak geldiği görülüyor.
+427,İndirim beklentisi ve rakip modele göre daha avantajlı görülmesi fiyat açısından olumlu bir izlenim vermiş.,Fiyatının yüksek olduğu ve indirim beklentisi oluşturduğu söyleniyor.,Ürün fiyatına değip değmediği konusunda şüpheler var.
+428,"Ürünün orijinal, sağlam ve kullanışlı bulunması kalite algısını güçlendirmiş.","Ürünün orijinal, sağlam ve kullanışlı olduğu vurgulanıyor.",Ürün kalitesi tartışılmaz.
+429,Kullanıcılar üründen memnun kalıp tavsiye ediyor ve tekrar tercih etmeye sıcak bakıyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+430,Kargo hızlı ve güvenli şekilde ulaştırılmış.,Kargo hızlı ve güvenli teslim edilmiş.,Ürün hızlı ve güvenli bir şekilde gönderiliyor.
+431,Paketleme sırasında bazı ürünlerde hasar ve eksik çıkma sorunu yaşanmış.,"Paketleme yetersiz bulunmuş, ürünün yırtık ve hasarlı geldiği belirtilmiş.","Paketleme kalitesi sorunlu, ürün hasar görmüş."
+432,Ürün fiyatını hak eden ve fiyat-performans açısından avantajlı bulunmuş.,Ürün fiyatına göre oldukça avantajlı ve parasını hak ediyor.,Ürün fiyatına değer.
+433,"Malzeme, dikiş ve dokusu beğenilen, kaliteli ve sağlam bir ürün olarak görülmüş.","Malzeme ve dokusu kaliteli, sağlam ve şık görünüşlü bulunuyor.",Ürün kalitesi çok iyi ve sağlamdır.
+434,Kullanıcılar üründen memnun kalmış ve tekrar almayı ya da tavsiye etmeyi düşünmüş.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+435,Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Kargo hızlı geldi.
+436,Paketleme özenli ve koruyucu bulunmuş.,Paketleme özenli bulunmuş ve ürünün iyi korunmuş olduğu söylenmiş.,Paketleme özenlidir.
+437,Ürün fiyatına göre başarılı ve alınabilir görülüyor.,Fiyatına göre iyi bir ürün olduğu ve alınmaya değer bulunduğu söyleniyor.,Ürün fiyatına değiyor.
+438,"Ürünün kumaşı, dokusu ve genel yapısı kaliteli ve yumuşak bulunmuş.","Kumaşı yumuşak, dokusu kaliteli ve ürünün genel yapısı sağlam bulunmuş.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+439,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+440,Kargo hızlı ve zamanında teslim edilmiş görünüyor.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Kargo süreci genellikle hızlı ve teslimat hızı memnun edici.
+441,Ürün kutulu ve korunaklı şekilde gelmiş.,Ürün kutulu paketle hızlı ve sağlam şekilde ulaşmış.,Paketleme kalitesi harika.
+442,Fiyatına göre başarılı ve uygun bir ürün olarak görülüyor.,Ürün fiyatına göre başarılı ve uygun fiyatlı bulunuyor.,Ürün fiyatına değiyor ve kalitesi uygun fiyatla veriliyor.
+443,"Kemerin kaliteli, şık ve dayanıklı olduğu belirtiliyor.","Ürünün kalitesi, sağlamlığı ve şıklığı beğenilmiş.",Ürün kalitesi genellikle olumlu olarak değerlendiriliyor.
+444,Kullanıcılar üründen memnun kalıp tavsiye ediyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak memnuniyeti yüksek ve tavsiye ediliyor.
+445,Ürün hızlı teslim edilmiş.,Ürün hızlı teslim edilmiş.,Ürün çok hızlı teslim edildi.
+446,Ürün güzel paketlenmiş ve kutu içeriği beklendiği gibi gelmiş.,Ürün güzel paketlenmiş.,Ürün güzel paketlenmişti.
+447,Fiyatının yüksek olduğu ve indirim olmadan alınmasının zor olduğu düşünülüyor.,Fiyatının yüksek olduğu ve indirim olmadan alınmaya değmediği söyleniyor.,"Ürün fiyatına değip değmediği konusunda genel kanı, çok pahalı olduğu yönünde."
+448,"Uyumlu fareyle iyi çalışan, kaliteli ve güzel görünen bir ürün olarak değerlendiriliyor.","Ürün kaliteli, uyumlu ve güzel çalışıyor.",Ürün kalitesi gayet yeterli ve çeşitli.
+449,Uyumlu fare kullananlar üründen memnun kalıp tavsiye ediyor.,Ürün genel olarak beğenilmiş ve uyumlu fareler için tavsiye edilmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+450,Teslimatın hızlı ve zamanında olduğu belirtilmiş.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci genellikle hızlı ve düzgün gerçekleşiyor.
+451,Paketlemenin özenli olmadığı ve bazı ürünlerin hasarlı geldiği söylenmiş.,Paketleme özensiz ve ürünün hasarlı geldiği belirtilmiş.,Paketleme kalitesi düşük ve çantada yırtıklar ve dikiş hataları görülmektedir.
+452,Fiyatına göre kullanışlı ve başarılı bir ürün olarak görülmüş.,Ürün fiyatına göre başarılı ve uygun fiyatlı bulunmuş.,Ürün fiyatına göre çok beğendim.
+453,Malzeme ve işçilik kalitesi genel olarak beğenilmiş.,Malzeme ve işçilik kalitesi genel olarak iyi bulunmuş.,Ürün kalitesi genel olarak iyi ve kullanışlıdır.
+454,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak beğenilmiş ve tekrar alınabileceği ifade edilmiş.,Ürün genel olarak iyi duruyor ve kullanıcılar memnun kalmaktadır.
+455,Kargo hızlı ve zamanında teslimat sağlıyor.,Teslimatın hızlı ve zamanında olduğu belirtiliyor.,Kargo süreci genellikle hızlı ve güvenilir olarak gözükmektedir.
+456,Paketleme özensiz bulunmuş ve kutu hasarlı gelmiş.,"Paketleme özensiz bulunmuş, kutu hasarlı ve ürünün korunması yetersiz kalmış.",Paketleme kalitesi genellikle kötüydü.
+457,Fiyatına göre yeterli ve avantajlı görülen bir ürün.,Fiyatına göre performansının iyi olduğu ve parasını hak ettiği söyleniyor.,Ürün fiyatına değip değmediği konusunda karışık görüşler var.
+458,"Ürün kullanışlı, kaliteli ve işlevini iyi yerine getiriyor.","Ürünün hafif, kullanışlı ve kaliteli olduğu vurgulanmış.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+459,Kullanıcılar üründen memnun ve tavsiye etme eğiliminde.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak memnuniyeti yüksek görünüyor.
+460,Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Ürün hızlı ve iyi bir kargo süreci ile gönderildi.
+461,Ürün özenli paketlenmiş ve korunaklı gönderilmiş.,Paketleme genel olarak iyi ve ürün korunaklı şekilde gönderilmiş.,Paketleme iyi.
+462,Fiyatına göre oldukça avantajlı ve alınmaya değer bulunmuş.,Fiyatına göre oldukça iyi ve uygun bir ürün olarak görülmüş.,Ürün fiyatına değer.
+463,"Malzemesi doğal, kullanışlı ve dayanıklı bir ürün olarak öne çıkıyor.","Malzeme kalitesi ve kullanışlılığı beğenilmiş, ürün sağlam ve uzun ömürlü görülmüş.",Ürün kalitesi genel olarak güzel ve sağlamdır.
+464,Kullanıcılar üründen memnun kalmış ve tekrar almayı düşünecek kadar beğenmiş.,Ürün genel olarak beğenilmiş ve tekrar alınabileceği düşünülmüş.,Ürün genel olarak tavsiye ediliyor ve tekrar satın alınacak bir şey olarak görülmektedir.
+465,,None,null
+466,,None,Paketleme kalitesi iyi.
+467,,None,Fiyat-performans dengesi iyi görünüyor.
+468,,None,null
+469,Ürün beklentileri karşılamış ve istenen özellikleri sunmuş görünüyor.,Ürün beklentiyi karşılamış ve memnuniyet yaratmış.,null
+470,,None,null
+471,,None,null
+472,Fiyatı uygun bulunmuş.,Fiyatının uygun olmadığı ve fiyatına değmediği söylenmiş.,Fiyat performansı iyi değil.
+473,Malzeme kalitesi ve işçiliği konusunda olumsuz değerlendirmeler öne çıkıyor.,"Malzeme kalitesi zayıf ve ürünün flanşlı, hafif bir yapıda olduğu belirtilmiş.",Ürün kalitesi hakkında net bir kanıya varılamıyor.
+474,Beden uyumu ve görünümü beğenilmiş.,Ürün beğenilmiş ve memnuniyetle karşılaşılmış.,Ürün genel memnuniyeti yüksek gibi görünüyor.
+475,Kargo hızlı ve teslimat sorunsuz görünüyor.,Kargo hızlı ve teslimat sorunsuz görünüyor.,Hızlı kargo teslimatı olumlu deneyimlere neden oldu.
+476,Ürün güzel paketlenmiş.,Ürün güzel paketlenmiş.,Paketleme kalitesi iyi.
+477,Fiyatına göre iyi bir ürün olarak değerlendiriliyor.,Fiyatına göre iyi bir ürün olarak görülüyor.,Ürün fiyatına değer.
+478,Ürünün görünümü ve kullanışlılığı beğenilmiş.,Malzeme kalitesi düşük bulunsa da ürün genel olarak şık ve kullanışlı olarak değerlendirilmiş.,"Ürün kalitesi tartışmalı, bazı kullanıcılar kaliteyi yeterli bulurken diğerleri daha düşük kaliteye sahip olduğunu belirtiyorlar."
+479,Kullanıcılar üründen memnun ve tavsiye ediyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Kullanıcılar genel olarak memnuniyet duyuyorlar ve tavsiye ediyorlar.
+480,"Kargo süreci hızlı ve düzenli bulunmuş, teslimat da memnuniyet vermiştir.",Kargo hızlı ve teslimat süreci düzenli bulunmuş.,"Kargo süreci genellikle hızlı ve özenli olsa da, teslimat hızı ve kurye deneyimi bazı durumlarda sorunlar içerebilir."
+481,"Paketleme özenli ve şık bulunmuş, ürünün iyi korunduğu belirtilmiştir.",Paketleme özenli ve kutu korunaklı şekilde gelmiş.,Paketleme kalitesi çok iyi ve özenlidir.
+482,Ürün fiyatına göre başarılı ve alınmaya değer görülmüştür.,Fiyatına göre oldukça iyi bir ürün olduğu söyleniyor.,Ürün fiyatına değer.
+483,"Ürünün kumaşı, rahatlığı ve dayanıklılığı genel olarak kaliteli bulunmuştur.","Kumaş ve genel işçilik kalitesi beğenilmiş, ürün kaliteli ve kullanışlı bulunmuş.",Ürün kalitesi genellikle olumlu olarak değerlendiriliyor.
+484,Kullanıcılar üründen memnun kalmış ve tekrar almayı tavsiye etmiştir.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Tüm kullanıcılar memnun kalıyor ve tekrar satın alma eğiliminde.
+485,,None,null
+486,,None,null
+487,Fiyatına göre alınabilir bir ürün olarak görülüyor.,Ürün alınabilir bir seçenek olarak görülmüş.,Ürün fiyatına değip değmediği belli değil.
+488,"Kumaşının ve dokusunun kaliteli olduğu, kolay eskimediği belirtiliyor.","Kumaşı ve dokusu beğenilmiş, ürünün kaliteli ve dayanıklı olduğu söylenmiş.",Ürün kalitesi iyi ve dayanıklıdır.
+489,Ürün genel olarak beğenilmiş ve memnuniyet yüksek görünüyor.,Ürün genel olarak çok beğenilmiş ve memnuniyet yüksek ifade edilmiş.,Ürün genel memnuniyeti yüksek.
+490,,None,null
+491,"Kıyafetler, alt parçalarla uyumlu kombinler oluşturacak şekilde geliyor.",Ürünlerin paketleme ve kutu durumuyla ilgili bir değerlendirme yok.,null
+492,,None,Fiyat performansını değerlendirecek yeterli kanıt yok.
+493,"Kalitesi beklenenden daha iyi bulunmuş, ancak plastik parçaların kolay yırtılabildiği belirtilmiş.",Malzeme kalitesi beklenenden iyi bulunmuş.,Ürün kalitesi beklenenden daha iyi.
+494,Beklenenden daha iyi kalite sunması nedeniyle memnuniyet yüksek görünüyor.,Bebek kıyafetlerinin kalitesinin beklentiyi aştığı belirtilmiş.,Tüketiciler ürünün kalitesinden memnunlar.
+495,Kargo hızlı ve zamanında teslim edilmiş görünüyor.,Kargo hızlı ve zamanında teslim edilmiş.,Kargo süreci genellikle olumlu olarak değerlendiriliyor.
+496,Paketleme konusunda korumasız ve yetersiz gönderim şikayetleri öne çıkıyor.,"Paketleme yetersiz bulunmuş, ürün korumasız ve özenli ambalajsız gönderilmiş.",Ürün paketleme kalitesi genellikle iyi veya direkt kutusuyla gönderildi.
+497,Ürün fiyatına göre iyi bir karşılık sunduğu düşünülüyor.,Ürün fiyatına göre iyi bir değer sunuyor.,Ürün fiyatına değer.
+498,Ürünün malzeme ve performans kalitesi olumlu değerlendiriliyor.,Malzeme kalitesi ve genel işçilik beğenilmiş.,Ürün kalitesi iyi görünüyor.
+499,Kullanıcılar üründen memnun olduklarını ve tavsiye ettiklerini belirtiyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak memnunlukla karşılanıyor ve tavsiye ediliyor.
+500,Teslimatın çok hızlı olduğu ve ürünün kısa sürede ulaştığı belirtiliyor.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci genellikle hızlı ve güvenilir olarak gözükmektedir.
+501,Paketlemenin özenli ve kutu durumunun iyi olduğu söyleniyor.,Paketleme özenli ve kutu şık bulunmuş.,Paketleme kalitesi iyi.
+502,Ürün fiyatına göre çok başarılı ve alınmaya değer bulunuyor.,Ürün fiyatına göre başarılı ve fiyat-performans açısından tatmin edici görülmüş.,Ürün fiyatına değer.
+503,Malzeme ve genel ürün kalitesi beğeniliyor.,"Malzeme ve ses kalitesi beğenilmiş, ürünün kaliteli ve kullanışlı olduğu söylenmiş.",Ürün kalitesi iyi ancak bazı kullanıcılar bazı sorunlarla karşılaştı.
+504,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Ürün genel olarak memnun kalınan bir seçenektir.
+505,Kargo süreciyle ilgili hızlı ve uygun bir teslimat deneyimi vurgulanıyor.,Kargo süreci hızlı ve sorunsuz görünüyor.,Kargo süreci sorunlu olabilir.
+506,Paketleme yetersiz bulunmuş ve ürün bozuk geldiği için koruma konusunda sorun yaşandığı belirtiliyor.,Ürün hasarlı geldiği için kutu durumu olumsuz değerlendirilmiş.,Paketleme kalitesi kötüydü.
+507,Ürün fiyatına göre iyi bir değer sunduğu düşünülüyor.,Ürün fiyatına göre oldukça avantajlı ve parasını karşılıyor.,Ürün fiyatına değer.
+508,"Malzeme ve işçilik açısından kaliteli, kullanışlı ve performansı iyi bir ürün olarak değerlendiriliyor.",Malzeme kalitesi ve genel işçiliği beğenilmiş.,Ürün kalitesi yerinde ve uygun fiyatlıdır.
+509,Genel olarak memnuniyet yüksek ve ürün tavsiye ediliyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcı memnuniyetini yüksek seviyede karşılayıp tavsiye ediliyor.
+510,Kargo çok hızlı gelmiş.,Kargo çok hızlı ve teslimat süreci memnuniyet verici görünüyor.,Hızlı kargo süreci.
+511,Özenli ve koruyucu şekilde paketlenmiş.,Ürün özenli paketlenmiş ve koruyucu bir şekilde gönderilmiş.,Paketleme kalitesi iyi.
+512,Fiyatı uygun ve ürünün kalitesi yüksek bulunmuş.,Fiyatı uygun ve sunduğu kaliteyle iyi bir değer sunuyor.,Fiyat uygun.
+513,"Malzeme ve tasarım kalitesi beğenilmiş, ürün sağlam ve kullanışlı bulunmuş.",Ürünün kalitesi ve iç tasarımı beğenilmiş.,Ürün kalitesi yüksek ve malzeme sağlamdır.
+514,Ürün beğenilmiş ve tavsiye edilmiş.,Ürün tavsiye edilmiş ve beğenilmiş.,Ürün genel olarak kullanıcılar tarafından memnuniyetle karşılanıyor.
+515,Gönderim hızlı bulunmuş.,Gönderim hızlı bulunmuş.,Kargo süreci hızlıdır.
+516,,None,null
+517,Fiyat-performans dengesi olumlu değerlendirilmiş.,Fiyatına göre performansının iyi olduğu ifade ediliyor.,Ürün fiyatına değer.
+518,Marka kalitesi olumlu görülmüş.,"Ürünün kaliteli ve performanslı olduğu, markanın güvenilir olduğu ifade ediliyor.",Ürün kalitesi iyi görünüyor.
+519,,None,null
+520,Kargo hızlı ve sorunsuz teslimat sağlamış.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve eksiksiz gerçekleşiyor.
+521,Paketleme sağlam bulunmuş ve ürünler zarar görmeden ulaşmış.,Paketleme eksiksiz ve sağlam bulunmuş.,Paketleme kalitesi iyi ve ürün eksiksiz geldi.
+522,Fiyatı uygun ve alınan değeri tatmin edici görülmüş.,Ürün fiyatına göre avantajlı ve hesaplı bulunmuş.,Ürün fiyatına değer.
+523,"Ürünün tazeliği ve tadı beğenilmiş, kaliteli bulunmuş.","Ürünün taze, eksiksiz ve beklentiyi karşılayan bir kalite sunduğu belirtilmiş.",Ürün kalitesi sorunlar içermiyor.
+524,Ürün genel olarak beğenilmiş ve tekrar alınmaya uygun görülmüş.,Ürün genel olarak beğenilmiş ve tekrar alınmaya değer bulunmuş.,Ürün genel olarak kullanıcı memnuniyetini karşılayıp tavsiye ediliyor.
+525,,None,Kargo süreci hakkında yeterli bilgiye sahip değilim.
+526,,None,null
+527,Ürün uygun fiyatlı bulunmuş.,Ürün uygun fiyatlı ve fiyatına göre iyi bir seçenek olarak görülmüş.,Ürün fiyatına değer.
+528,Kumaşı kaliteli ve kullanışlı olarak değerlendirilmiş.,Kumaşı beğenilmiş ve ürünün kaliteli olduğu belirtilmiş.,Ürün kalitesi iyi görünüyor.
+529,Ürün spor için beğenilmiş ve tekrar tercih edildiği anlaşılmış.,Ürün spor için çok beğenilmiş ve tekrar alınabilecek bir ürün olarak görülmüş.,Ürün genel olarak memnuniyet veriyormuş.
+530,,None,null
+531,,None,null
+532,Fiyatının karşılığını verdiği ve indirimde daha avantajlı bulunduğu söyleniyor.,Fiyatına göre iyi bir seçenek olduğu ve indirimdeyken avantajlı bulunduğu söyleniyor.,Ürün fiyatına genellikle değer.
+533,"Kumaş, baskı ve genel işçilik açısından kaliteli ve sağlam bir ürün olarak değerlendiriliyor.","Kumaş, baskı ve genel işçilik kalitesi beğenilmiş.",Ürün kalitesi genel olarak iyi ve kaliteli olarak değerlendirilebilir.
+534,Ürün genel olarak beğeniliyor ve tekrar tercih edilebilecek bir izlenim veriyor.,Ürün beğenilmiş ve tavsiye edilmiş.,Kullanıcılar genel olarak memnuniyet duyuyorlar ve tavsiye ediyorlar.
+535,"Kargo süreci hızlı ve sorunsuz ilerlemiş, ürün belirtilen şekilde ulaşmış.",Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo süreci sorunsuz ve hızlıdır.
+536,Paketin yırtık gelmesi nedeniyle ambalaj özeni yetersiz bulunmuş.,Paketin yırtık gelmesi özenli paketleme beklentisini olumsuz etkilemiş.,Paketleme kalitesi sorunlu.
+537,Ürün fiyatına göre başarılı ve uygun fiyatlı görülmüş.,Ürün uygun fiyatlı ve fiyatına göre avantajlı görülmüş.,Ürün fiyatına değer.
+538,"Ürünün kalitesi, doğallığı ve kullanım hissi beğenilmiş.","Ürünün doğal, kaliteli ve güven veren bir yapıda olduğu vurgulanıyor.",Ürün kalitesi memnuniyet verici ve doğal olduğu için gönül rahatlığıyla kullanılabilir.
+539,Kullanıcılar üründen memnun kalmış ve tekrar kullanma isteği belirtmiş.,Kullanıcılar üründen memnun kalmış ve tekrar kullanmayı düşünmüş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+540,Kargo hızlı ve sorunsuz olarak değerlendirilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Hızlı kargo süreci ve uygun fiyat avantajı ürünün tercih edilmesinde önemli rol oynuyor.
+541,Paketleme yetersiz bulunmuş ve ürünün korumasız geldiği belirtilmiş.,"Paketleme yetersiz bulunmuş, ürünün korunması zayıf kalmış.",Paketleme kalitesi sorunlu ve ürünün korunması yeterli değil.
+542,Ürün fiyatına göre başarılı ve uygun bulunmuş.,Ürün fiyatına göre başarılı ve uygun fiyatlı bulunmuş.,Ürün fiyatına değer.
+543,"Ürünün dokusu, rengi ve doğal duruşu beğenilmiş.","Ürünün yapısı, rengi ve doğal görünümü beğenilmiş.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+544,Kullanıcılar üründen memnun kalıp tavsiye etmeye eğilimli görünüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+545,Kargo hızlı teslim edilmiş ve gönderim süreci memnuniyet yaratmış.,Kargo hızlı teslim edilmiş ve gönderim süreci memnuniyet vermiş.,Kargo süreci genellikle hızlı ve teslimat hızı memnun edici.
+546,Paketleme özenli ve ambalajın güzel olduğu belirtilmiş.,Paketleme özenli ve ürün iyi korunmuş görünüyor.,Paketleme kalitesi iyi.
+547,Fiyatının uygun olduğu ve sunduğu ısıtma performansıyla değerli bulunduğu söylenmiş.,Fiyatının uygun olduğu ve parasını hak ettiği söylenmiş.,Fiyatın performansı iyi görünüyor.
+548,"Ürünün yumuşak, sıcak tutan ve kaliteli bir yapıda olduğu ifade edilmiş.","Ürünün kalitesi, yünü ve hissi beğenilmiş.",Ürün kalitesi güzel ve sağlamdır.
+549,"Ürün ve satıcı genel olarak beğenilmiş, tekrar alışveriş ve tavsiye eğilimi öne çıkmış.",Kullanıcılar üründen memnun kalmış ve tekrar almayı ya da tavsiye etmeyi düşünmüş.,Kullanıcılar genel olarak memnuniyet duyuyorlar ve tekrar satın alma eğiliminde.
+550,Teslimat hızlı ve sorunsuz gerçekleşmiş görünüyor.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve teslimat hızı uygun fiyatlıdır.
+551,Paketleme sağlam ve ürünler hasarsız ulaşmış.,Paketleme özenli ve ürünler sağlam ulaşmış.,Paketleme kalitesi genellikle iyi ve ürünler eksiksiz geldi.
+552,Ürün uygun fiyatlı ve hesaplı bulunmuş.,Fiyatının uygun ve avantajlı olduğu söyleniyor.,Ürün uygun fiyatlıdır.
+553,Ürünün tadı ve genel kalitesi beğenilmiş.,"Ürünün taze, lezzetli ve sağlam olduğu vurgulanıyor.",Ürün kalitesi yüksek ve sağlamdır.
+554,Ürün genel olarak beğenilmiş ve tekrar alınmak istenmiş.,Ürün genel olarak beğenilmiş ve tekrar alınmaya değer bulunmuş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+555,Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo hızlı ve teslimat sorunsuz gerçekleşmiş.,Kargo süreci genellikle hızlı ve özenlidir.
+556,Paketleme güzel yapılmış ve ürün korunaklı şekilde gönderilmiş.,Paketleme genel olarak iyi ve ürünün korunması olumlu değerlendirilmiş.,Paketleme kalitesi iyi ve faturalıdır.
+557,Ürün fiyatına göre iyi bir değer sunuyor.,Fiyatının uygun ve verilen paranın karşılığını verdiği söyleniyor.,Ürün fiyatına değer.
+558,"Ürünün dokusu, dikişi ve genel kalitesi beğenilmiş.","Kumaş dokusu, dikiş ve genel işçilik kalitesi beğenilmiş.",Ürün kalitesi çok iyi ve beklentilerin üzerinde.
+559,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Ürün genel olarak memnuniyet verici ve tavsiye edilebilir.
+560,Ürün hızlı teslim edilmiş ve kargo süreci sorunsuz bulunmuş.,Ürün hızlı ve sorunsuz teslim edilmiş.,Ürün iyi kargolanmış ve hızlıca teslim edildi.
+561,,None,null
+562,Levi’s kalitesine göre fiyatı uygun bulunmuş.,Fiyatının uygun olduğu ve kaliteyle uyumlu bulunduğu söylenmiş.,Ürün fiyatına değer.
+563,"Ürünün kalitesi, duruşu ve işçiliği beğenilmiş.","Malzeme ve işçilik kalitesi beğenilmiş, ürünün kaliteli ve sağlam olduğu söylenmiş.",Ürün kalitesi iyi ve beklenen kalitedir.
+564,Ürün genel olarak beğenilmiş ve tekrar memnuniyet ifade edilmiş.,Ürün genel olarak beğenilmiş ve memnuniyet yüksek.,Kullanıcılar genel olarak memnun ve tekrar satın alma eğiliminde.
+565,,None,null
+566,,None,null
+567,Fiyatına göre memnuniyet verici bulundu.,Fiyatına göre memnuniyet vermiş.,Ürün fiyatına değer.
+568,"Kumaşı, işçiligi ve genel yapısı kaliteli ve rahat olarak değerlendiriliyor.","Kumaşı ve işçiliği beğenilmiş, ürünün kaliteli ve rahat olduğu söylenmiş.",Ürün kalitesi genel olarak yüksek ve memnun edici.
+569,Ürün genel olarak beğenilmiş ve memnuniyet oluşturmuş.,Ürün beğenilmiş ve memnuniyetle karşılanmış.,Kullanıcılar genel olarak memnundur.
+570,Ürün hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo hızlı ve sorunsuz teslim edilmiş.,Ürünler hızlı bir şekilde teslimat yapılmakta ve kurye deneyimi genellikle olumlu olarak yorumlanmaktadır.
+571,Paketleme genel olarak özenli ve koruyucu bulunmuş.,Paketleme özenli ve ürün korunaklı şekilde ulaşmış.,Paketleme kalitesi genellikle iyi ama bazen hasar görülebilir.
+572,Ürün fiyatına göre değerli ve fiyat performans açısından başarılı görülüyor.,Ürün fiyatına göre başarılı ve fiyat-performans açısından memnuniyet veriyor.,"Ürün fiyatına değip değmediği, para-değer dengesi ve fiyat avantajı konusunda yeterli kanıt bulunmamaktadır."
+573,"Ürünün malzeme ve kullanım kalitesi yüksek, sağlam ve başarılı bulunuyor.","Ürünün kaliteli, sağlam ve uyumlu bir yapıda olduğu vurgulanıyor.",Ürün kalitesi yüksek ve dayanıklı tasarım sahip.
+574,Kullanıcılar üründen memnun ve tavsiye etme eğiliminde görünüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılayacak düzeyde ve tavsiye edilebilir.
+575,Siparişin hızlı gönderildiği ve kısa sürede ulaştığı belirtiliyor.,Sipariş hızlı teslim edilmiş ve gönderim süreci olumlu değerlendirilmiş.,Satıcı hızlı sevk etti ve sipariş hızlı elime ulaştı.
+576,Kutu içeriğinin eksiksiz geldiği ve kuruluma hazır olduğu söyleniyor.,Paketten gerekli parçalar çıkıyor ve kutu içeriği düzenli görünüyor.,Paketleme kalitesi iyi görünüyor.
+577,Fiyatına göre özellikleriyle çok iyi bir tercih olduğu vurgulanıyor.,Fiyatına göre oldukça iyi bir ürün olduğu ve alınabilir bulunduğu söyleniyor.,Ürün fiyatına göre iyi olduğu için satın alınabilir ve fiyat performans olarak Çok güzel bir ürün...
+578,Malzeme kalitesi ve genel çalışma performansı başarılı bulunuyor.,"Malzeme ve genel işçilik kalitesi beğenilmiş, ürünün sağlam ve iyi çalıştığı söylenmiş.","Ürün kalitesi mükemmel, malzeme kalite iyi ve işçilik kusursuz."
+579,Ürün tavsiye ediliyor ve yeniden alınabileceği ifade ediliyor.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Ürün genel olarak kullanıcı memnuniyetini karşılayacak nitelikte ve tavsiye edilebilir.
+580,Kargo süreci hızlı ve teslimat sorunsuz görünmektedir.,"Kargo süreci hızlı ve sorunsuz ilerlemiş, ürünler zamanında teslim edilmiş.",Kargo süreci genellikle hızlı ve problemli durumlar dışında sorunsuz gerçekleşti.
+581,Paketleme özenli ve kutu durumu genel olarak sağlamdır.,Paketleme özenli ve ürün sağlam şekilde ulaşmış.,Paketleme kalitesi genellikle iyi ama bazen ürün hasarlı olarak teslim edilebilir.
+582,Ürün fiyatına göre iyi bir değer sunmaktadır.,Fiyatına göre iyi bir ürün olduğu ve parasını hak ettiği söylenmiş.,"Ürün fiyatına değip değmediği konusunda genel kanı, fiyatı uygun bulan kullanıcıların varlığıdır."
+583,"Malzeme ve işçilik kalitesi yüksek, ürün sağlam ve premium hissediyor.","Malzeme ve işçilik kalitesi yüksek, sağlam ve premium hissi veren bir ürün olarak değerlendiriliyor.",Ürün kalitesi gayet sağlam ve kaliteli hissettiriyor.
+584,Kullanıcılar üründen memnun ve tavsiye etme eğilimindedir.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Ürün genel olarak memnuniyet veriyorsa da bazı kullanıcılar riskten ötürü tavsiye etmiyor.
+585,Kargo hızlı ve sorunsuz bir şekilde teslim edilmiş.,Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo süreci genellikle hızlı ve sorunsuzdur.
+586,Paketleme genel olarak normal ve ürünün özenle gönderildiği belirtilmiş.,Paketleme genel olarak düzenli ve koruyucu görünüyor.,Paketleme kalitesi iyi görünüyor.
+587,Ürün fiyatına göre başarılı ve fiyat performans açısından beğenilmiş.,Ürün fiyatına göre başarılı ve parasını hak eden bir seçenek olarak görülüyor.,Ürün fiyatına değer.
+588,Ürünün malzeme ve genel kalitesi yüksek bulunmuş.,"Ürünün kalitesi, yapısı ve marka kalitesi beğenilmiş.",Ürün kalitesi beklediğimiz üstünde çıktı.
+589,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+590,Teslimatın hızlı ve zamanında yapıldığı belirtiliyor.,Teslimatın hızlı ve zamanında olduğu belirtiliyor.,Hızlı teslimat ve zamanında teslimat süreci başarılıdır.
+591,Koruyucu parçanın eksik gelmesi paketleme konusunda olumsuzluk yaratmış.,Paketin koruyucu görünmesine rağmen ürünün kutudan çıkması paketleme konusunda olumsuz bir izlenim bırakmış.,Paketleme kalitesi iyi görünüyor.
+592,Fiyatının uygun ve performansına göre değerli olduğu söyleniyor.,Fiyatının uygun olduğu ve fiyatına göre iyi bir seçenek olduğu söyleniyor.,Ürün fiyatına değer.
+593,"Ürünün kaliteli, keskin ve konforlu bir tıraş sunduğu ifade ediliyor.","Ürünün kaliteli, keskin ve kullanışlı olduğu vurgulanıyor.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+594,Kullanıcılar üründen memnun olduklarını ve tavsiye ettiklerini söylüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Kullanıcılar genel olarak memnun ve tavsiye ediyorlar bu ürünü.
+595,Kargo hızlı ve teslimat sorunsuz gerçekleşmiş görünüyor.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve hasarsız olarak gözükmektedir.
+596,Paketleme özenli bulunmuş ve ürün sağlam ulaşmış.,Paketin özenli geldiği ve ürünün sağlam ulaştığı belirtiliyor.,Paketleme kalitesi genellikle iyi ama hediye paketi gönderme konusunda bazı sorunlar var.
+597,Fiyatına göre iyi bir seçenek ve hediye için uygun görülmüş.,Fiyatına göre çok iyi bir değer sunduğu belirtilmiş.,Ürün fiyatına değer.
+598,"Ürünün kalitesi beğenilmiş, yapımı kolay ve görüntüsü hoş bulunmuş.","Ürünün yapımı kolay, görünümü tatlı ve genel kalitesi beğenilmiş.",Ürün kalitesi oldukça iyi ve yapımı kolaydır.
+599,Genel olarak ürün çok beğenilmiş ve tavsiye edilir bulunmuş.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+600,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo süreci genellikle hızlı ve zamanında gerçekleşmektedir.
+601,Ürün içindeki parçaların düzensiz yerleştirildiği ve bazı parçaların ezik ya da kırık geldiği söyleniyor.,"Paketleme yetersiz bulunmuş, ürünün kutu ve fırça açısından hasarlı geldiği belirtilmiş.","Paketleme kalitesi sorunlu, ürün içi bazı parçalar hasarlı olarak geldi."
+602,Fiyatına göre iyi bir ürün olduğu vurgulanıyor.,Fiyatına göre iyi bir performans sunduğu belirtilmiş.,Ürün fiyatına değer.
+603,"Malzeme kalitesinin zayıf olduğu, buna rağmen parçaların iş gördüğü ifade ediliyor.","Malzeme kalitesi zayıf bulunmuş, ancak ürünün iş gördüğü belirtilmiş.",Ürün kalitesi genel olarak kötü.
+604,Kullanışlı ve pratik bulunup tavsiye edilen bir ürün olarak değerlendiriliyor.,Kullanışlı ve memnuniyet veren bir ürün olarak değerlendiriliyor.,Ürün genel olarak kullanıcı memnuniyetini karşıladı ve tavsiye edilebilir.
+605,Ürün hızlı ve sağlam teslim edilmiş.,Ürün hızlı ve sağlam şekilde teslim edilmiş.,Kargo süreci genellikle hızlı ve güvenilir olarak görünüyor.
+606,Kutu güvenlik bandı kesilmiş ve paket ezik gelmiş.,Kutunun açılırken güvenlik bandının kesilmiş olduğu belirtilmiş.,Paketleme kalitesi sorunlu.
+607,,Fiyatına göre iyi bir performans sunduğu belirtilmiş.,Fiyat performans dengesi iyi görünüyor.
+608,İşlemci yüksek performanslı ve uygun soğutmayla sorunsuz çalışıyor.,"İşlemcinin performansı ve soğutma ile uyumlu çalıştığı, ısınma problemi yaşamadığı belirtiliyor.",Ürün kalitesi genel olarak olumlu olarak yorumlanıyor.
+609,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Kullanıcılar üründen memnun kalmış ve tekrar tercih edebileceklerini düşünmüş.,Genel kullanıcı memnuniyeti düşük gibi görünüyor.
+610,"Kargo süreci hızlı ve sorunsuz ilerlemiş, teslimat kısa sürede yapılmış.",Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo süreci genellikle sorunsuz ve hızlı ilerledi.
+611,"Paketleme genel olarak sağlam bulunmuş, ancak açılmış ya da çizik kutu şikayetleri de var.","Kutu bazı yorumlarda ezikli, çizik ve açılmış olarak belirtilmiş.","Paketleme kalitesi sorunlu, kutu hasarlı ve bazı etiketler sökülmüş."
+612,Ürün fiyatına göre iyi bir performans sunuyor ve indirimle alınması avantajlı görülmüş.,Ürün fiyatına göre başarılı ve parasını hak eden bir seçenek olarak görülüyor.,Ürün fiyatına değiyor.
+613,"Ürünün kalitesi ve Apple işçiliği beğenilmiş, orijinalliği de güven vermiş.","Malzeme ve işçilik kalitesi yüksek, ürün sağlam ve kullanışlı bulunmuş.",Ürün kalitesi genel olarak olumlu olarak değerlendiriliyor.
+614,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğilimi göstermiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde.,Ürün genel olarak kullanıcı memnuniyetini yüksek seviyede karşılamaktadır.
+615,Kargo hızlı ve zamanında teslim edilmiş görünüyor.,Kargo hızlı ve zamanında teslim edilmiş.,Kargo süreci genellikle zamanında gerçekleşiyor.
+616,Paketleme korunaklı ve sağlam bulunmuş.,Paketleme genel olarak koruyucu ve sağlam bulunmuş.,Paketleme kalitesi genellikle olumlu olarak yorumlandı.
+617,Ürün fiyatına göre oldukça başarılı ve alınabilir görülüyor.,Ürün fiyatına göre başarılı ve fiyat-performans açısından tatmin edici görülmüş.,Ürün fiyatına göre gayet başarılı ve tatmin edici bir fiyat performans ürünüdür.
+618,"Tablet kullanışlı, akıcı ve sağlam bir ürün olarak öne çıkıyor.","Ürünün kalitesi, kullanım rahatlığı ve sağlamlığı beğenilmiş.",Ürün kalitesi genel olarak yeterli ve sağlamdır.
+619,Kullanıcılar üründen memnun kalıp tavsiye ediyor ve tekrar almayı düşünüyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+620,,None,Kargo süreci hakkında yeterli bilgiye sahip değilim.
+621,,None,null
+622,,None,Fiyat-performans dengesi iyi görünüyor.
+623,"Ürünün kalitesi, sağlamlığı ve işçiliği beğeniliyor; rahat, şık ve dayanıklı bulunduğu belirtiliyor.","Malzeme ve işçilik kalitesi yüksek, ürün sağlam ve rahat görünüyor.",Ürün kalitesi iyi.
+624,Genel memnuniyet yüksek; ürün beğenilmiş ve tavsiye edilir bir izlenim veriyor.,Ürün beğenilmiş ve memnuniyet yüksek görünüyor.,Ürün genel olarak memnuniyet veriyormuş.
+625,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo süreci genellikle hızlı ve sorunsuz gerçekleşiyor.
+626,Hediye olarak gelen ürünlerden birinin paketsiz gelmesi paketleme açısından olumsuz bir izlenim bırakmış.,Paketli ve paketsiz ürünlerin birlikte geldiği belirtilmiş.,Paketleme kalitesi sorunlu.
+627,Ürün fiyatına göre oldukça iyi bir performans sunuyor.,Fiyatına göre çok iyi bir performans sunduğu belirtiliyor.,Ürün fiyatına değer.
+628,"Ürün rahat ve kaliteli bulunurken, bazı yorumlarda kısa sürede yıpranma şikayeti de yer alıyor.","Ürün rahat ve kaliteli bulunmuş, orijinal olduğu da belirtilmiş.",Ürün kalitesi konusunda bazı olumlu ve olumsuz yorumlar mevcuttur.
+629,Kullanıcılar üründen genel olarak memnun kalmış ve tavsiye ediyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak memnuniyeti yüksek ve tavsiye ediliyor.
+630,"Teslimat hızlı ve sorunsuz görünürken, bir yorumda ürün gönderimiyle ilgili sorun yaşandığı belirtilmiş.","Teslimat hızlı ve ürün temiz, düzenli şekilde ulaştırılmış.",Kargo süreci başarılı ve hızlıdır.
+631,"Ürün temiz ve düzenli kutusunda teslim edilmiş, ancak bir yorumda iç tabanlarda kir izi olduğu söylenmiş.",Ürün tertemiz ve düzenli kutusunda teslim edilmiş.,Ürün paketleme olarak tertemiz ve nizami olarak teslim edildi.
+632,Fiyatının piyasa altı olması alışverişi avantajlı kılmış.,Piyasa fiyatının altında ve kalite açısından avantajlı bulunmuş.,Ürün fiyatına değer.
+633,Ayakkabının kalitesi ve dayanıklılığı olumlu değerlendirilmiş.,Ayakkabının kalitesi ve kullanım rahatlığı beğenilmiş.,Ürün kalitesi genel olarak olumlu yorumlar almaktadır.
+634,Kullanıcılar üründen memnun kalmış ve tavsiye eder bir izlenim vermiş.,Ürün beğenilmiş ve tekrar tercih edilebilecek bir alışveriş olarak görülmüş.,Ürün genel olarak kullanıcılar tarafından beğenilmekte ve tavsiye edilmektedir.
+635,,None,null
+636,Ürün iyi korunmuş ve sorunsuz şekilde ulaşmış görünüyor.,None,null
+637,Fiyatına göre kaliteli ve alınmaya değer bulunmuş.,Fiyatına göre kaliteli ve okula da uygun bir seçenek olarak görülüyor.,Ürün fiyatına değer.
+638,"Malzeme ve işçilik açısından beğenilmiş, temizliği kolay ve şık bir ürün olarak görülmüş.",Malzeme kalitesi ve işçiliği genel olarak beğenilmiş.,Ürün kalitesi iyi görünüyor.
+639,Kullanıcılar üründen memnun kalmış ve tavsiye eder bir izlenim vermiş.,Ürün beğenilmiş ve memnuniyet yüksek.,Kullanıcılar genel olarak memnuniyet duyuyorlar ve tekrar satın alma eğiliminde.
+640,Teslimat ve iade sürecinde gecikmeler ile karışıklıklar yaşandığı belirtilmiş.,Teslimat ve iade süreci bazı kullanıcılar için yavaş ve sorunlu görünmüş.,Kargo süreci sorunlu ve teslimat hızı beklenilenin aksine yavaş.
+641,,None,null
+642,Fiyatının piyasanın oldukça altında olduğu ve bu fiyata orijinal ürün alınmasının memnuniyet verdiği söylenmiş.,Fiyatının piyasa açısından çok avantajlı olduğu söyleniyor.,Ürün fiyatına değer.
+643,"Ürünün rahat, şık ve kaliteli olduğu, orijinal bulunduğu ifade edilmiş.","Ürünün rahat, şık ve kaliteli olduğu vurgulanmış.",Ürün kalitesi genel olarak iyi görünüyor.
+644,"Ürün genel olarak beğenilmiş, tavsiye edilmiş ve tekrar tercih edilebilecek bir ayakkabı olarak görülmüş.",Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak memnuniyet veriyorsa da bazı kullanıcılar tavsiye etmemektedir.
+645,,None,null
+646,,None,null
+647,Fiyatının karşılığını veren uygun fiyatlı bir ürün olarak görülüyor.,Fiyatının çok iyi olduğu ve avantajlı bulunduğu söylenmiş.,"Fiyat performans olarak değerlendirildiğinde, ürün oldukça uygun fiyatlıdır."
+648,"Hafif, suya dayanıklı ve rahat yapısıyla kaliteli bulunduğu belirtiliyor.","Malzeme hafif, rahat ve suya dayanıklı bulunuyor.",Ürün kalitesi genel olarak olumlu görünüyor.
+649,Ürün çocuklar için beğenilmiş ve yeniden alınmak istenmiş.,"Ürün rahat ve konforlu bulunmuş, tekrar alınabileceği ve tavsiye edildiği söylenmiş.",Kullanıcılar genel olarak memnuniyet duyuyorlar ve tekrar satın alma eğiliminde.
+650,Teslimat hızlı ve sorunsuz görünse de gönderim sırasında paketleme çok kötüydü.,Teslimatın hızlı olduğu belirtilmiş.,Kargo süreci sorunlu ve teslimat hızı beklenenin aksine yavaş.
+651,Kutu kötü durumda ve kirli geldiği için paketleme zayıf bulunmuş.,"Paketleme yetersiz kalmış ve ürün kirli, hasarlı şekilde gelmiş.",Paketleme kalitesi kötü.
+652,Fiyatına göre oldukça değerli ve alınmaya değer bir ürün olarak görülmüş.,Ürün fiyatına göre iyi bir değer sunuyor.,Ürün fiyatına değer.
+653,"Malzeme kalitesi ve işçiliği beğenilmiş, ürün kaliteli ve sağlam bulunmuş.","Malzeme ve işçilik kalitesi yüksek, sağlam ve kullanışlı bir ürün olarak değerlendiriliyor.",Ürün kalitesi yüksek ve sağlamdır.
+654,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+655,Teslimatın hızlı olduğu ve ürünün çabuk ulaştığı belirtiliyor.,Teslimatın hızlı olduğu ve ürünün kısa sürede ulaştığı belirtiliyor.,Teslimat hızı genellikle hızlıdır.
+656,Kargo kutusunun yırtık gelmesi paketlemenin zayıf olduğunu gösteriyor.,Paketin yırtılmış gelmesi ve ürünün hasarlı görünmesi paketleme açısından olumsuz bir izlenim bırakmış.,"Paketleme kalitesi sorunlu, kargo kutusu hasarlı geldi."
+657,Fiyatının yüksek olduğu ve bu paraya değmediği düşünülüyor.,Fiyatının yüksek olduğu ve bazı kullanıcılar için uygun olmadığı söylenmiş.,Ürün fiyatına değip değmediği tartışmalı.
+658,"Malzeme ve işçilik kalitesi sağlam, dayanıklı ve kaliteli bulunuyor.","Malzeme ve işçilik kalitesi beğenilmiş, ürün sağlam ve kaliteli bulunmuş.","Ürün kalitesi sağlam ve dayanıklı malzemelerden üretilmiş, malzeme kalitesi gayet iyi ve şık duruyor."
+659,Ürün genel olarak beğeniliyor ve tavsiye ediliyor.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Ürün genel olarak memnun kalınan ve tavsiye edilen bir ürün gibi görünüyor.
+660,"Kargo süreci hızlı ve sorunsuz, ürün zamanında ve sağlam ulaşıyor.",Kargo hızlı ve zamanında teslim edilmiş görünüyor.,Kargo süreci genellikle zamanında gerçekleşiyor.
+661,Paketleme özenli ve koruyucu bulunuyor.,Paketleme bazı yorumlarda yetersiz ve yırtık bulunmuş.,Paketleme kalitesi genellikle kötüydü.
+662,Fiyatı uygun ve fiyat-performans açısından avantajlı görülüyor.,Ürün fiyatına göre oldukça avantajlı ve alınabilir bulunmuş.,Ürün fiyatına değer ve fiyat avantajı sunuyor.
+663,"Ürün taze, lezzetli ve kaliteli olarak değerlendiriliyor.","Ürünün taze, lezzetli ve kaliteli olduğu vurgulanmış.",Ürün kalitesi genellikle olumlu olarak değerlendirilmiştir.
+664,Ürün genel olarak beğeniliyor ve tekrar tercih ediliyor.,Ürün genel olarak beğenilmiş ve tekrar alınmak istenmiş.,Ürün genel olarak memnuniyeti yüksek ve tavsiye ediliyor.
+665,Siparişin çok hızlı kargoya verildiği belirtiliyor.,Siparişin çok hızlı teslim edildiği belirtiliyor.,Kargo süreci hızlı ve teslimat hızı beklenen düzeyde.
+666,,None,null
+667,Fiyatının kapasitesine ve sunduğu uyuma göre karşılığını verdiği söyleniyor.,Fiyatına göre sunduğu değeri iyi karşılayan bir ürün olarak görülüyor.,Ürün fiyatına değer.
+668,"Malzeme kalitesi ve performansı beğenilmiş, ürünün kaliteli ve hızlı olduğu vurgulanmış.","Malzeme ve performans kalitesi beğenilmiş, ürünün kaliteli ve hızlı çalıştığı söylenmiş.",Ürün kalitesi yeterli ve beklentileri karşılar.
+669,Ürün beklentileri karşılamış ve tavsiye edilir bulunmuş.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+670,Teslimatın hızlı ve sorunsuz olduğu belirtiliyor.,Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Kargo süreci genellikle hızlı ve teslimat hızı uygun olarak gerçekleşmektedir.
+671,Paket içeriğinin eksik çıkması ambalaj konusunda olumsuz bir izlenim veriyor.,"Paketleme yetersiz bulunmuş, şarj cihazı paketten ayrılmış.","Paketleme kalitesi iyi, ürünün korunması başarılı."
+672,Fiyatına göre başarılı ve alınan parayı hak eden bir ürün olarak görülüyor.,Fiyatına göre iyi bir seçenek olduğu ve parasını hak ettiği söyleniyor.,"Ürün fiyatına değiyor, ancak daha yüksek fiyatlı modellerin daha iyi performans sunabileceği anlaşılıyor."
+673,"Malzeme ve kesim kalitesi beğeniliyor, kullanımda başarılı ve kullanışlı bulunuyor.","Ürünün kalitesi, keskinliği ve kullanım rahatlığı beğenilmiş.",Ürün kalitesi yüksek ve sağlamdır.
+674,Ürün genel olarak memnuniyet yaratıyor ve tavsiye ediliyor.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Ürün genel olarak memnun edici ve tavsiye edilebilir.
+675,Kargo süreci genel olarak hızlı ve memnuniyet verici bulunmuş.,Kargo süreci hızlı ve sorunsuz görünüyor.,Kargo süreci genellikle hızlı ve paketleme kalitelidir.
+676,Paketleme sağlam ve ürünü iyi koruyan bir yapıda değerlendirilmiş.,Paketleme sağlam ve koruyucu bulunmuş.,Paketleme oldukça sağlam ve iyi yapıştırılmış.
+677,"Ürün fiyatına göre iyi bir performans sunan, alınabilir bir seçenek olarak görülmüş.",Fiyatına göre iş görür ve fiyat-performans açısından başarılı bulunuyor.,Ürün fiyatına göre gerçekten iyi iş görüyor.
+678,Malzeme kalitesi ve kullanım hissi genel olarak kaliteli ve sağlam bulunmuş.,"Malzeme ve genel yapısı kaliteli, sağlam ve kullanışlı bulunmuş.",Ürün kalitesi genellikle yeterli ve kaliteli olarak değerlendiriliyor.
+679,"Ürün işini iyi yapan, kullanışlı ve memnuniyet bırakan bir ürün olarak değerlendirilmiş.",Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcı memnuniyetini karşılayacak düzeyde.
+680,"Teslimatın hızlı ve zamanında olduğu, kargolama sürecinin başarılı bulunduğu görülüyor.",Kargo hızlı ve zamanında teslim edilmiş görünüyor.,"Kargo süreci genellikle hızlı ve teslimat hızı iyi olsa da, bazı durumlarda paketleme sorunları ve eksik ürünler ortaya çıkabiliyor."
+681,Ürün sağlam ve iyi paketlenmiş şekilde ulaştığı için ambalajdan memnuniyet öne çıkıyor.,Paketleme genel olarak iyi ve ürün korunaklı ulaşmış.,Paketleme kalitesi genellikle iyi ama bazen hasar görülmektedir.
+682,Ürünün fiyatının uygun olduğu ve fiyatına göre iyi bir tercih sayıldığı belirtiliyor.,Fiyatının uygun olduğu ve alınabilir bulunduğu söyleniyor.,Ürün fiyatına değer.
+683,"Ürünün orijinal, sağlam ve kaliteli bulunduğu, kokusunun da beğenildiği anlaşılıyor.","Ürünün kokusu, köpürmesi ve genel kalitesi beğenilmiş.","Ürün kalitesi sağlam ve güzel, markanın en kaliteli şampuanı olarak kabul edilebilir."
+684,Ürün genel olarak beğeniliyor ve tekrar alınabilecek kadar memnuniyet oluşturuyor.,Ürün beğenilmiş ve tekrar tercih edilebilecek bir ürün olarak görülmüş.,Ürün genel olarak kullanıcılar tarafından beğenilmekte ve tavsiye edilmektedir.
+685,Kargo hızlı ve ürün kısa sürede teslim edilmiş.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,"Kargo süreci genellikle hızlıdır, ancak bazı durumlarda teslimat hızı sorunlar yaratabilir."
+686,"Paketleme yetersiz bulunmuş, kutu ve not beklentiyi karşılamamış.","Paketleme genel olarak iyi bulunmuş, ancak kutu ve not eksikliği eleştirilmiş.",Paketleme kalitesi sorunlu.
+687,Fiyatı uygun ve şık bir seçenek olarak görülmüş.,Fiyatının uygun olduğu ve alınabilir bulunduğu söylenmiş.,Ürün fiyatına değer.
+688,"Ürün kaliteli, orijinal ve rahat bulunmuş.","Ürünün orijinal, kaliteli ve rahat olduğu vurgulanıyor.",Ürün kalitesi genel olarak olumlu olarak değerlendiriliyor.
+689,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+690,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Hızlı kargo süreci ve uygun fiyatlar ürünün teslimat hızını etkiler.
+691,Paketleme genel olarak sorunsuz ve düzenli bulunmuş.,Paketleme genel olarak düzenli ve koruyucu bulunmuş.,Paketleme kalitesi genel olarak beklenen düzeydeydi.
+692,Ürün fiyatına göre iyi bir performans sunuyor.,Fiyatına göre başarılı ve alınabilir bir ürün olarak görülüyor.,"Ürün fiyatına değip değmediği konusunda genel kanı, ürünün fiyatına göre iyi performans sunmasıdır."
+693,"Ürün kaliteli, kullanışlı ve yapışkanı da sağlam görünüyor.","Ürünün yapışkanı, ledleri ve genel işçiliği kaliteli bulunmuş.",Ürün kalitesi genel olarak olumlu yorumlar almaktadır.
+694,Kullanıcılar üründen memnun kalıp tavsiye ediyor ve yeniden almayı düşünüyor.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Ürün genel olarak kullanıcı memnuniyetini karşılamaktadır.
+695,Ürün hızlı teslim edilmiş ve sorunsuz ulaştırılmış.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,Ürün genellikle sipariş tarihinden 1-2 gün sonra teslim edilmektedir.
+696,,None,null
+697,"Fiyatı uygun olduğunda alınabilir, özelliklerine göre değerli bulunuyor.",Fiyatına göre sunduğu özellikler ve performans açısından avantajlı görülmüş.,"Ürün fiyatına değiyor, ancak uygulamasının yıllık ücreti yüksek bulunabilir."
+698,"Görüntü, ses ve genel işçilik kalitesi beğeniliyor.","Görüntü, ses ve genel kalite beğenilmiş, ürünün sağlam ve işlevsel olduğu söylenmiş.",Ürün kalitesi iyi ve sağlamdır.
+699,Kullanıcılar üründen memnun kalıp tavsiye ediyor ve tekrar almayı düşünüyor.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+700,,None,Kargo süreci sorunlu.
+701,Şık kutu tasarımı ve kilitli başlığıyla paketleme beğenilmiş.,Şık kutu tasarımları ve kilitli plastik başlık ile ürünün korunması olumlu değerlendirilmiş.,Paketleme kalitesi şık kutu tasarımları ve kilitli plastik başlık ile dikkat çekiyordu.
+702,Fiyatının uygun olduğu ve indirimde alınmaya değer bulunduğu söylenmiş.,Fiyatının yüksek olduğu ve premium ürün olduğu için fiyat-performans açısından beğenilmemiş.,Ürün fiyatına değiyor.
+703,"Koku kalitesi, kalıcılığı ve ter kokusunu baskılama başarısı olumlu değerlendirilmiş.","Kokusu ve kalıcılığı beğenilmiş, kaliteli bir ürün olarak değerlendirilmiş.",Ürün kalitesi genel olarak olumlu yorumlar alıyor.
+704,"Kokusu ve kullanımından memnun kalındığı, tekrar alınacağı ve tavsiye edildiği görülüyor.",Kullanıcılar üründen memnun kalmış ve tekrar almayı düşünecek kadar beğenmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+705,Teslimatın çok hızlı olduğu ve ürünün kısa sürede ulaştığı belirtiliyor.,Teslimatın çok hızlı olduğu ve ürünün kısa sürede ulaştığı belirtiliyor.,Kargo süreci genellikle hızlı ve teslimat genellikle iş gününde gerçekleşiyor.
+706,"Paketlemenin zayıf olduğu, ürünün korumasız ve eksik geldiği anlaşılıyor.","Paketleme yetersiz bulunmuş, ürünün korunması zayıf kalmış.","Paketleme kalitesi sorunlu, ürün hasar görmüş."
+707,Ürünün fiyatına göre oldukça başarılı ve parasını hak eden bir seçenek olduğu söyleniyor.,Ürün fiyatına göre başarılı ve parasını karşılıyor.,Ürün fiyatına göre oldukça başarılı ve parasının karşılığını tam olarak veren bir ürün.
+708,Malzeme kalitesinin iyi ve ürünün sağlam durduğu ifade ediliyor.,Malzeme kalitesi ve dayanıklılığı genel olarak beğenilmiş.,Ürün kalitesi genellikle olumlu olarak değerlendiriliyor.
+709,Kullanıcılar üründen memnun kaldığını ve tekrar tercih edebileceğini belirtiyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak memnun kalınan ve tavsiye edilen bir ürün gibi görünüyor.
+710,Kargo süreci hızlı ve sorunsuz bulunmuş.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Kargo süreci genellikle hızlı ve iyi işliyor.
+711,Paketleme bazı yorumlarda iyi bulunurken kutunun kirli ve yıpranmış geldiği de belirtilmiş.,Paketleme genel olarak iyi bulunmuş ve ürünün korunaklı geldiği söylenmiş.,Paketleme kalitesi genellikle iyi değildi.
+712,Ürün indirimli ve uygun fiyatıyla fiyatına değer bulunmuş.,Fiyatının uygun olduğu ve indirimle alınmasının avantajlı olduğu söyleniyor.,Ürün fiyatına değer.
+713,"Ayakkabı rahat, şık ve kaliteli olarak değerlendirilmiş.","Ayakkabının rahat, şık ve kaliteli olduğu vurgulanıyor.",Ürün kalitesi genel olarak yeterli ve konforlu bir deneyim sunuyor.
+714,Kullanıcılar üründen genel olarak memnun kalmış ve tavsiye etmiş.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Ürün genel olarak memnuniyet veriyorsa da bazı kullanıcılar kalıpları küçük buluyor.
+715,"Kargo süreci hızlı ve başarılı bulunmuş, teslimatın çabuk geldiği belirtilmiş.","Kargo süreci hızlı ve özenli bulunmuş, teslimatın sorunsuz olduğu belirtilmiş.","Kargo süreci genellikle hızlı ve özenli olsa da, bazı durumlarda paket hasar görebilir."
+716,"Paketleme sık sık yetersiz görülmüş, ürünün yırtık ya da patlak geldiği söylenmiş.","Paketleme zayıf bulunmuş, ürünün yırtık, patlak ve korumasız geldiği belirtilmiş.",Paketleme kalitesi genellikle sorunlu ve yırtık geldi.
+717,Fiyatının uygun ve performansının tatmin edici olduğu ifade edilmiş.,Fiyatının uygun ve performansının değerli bulunduğu söylenmiş.,Ürün fiyatı uygun ve makul.
+718,"Ürünün topaklanması, kokusu ve genel kalitesi beğenilmiş.","Ürünün topaklanması ve kokusu beğenilmiş, kaliteli bir ürün olarak değerlendirilmiş.",Ürün kalitesi iyi ve dayanıklıdır.
+719,Kullanıcılar üründen memnun kaldıklarını ve tekrar tercih edebileceklerini belirtmiş.,Ürün genel olarak beğenilmiş ve tekrar tercih edilebilecek bir kedi kumu olarak görülmüş.,Kullanıcı memnuniyeti genel olarak olumlu görünüyor.
+720,Kargo hızlı ve teslimat sorunsuz görünüyor.,Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Kargo süreci hızlı ve güvenilir olarak gerçekleşti.
+721,"Ürün kutulu ve korunaklı şekilde, hasarsız ulaştırılmış.",Paketleme özenli ve kutu hasarsız ulaşmış.,Paketleme kalitesi genellikle iyi ve kutular hasarsız olarak geliyor.
+722,Ürünün fiyatını hak ettiği ve değerli bulunduğu söyleniyor.,Fiyatına göre değerli ve alınmaya değer görülmüş.,"Ürün fiyatına değer, ancak fiyatlar değiştiğinde fiyat avantajı sağlanabiliyor."
+723,İşlemcinin performansı ve çalışma verimi çok beğenilmiş.,"İşlemcinin performansı ve soğutması beğenilmiş, güçlü ve başarılı bir işlemci olarak değerlendirilmiş.","Ürün kalitesi ve işçiliği yüksek, soğutma sistemi de etkili ve sessiz bir şekilde iş görüyor."
+724,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini belirtiyor.,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini söylüyor.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+725,,None,null
+726,Ürün kutusu açılmış olsa da genel olarak yeni gibi ve iyi korunmuş görünüyordu.,Ürün kutu ve ambalaj açısından yeni ve sağlam görünmüş.,Ürün kutusunun paketleme kalitesi yeni gibi etiketle satışa sunulduğundan eminim.
+727,Fiyatına göre güçlü performans sunduğu ve tercih edilmesini mantıklı kıldığı belirtiliyor.,Fiyatına göre iyi bir performans sunduğu ve tercih edilebilir bulunduğu söyleniyor.,Ürün fiyatına değer ve fiyat avantajı sunuyor.
+728,"Malzeme kalitesi, soğutması ve sessiz çalışmasıyla sağlam ve başarılı bir kart olarak öne çıkıyor.","Malzeme ve işçilik kalitesi yüksek, performansı da sağlam ve etkileyici bulunuyor.",Ürün kalitesi ve işçiliği iyi düzeydedir.
+729,Genel kullanımda memnuniyet yüksek ve ürünün tavsiye edilebilir bulunduğu anlaşılıyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,"Genel kullanıcı memnuniyeti iyi, tavsiye edilip edilmediği konusunda ise karışık bir durum var."
+730,Teslimatın hızlı olduğu ve kısa sürede ulaştığı belirtilmiş.,Teslimatın hızlı olduğu ve ürünün kısa sürede ulaştığı belirtiliyor.,null
+731,,None,null
+732,Fiyatına göre kaliteli bulunduğu ifade edilmiş.,Fiyatına göre kaliteli bulunduğu söylenmiş.,Fiyat performans dengesi iyi.
+733,"Ürünün şık, kaliteli ve beklentileri karşılayan bir yapıda olduğu söylenmiş.","Ürünün kalitesi, zarifliği ve genel yapısı beğenilmiş.",Ürün kalitesi yüksek ve sağlamdır.
+734,Kullanımı kolay ve genel olarak memnuniyet veren bir ürün olarak değerlendirilmiş.,Kullanıcılar üründen memnun kalmış ve kullanımını beğenmiş.,Kullanıcılar genel olarak memnuniyet duyuyorlar ve tekrar satın alma eğiliminde.
+735,"Kargo süreci hızlı ve sorunsuz ilerlemiş, teslimat çoğunlukla beklenenden erken gelmiş.",Kargo hızlı ve teslimat süreci sorunsuz görünüyor.,Kargo süreci genellikle hızlı ve teslimatlar genellikle beklenenden önce gerçekleşiyor.
+736,"Paketleme genel olarak özenli ve koruyucu bulunmuş, ürün kapalı kutuda teslim edilmiş.",Paketleme genel olarak iyi ve ürün orijinal kutusunda teslim edilmiş.,Paketleme kalitesi genellikle iyi ve orijinal kutuda teslim edildi.
+737,Ürün fiyatına göre oldukça iyi bir seçenek ve fiyat-performans açısından beğenilmiş.,Ürün fiyatına göre oldukça avantajlı ve fiyat-performans açısından başarılı görülmüş.,Ürün fiyatına değer.
+738,"Ürünün malzeme ve işçilik kalitesi Apple standardında, sağlam ve kullanışlı bulunmuş.",Ürünün kalitesi ve sağlamlığı beğenilmiş.,Ürün kalitesi sağlam ve güvenilir gibi görünüyor.
+739,Kullanıcılar üründen genel olarak memnun kalmış ve tavsiye etmeye eğilim göstermiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+740,"Kargo süreci hızlı ve sorunsuz ilerlemiş, teslimat erken ulaşmış.",Kargo hızlı ve sorunsuz teslim edilmiş.,Kargo süreci genellikle hızlı ve sorunsuz gerçekleşiyor.
+741,"Paketleme özenli ve koruyucu bulunmuş, ürün sağlam şekilde ulaşmış.",Paketleme özenli ve ürün sağlam şekilde ulaşmış.,Paketleme kalitesi genellikle iyi ve ürünlerin korunması sağlanıyor.
+742,Fiyatının sunduğu değere değdiği ve uygun bulunduğu belirtilmiş.,Ürün fiyatına göre avantajlı ve parasını hak eden bir seçenek olarak görülüyor.,Ürün fiyatına değer ve parasını hakeder.
+743,"Malzeme ve kasa kalitesi yüksek, cihaz sağlam ve kaliteli görülmüş.","Malzeme ve genel işçilik kalitesi yüksek, cihaz sağlam ve premium hissi veriyor.",Ürün kalitesi yüksek ve premium bir cihaz olarak tanımlanabilir.
+744,Kullanıcılar üründen memnun kalmış ve gönül rahatlığıyla tavsiye etmiş.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+745,Kargo hızlı ve teslimat genelde sorunsuz görünüyor.,Kargo hızlı ve teslimat süreci memnuniyet verici görünüyor.,Kargo süreci genellikle hızlı ve teslimat genellikle zamanında gerçekleşiyor.
+746,Paketleme beklentiyi karşılamamış ve ürün sıradan bir kutuda gelmiş.,Ürün kutuda ve özenli şekilde gelmiş.,"Paketleme kalitesi sorunlu, ürün kutuda değil hediye paketi içinde gönderilmemiş gibi görünüyor."
+747,Fiyatının uygun olduğu ve ürünü değerli buldukları görülüyor.,Fiyatının uygun ve alınmaya değer olduğu söylenmiş.,Ürün fiyatına değer.
+748,"Ürün kaliteli, rahat ve orijinal hissi veren sağlam bir model olarak öne çıkıyor.","Ürünün kaliteli, rahat ve orijinal olduğu vurgulanıyor.",Ürün kalitesi genel olarak olumlu yorumlar aldı.
+749,Kullanıcılar üründen memnun kalıp tavsiye ediyor ve tekrar alışverişe sıcak bakıyor.,Ürün genel olarak beğenilmiş ve tavsiye edilmiş.,Genel kullanıcı memnuniyeti yüksek ve tavsiye ediliyor.
+750,Kargo ve teslimat süreci hızlı ve sorunsuz olarak öne çıkıyor.,Kargo hızlı ve sorunsuz teslim edilmiş.,Hızlı ve kaliteli kargo süreci ürünün teslimat hızını etkileyerek sorunsuz teslimat gerçekleşti.
+751,Ürün temiz ve özenli paketlenmiş görünüyor.,Ürün temiz ve düzenli paketlenmiş.,Paketleme kalitesi iyi.
+752,Ürün fiyatına göre başarılı ve parasını hak eden bir cihaz olarak değerlendiriliyor.,Fiyatına göre başarılı ve parasını hak eden bir ürün olarak görülüyor.,Ürün parasını hak ediyor ve fiyatı uygun.
+753,Cihazın malzeme ve kullanım kalitesi genel olarak iyi ve sorunsuz bulunuyor.,"Malzeme ve kullanım hissiyle birlikte işlevini iyi yerine getiren, sorunsuz çalıştığı söylenmiş.",Ürün kalitesi kabul edilebilir düzeyde.
+754,Kullanıcılar üründen memnun kaldıklarını ve tavsiye ettiklerini belirtiyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etme eğiliminde olmuş.,Ürün genel olarak kullanıcı memnuniyetini karşılayacak düzeyde ve tavsiye edilebilir.
+755,,None,null
+756,Paketleme düzenli ve ürünü koruyacak şekilde yapılmış görünüyor.,Paketleme özenli ve ürün korunaklı şekilde gelmiş.,Paketleme güzel ve küçük yer kaplamayan bir ürün.
+757,Fiyatının yüksek bulunduğu ve bu seviyede bekleneni karşılamadığı düşünülüyor.,Fiyatının yüksek olduğu ve parasını hak etmediği düşünülmüş.,Ürün fiyatına değmediği belli.
+758,Malzeme kalitesi ve kullanım kolaylığıyla beğeni topluyor.,"Malzeme ve kullanım kalitesi beğenilmiş, ürün kullanışlı ve pratik bulunmuş.",Ürün kalitesi yüksek ve pratik bir tasarım sahip.
+759,Ürün genel olarak çok beğenilmiş ve tekrar sipariş etme isteği oluşturmuş.,Ürün genel olarak beğenilmiş ve tekrar tercih edilebilecek bir ürün olarak görülmüş.,Ürün genel olarak kullanıcılar tarafından beğenilmekte ve tavsiye edilmektedir.
+760,Kargo hızlı ve teslimat süreci sorunsuz olarak öne çıkıyor.,Kargo hızlı ve sorunsuz teslim edilmiş görünüyor.,"Kargo süreci genellikle hızlı ve sorunsuz olsa da, bazı durumlarda paketleme özensiz veya teslimat gecikmeli olabilir."
+761,Paketleme özensiz ve korumasız bulunmuş.,"Paketleme özensiz bulunmuş, ürünün korunması yetersiz kalmış.",Paketleme kalitesi genellikle kötüydü.
+762,Ürün fiyatına göre avantajlı ve uygun bulunuyor.,Ürün fiyatına göre avantajlı ve hesaplı bulunmuş.,Ürün fiyatına değer.
+763,"Ürünün orijinalliği, sağlamlığı ve genel kalitesi beğeniliyor.","Ürünün dayanıklı, orijinal ve kaliteli olduğu vurgulanıyor.",Ürün kalitesi genel olarak iyi ve dayanıklı olarak gözükmektedir.
+764,Kullanıcılar üründen memnun ve tavsiye ediyor.,Kullanıcılar üründen memnun kalmış ve tavsiye etmiş.,Ürün genel olarak kullanıcılar tarafından beğenilmiş ve tavsiye edilmiştir.

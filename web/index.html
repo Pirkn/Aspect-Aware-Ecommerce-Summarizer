@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Review Evaluator</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/static/shared.css"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="env,react">
+/* ==================================================================
+   Static data
+================================================================== */
+
+const ASPECTS = ["kargo", "paketleme", "fiyat_performans", "kalite", "genel_memnuniyet"];
+
+const ASPECT_LABELS = {
+  kargo:            { tr: "Kargo",             en: "Shipping",              short: "kargo" },
+  paketleme:        { tr: "Paketleme",         en: "Packaging",             short: "paketleme" },
+  fiyat_performans: { tr: "Fiyat/Performans",  en: "Price / Value",         short: "fiyat" },
+  kalite:           { tr: "Kalite",            en: "Quality",               short: "kalite" },
+  genel_memnuniyet: { tr: "Genel Memnuniyet",  en: "Overall Satisfaction",  short: "genel" },
+};
+
+const DEMO_PRODUCTS = [
+  {
+    asin: "B0C3BV19Q3",
+    emoji: "H3",
+    title: "HyperX Cloud III Oyuncu Kulaklığı",
+    meta: "Hazır CSV · hızlı tanı",
+  },
+  {
+    asin: "B0C8VK2Y95",
+    emoji: "DK",
+    title: "Hakiki Deri Kartlık",
+    meta: "Hazır CSV · hızlı tanı",
+  },
+  {
+    asin: "B0CHXF71NK",
+    emoji: "S9",
+    title: "Apple Watch Series 9 Akıllı Saat",
+    meta: "Hazır CSV · hızlı tanı",
+  },
+];
+
+const STAGES = [
+  {
+    key: "scraping",
+    title: "Yorumlar hazırlanıyor",
+    sub: "Canlı scrape, CSV yükleme veya hazır veri",
+  },
+  {
+    key: "preprocessing",
+    title: "Cümlelere ayrılıyor",
+    sub: "Zemberek ile Türkçe cümle bölütleme",
+  },
+  {
+    key: "aspect_labeling",
+    title: "Yön etiketleniyor",
+    sub: "Fine-tuned BERT sınıflandırıcı · 5 yön",
+    dense: true,
+  },
+  {
+    key: "evidence_selection",
+    title: "Kanıt seçiliyor",
+    sub: "MMR ile çeşitlilik + ilgi optimizasyonu",
+  },
+  {
+    key: "summarization",
+    title: "Özetler üretiliyor",
+    sub: "Llama 3.1 8B (LoRA) · student model",
+  },
+];
+
+/* ==================================================================
+   Helpers
+================================================================== */
+
+function scoreColor(v) {
+  if (v == null) return 'var(--muted)';
+  if (v >= 0.7) return 'var(--good)';
+  if (v >= 0.5) return 'var(--mid)';
+  return 'var(--low)';
+}
+
+function useAnimatedNumber(target, durationMs = 400) {
+  const [value, setValue] = React.useState(0);
+  React.useEffect(() => {
+    if (target == null) { setValue(0); return; }
+    let raf = 0;
+    const start = performance.now();
+    const from = 0;
+    const tick = (t) => {
+      const p = Math.min(1, (t - start) / durationMs);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setValue(Math.round(from + (target - from) * eased));
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [target, durationMs]);
+  return value;
+}
+
+function Stars({ rating }) {
+  const full = Math.floor(rating || 0);
+  return (
+    <div className="rating-stars">
+      {[1,2,3,4,5].map(i => (
+        <span key={i} className="star" style={{color: i <= full ? '#e8a822' : '#ddd'}}>★</span>
+      ))}
+    </div>
+  );
+}
+
+function highlightInText(full, matched) {
+  if (!full || !matched) return <span>{full}</span>;
+  const idx = full.toLowerCase().indexOf(matched.toLowerCase());
+  if (idx === -1) return <span>{full}</span>;
+  return (
+    <>
+      <span>{full.slice(0, idx)}</span>
+      <span className="highlight">{full.slice(idx, idx + matched.length)}</span>
+      <span>{full.slice(idx + matched.length)}</span>
+    </>
+  );
+}
+
+function formatElapsed(ms) {
+  const s = ms / 1000;
+  const mm = Math.floor(s / 60).toString().padStart(2, '0');
+  const ss = (s % 60).toFixed(1).padStart(4, '0');
+  return `${mm}:${ss}`;
+}
+
+/* ==================================================================
+   Act 1 — Landing / input
+================================================================== */
+
+function Landing({ onSubmit, onFileSubmit, onPresetSubmit, error }) {
+  const [value, setValue] = React.useState('');
+  const [comment, setComment] = React.useState('');
+  const fileRef = React.useRef(null);
+
+  const canSubmit = value.trim().length > 0;
+
+  const handleSubmit = (e) => {
+    e?.preventDefault?.();
+    if (!canSubmit) return;
+    onSubmit(value.trim(), comment.trim());
+  };
+
+  const handleDemo = (asin) => {
+    setValue(asin);
+    onPresetSubmit(asin, comment.trim());
+  };
+
+  const handleFileChange = (e) => {
+    const f = e.target.files?.[0];
+    if (f) onFileSubmit(f, comment.trim());
+    e.target.value = '';
+  };
+
+  return (
+    <div className="landing">
+      <div className="landing-col">
+        <div className="brand">
+          <div className="brand-mark">🧾</div>
+          <div className="brand-name">Review Evaluator</div>
+          <div className="brand-sub">
+            Türkçe e-ticaret yorumlarından yön bazlı özetler üretir. Öğrenci ve öğretmen
+            modellerin kanıta dayalı karşılaştırması.
+          </div>
+        </div>
+
+        <form className="input-shell" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="Amazon ürün URL'si veya ASIN yapıştırın"
+            autoFocus
+          />
+          <button type="submit" className="btn-primary" disabled={!canSubmit}>
+            Analiz Et
+          </button>
+        </form>
+
+        <div className="comment-shell">
+          <textarea
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            placeholder="(İsteğe bağlı) Kendi yorumunuzu ekleyin — Amazon yorumlarıyla birlikte analiz edilecek"
+            rows={3}
+          />
+        </div>
+
+        {error && <div className="error-inline">{error}</div>}
+
+        <div className="upload-row">
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={() => fileRef.current?.click()}
+          >
+            <span>📄</span>
+            <span>Scrape başarısız olursa: CSV yükleyin</span>
+          </button>
+          <input
+            ref={fileRef}
+            type="file"
+            accept=".csv"
+            style={{display: 'none'}}
+            onChange={handleFileChange}
+          />
+        </div>
+
+        <div>
+          <div className="section-head">Veya hazır bir örnek seçin</div>
+          <div className="demo-cards">
+            {DEMO_PRODUCTS.map((p) => (
+              <button
+                key={p.asin}
+                type="button"
+                className="demo-card"
+                onClick={() => handleDemo(p.asin)}
+              >
+                <div className="demo-badge">{p.emoji}</div>
+                <div className="demo-body">
+                  <div className="demo-title">{p.title}</div>
+                  <div className="demo-meta">{p.asin} · {p.meta}</div>
+                </div>
+                <div className="demo-arrow">›</div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="footer-meta">
+          <div className="footer-line">Teacher: GPT-5.4-mini · Student: Llama 3.1 8B LoRA · BERTScore F1: 0.852</div>
+          <div className="footer-line">Capstone · 5 aspects · Turkish e-commerce</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ==================================================================
+   Act 2 — Pipeline progress
+================================================================== */
+
+function StageMetric({ stage, state }) {
+  // state: { status, metric, product, error }
+  if (state.status === 'failed') {
+    return <div className="stage-metric" title={state.error || ''}>{state.error || 'Hata'}</div>;
+  }
+  if (state.status === 'active') {
+    return <div className="stage-metric"><span className="spinner"/></div>;
+  }
+  if (state.status === 'done' && state.metric) {
+    return <MetricView stage={stage} metric={state.metric}/>;
+  }
+  return <div className="stage-metric" style={{color: 'var(--muted)', fontWeight: 400, fontSize: 11}}>—</div>;
+}
+
+function MetricView({ stage, metric }) {
+  if (stage.key === 'scraping') {
+    return <AnimatedCount value={metric.reviews} unit="yorum"/>;
+  }
+  if (stage.key === 'preprocessing') {
+    return <AnimatedCount value={metric.sentences} unit="cümle"/>;
+  }
+  if (stage.key === 'aspect_labeling' && metric.per_aspect) {
+    const parts = ASPECTS.map(a => {
+      const label = ASPECT_LABELS[a].short;
+      return `${label}: ${metric.per_aspect[a] ?? 0}`;
+    });
+    return <div className="per-aspect-row">{parts.map((p, i) => <span key={i}><b>{p}</b>{i < parts.length - 1 ? ' · ' : ''}</span>)}</div>;
+  }
+  if (stage.key === 'evidence_selection' && metric.per_aspect) {
+    const total = ASPECTS.reduce((a, k) => a + (metric.per_aspect[k] || 0), 0);
+    const avg = Math.round(total / ASPECTS.length);
+    return <AnimatedCount value={avg} unit="~cümle / yön"/>;
+  }
+  if (stage.key === 'summarization') {
+    return <AnimatedCount value={metric.aspects ?? metric.summaries ?? 5} unit="yön özeti"/>;
+  }
+  return null;
+}
+
+function AnimatedCount({ value, unit }) {
+  const n = useAnimatedNumber(value ?? 0, 500);
+  return (
+    <div className="stage-metric">
+      {n.toLocaleString('tr-TR')} <span style={{color: 'var(--muted)', fontWeight: 500, marginLeft: 4}}>{unit}</span>
+    </div>
+  );
+}
+
+function StageCard({ index, stage, state }) {
+  const cls = [
+    'stage-card',
+    state.status,
+    stage.dense ? 'dense' : '',
+  ].filter(Boolean).join(' ');
+
+  const badge = state.status === 'done' ? '✓'
+              : state.status === 'failed' ? '✕'
+              : String(index + 1);
+
+  return (
+    <div className={cls}>
+      <div className="stage-num">{badge}</div>
+      <div className="stage-body">
+        <div className="stage-name">{stage.title}</div>
+        <div className="stage-sub">{stage.sub}</div>
+      </div>
+      <StageMetric stage={stage} state={state}/>
+    </div>
+  );
+}
+
+function Progress({ runId, onComplete, onRetry }) {
+  const [stages, setStages] = React.useState(() =>
+    STAGES.map(() => ({ status: 'pending', metric: null, error: null }))
+  );
+  const [product, setProduct] = React.useState(null);
+  const [elapsed, setElapsed] = React.useState(0);
+  const [done, setDone] = React.useState(false);
+  const [failed, setFailed] = React.useState(false);
+  const t0Ref = React.useRef(performance.now());
+
+  React.useEffect(() => {
+    const id = setInterval(() => {
+      if (!done && !failed) setElapsed(performance.now() - t0Ref.current);
+    }, 100);
+    return () => clearInterval(id);
+  }, [done, failed]);
+
+  React.useEffect(() => {
+    const url = `/api/run/${runId}/events`;
+    const es = new EventSource(url);
+
+    const setStage = (idx, patch) => {
+      setStages(prev => prev.map((s, i) => i === idx ? { ...s, ...patch } : s));
+    };
+
+    es.addEventListener('stage_start', (e) => {
+      const d = JSON.parse(e.data);
+      setStage(d.stage - 1, { status: 'active' });
+    });
+    es.addEventListener('stage_complete', (e) => {
+      const d = JSON.parse(e.data);
+      setStage(d.stage - 1, { status: 'done', metric: d.metric });
+      if (d.product) setProduct(d.product);
+    });
+    es.addEventListener('pipeline_complete', (e) => {
+      const d = JSON.parse(e.data);
+      setDone(true);
+      es.close();
+      setTimeout(() => onComplete(d.result_url), 800);
+    });
+    es.addEventListener('pipeline_error', (e) => {
+      const d = JSON.parse(e.data);
+      setFailed(true);
+      // Mark the first active stage as failed; if none active, the first pending.
+      setStages(prev => {
+        const next = [...prev];
+        let idx = next.findIndex(s => s.status === 'active');
+        if (idx === -1) idx = next.findIndex(s => s.status === 'pending');
+        if (idx === -1) idx = 0;
+        next[idx] = { status: 'failed', metric: null, error: d.message || 'Hata' };
+        return next;
+      });
+      es.close();
+    });
+    es.onerror = () => {
+      // Connection lost — don't spam errors; the server's final event closes us cleanly.
+    };
+    return () => es.close();
+  }, [runId, onComplete]);
+
+  const activeCount = stages.filter(s => s.status !== 'pending').length;
+  const currentStage = Math.min(activeCount, STAGES.length);
+
+  return (
+    <div className="app">
+      <div className="header">
+        <div className="header-inner">
+          <div className="product-badge">🧾</div>
+          <div className="product-info">
+            <div className="product-id">
+              {product?.id || 'Yükleniyor...'} · Pipeline
+            </div>
+            <div className="product-title">
+              {product?.title || 'Ürün bilgisi alınıyor...'}
+            </div>
+          </div>
+          <div className="header-stats">
+            <div className="stat">
+              <div className="stat-val">{currentStage} / {STAGES.length}</div>
+              <div className="stat-label">Aşama</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="main">
+        <div className="stage-col">
+          {STAGES.map((stage, i) => (
+            <StageCard key={stage.key} index={i} stage={stage} state={stages[i]}/>
+          ))}
+        </div>
+
+        <div className="stage-footer">
+          <div className="elapsed-timer">⏱ {formatElapsed(elapsed)}</div>
+          {done && <div className="redirect-hint">Yönlendiriliyor...</div>}
+          {failed && (
+            <button className="btn-primary" onClick={onRetry}>Tekrar Dene</button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ==================================================================
+   Act 3 — Results (ported from Review Evaluator.html)
+================================================================== */
+
+function EvidenceCard({ ev }) {
+  return (
+    <div className="ev-card">
+      <div className="ev-header">
+        <div className="ev-rank">#{ev.rank}</div>
+        <div className="ev-matched" style={{fontStyle:'normal', fontWeight:400, fontSize:12, color:'var(--muted)'}}>
+          Review #{ev.review_id ?? '—'}
+        </div>
+        <div className="ev-meta">
+          {ev.mmr_rank != null && <span className="mmr-chip">MMR #{ev.mmr_rank}</span>}
+          <Stars rating={ev.rating}/>
+        </div>
+      </div>
+      <div className="ev-full-review" style={{borderTop:'none', paddingTop:0}}>
+        {highlightInText(ev.full || ev.matched, ev.matched)}
+      </div>
+      <div className="ev-scores" style={{borderTop:'1px solid var(--border)', paddingTop:12}}>
+        <div className="score-row">
+          <span className="score-label">Similarity</span>
+          <div className="score-bar-bg">
+            <div className="score-bar" style={{width: `${Math.max(0, Math.min(1, ev.similarity))*100}%`, background: scoreColor(ev.similarity)}}/>
+          </div>
+          <span className="score-val" style={{color: scoreColor(ev.similarity)}}>{ev.similarity.toFixed(4)}</span>
+        </div>
+        {ev.relevance != null && (
+          <div className="score-row">
+            <span className="score-label">Relevance</span>
+            <div className="score-bar-bg">
+              <div className="score-bar" style={{width: `${Math.max(0, Math.min(1, ev.relevance))*100}%`, background: scoreColor(ev.relevance)}}/>
+            </div>
+            <span className="score-val" style={{color: scoreColor(ev.relevance)}}>{ev.relevance.toFixed(4)}</span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Results({ data, onReset }) {
+  const summaries = data.summaries || [];
+  const evidence = data.evidence || [];
+  const availableAspects = ASPECTS.filter(a => summaries.some(s => s.aspect === a));
+  const [activeAspect, setActiveAspect] = React.useState(availableAspects[0] || 'kargo');
+
+  const currentSummary = summaries.find(s => s.aspect === activeAspect) || { student: null, teacher: null };
+  const currentEvidence = evidence.filter(e => e.aspect === activeAspect);
+  const avgSim = currentEvidence.length
+    ? (currentEvidence.reduce((a, b) => a + b.similarity, 0) / currentEvidence.length).toFixed(3)
+    : '—';
+
+  const avgAllSim = evidence.length
+    ? (evidence.reduce((a, b) => a + b.similarity, 0) / evidence.length).toFixed(3)
+    : '—';
+
+  return (
+    <div className="app">
+      <div className="header">
+        <div className="header-inner">
+          <div className="product-badge">🤖</div>
+          <div className="product-info">
+            <div className="product-id">
+              {data.product?.id || '—'} · Student vs Teacher Summary Review
+            </div>
+            <div className="product-title">
+              {data.product?.title || 'Ürün'}
+            </div>
+          </div>
+          <div className="header-stats">
+            <div className="stat">
+              <div className="stat-val" style={{color:'var(--student)'}}>{summaries.length}</div>
+              <div className="stat-label">Aspects</div>
+            </div>
+            <div className="stat">
+              <div className="stat-val">{evidence.length}</div>
+              <div className="stat-label">Evidence</div>
+            </div>
+            <div className="stat">
+              <div className="stat-val" style={{color:'var(--good)'}}>{avgAllSim}</div>
+              <div className="stat-label">Avg Sim.</div>
+            </div>
+            <button className="btn-ghost" onClick={onReset}>← Yeni analiz</button>
+          </div>
+        </div>
+      </div>
+
+      <div className="main main-grid">
+        <div className="sidebar">
+          <div className="sidebar-title">Aspects</div>
+          {availableAspects.map(a => {
+            const cnt = evidence.filter(e => e.aspect === a).length;
+            const label = ASPECT_LABELS[a];
+            return (
+              <button
+                key={a}
+                className={`aspect-btn ${activeAspect === a ? 'active' : ''}`}
+                onClick={() => setActiveAspect(a)}
+              >
+                <span className="aspect-name">{label.tr}</span>
+                <span className="aspect-sub">{label.en} <span className="evidence-count">{cnt}</span></span>
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="content">
+          <div>
+            <div className="section-head">Summary Comparison</div>
+            <div className="summaries">
+              <div className="summary-card student">
+                <div className="summary-label">
+                  <span className="label-dot student" style={{background:'var(--student)'}}/>
+                  Student
+                </div>
+                <div className="summary-text">
+                  {currentSummary.student || <em style={{color:'var(--muted)'}}>null — yetersiz kanıt</em>}
+                </div>
+              </div>
+              <div className="summary-card teacher">
+                <div className="summary-label">
+                  <span className="label-dot teacher" style={{background:'var(--teacher)'}}/>
+                  Teacher (Ground Truth)
+                </div>
+                <div className="summary-text">
+                  {currentSummary.teacher || <em style={{color:'var(--muted)'}}>null — yetersiz kanıt</em>}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="section-head">
+              Supporting Evidence
+              <span style={{fontWeight:400, textTransform:'none', letterSpacing:0, color:'var(--muted)', fontSize:11}}>
+                {currentEvidence.length} reviews · avg similarity {avgSim}
+              </span>
+            </div>
+            <div className="evidence-list">
+              {currentEvidence.length === 0 && (
+                <div className="ev-card" style={{padding: '18px 20px', color: 'var(--muted)', fontSize: 13}}>
+                  Bu yön için kanıt bulunamadı.
+                </div>
+              )}
+              {currentEvidence.map((ev, i) => <EvidenceCard key={i} ev={ev}/>)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ==================================================================
+   App shell — manages which act is visible
+================================================================== */
+
+function App() {
+  const [view, setView] = React.useState('landing');  // 'landing' | 'progress' | 'results'
+  const [runId, setRunId] = React.useState(null);
+  const [resultData, setResultData] = React.useState(null);
+  const [landingError, setLandingError] = React.useState(null);
+
+  const startRun = async (text, file, comment, dataAsin) => {
+    setLandingError(null);
+    try {
+      const fd = new FormData();
+      if (text) fd.append('input', text);
+      if (file) fd.append('file', file);
+      if (comment) fd.append('comment', comment);
+      if (dataAsin) fd.append('data_asin', dataAsin);
+      const res = await fetch('/api/run', { method: 'POST', body: fd });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.detail || `HTTP ${res.status}`);
+      }
+      const data = await res.json();
+      setRunId(data.run_id);
+      setView('progress');
+    } catch (e) {
+      setLandingError(e.message || String(e));
+    }
+  };
+
+  const handleSubmit = (text, comment) => startRun(text, null, comment);
+  const handleFileSubmit = (file, comment) => startRun(null, file, comment);
+  const handlePresetSubmit = (asin, comment) => startRun(null, null, comment, asin);
+
+  const handleComplete = async (resultUrl) => {
+    try {
+      const res = await fetch(resultUrl);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      setResultData(data);
+      setView('results');
+    } catch (e) {
+      setLandingError(`Sonuçlar alınamadı: ${e.message}`);
+      setView('landing');
+    }
+  };
+
+  const handleReset = () => {
+    setView('landing');
+    setRunId(null);
+    setResultData(null);
+    setLandingError(null);
+  };
+
+  if (view === 'landing') {
+    return <Landing onSubmit={handleSubmit} onFileSubmit={handleFileSubmit} onPresetSubmit={handlePresetSubmit} error={landingError}/>;
+  }
+  if (view === 'progress') {
+    return <Progress runId={runId} onComplete={handleComplete} onRetry={handleReset}/>;
+  }
+  return <Results data={resultData} onReset={handleReset}/>;
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

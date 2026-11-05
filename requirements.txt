@@ -1,0 +1,14 @@
+pytz==2024.1
+pandas==2.2.2
+selenium==4.15.2
+numpy==1.26.4
+torch==2.11.0
+transformers==4.57.1
+sentence-transformers==5.4.1
+openai==1.55.3
+python-dotenv==1.0.0
+requests==2.32.3
+zemberek-python==0.2.3
+fastapi==0.136.0
+uvicorn==0.34.0
+python-multipart==0.0.26
